@@ -335,9 +335,9 @@ body {
     color: var(--gold);
 }
 
-/* Word of the Day Banner */
+/* Word of the Day Banner & Tab Intro Banners */
 .wotd-section {
-    margin: 24px 0 16px 0;
+    margin: 0 0 24px 0;
 }
 
 .wotd-banner {
@@ -762,6 +762,8 @@ body.theme-dark .scholarly-select:focus {
 /* Tab Views */
 .tab-view {
     display: none;
+    padding-top: 28px;
+    padding-bottom: 48px;
 }
 
 .tab-view.active-tab-content {
@@ -2440,6 +2442,9 @@ body.theme-dark .btn-fc-learned {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .tab-view {
+        padding-top: 18px;
+    }
     .top-bar {
         flex-direction: column;
         align-items: flex-start;
