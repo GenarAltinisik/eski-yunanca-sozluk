@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Genar's Master Ancient Greek - Kapsamlı Eski Yunanca Sözlük, Politeknik Arama, Fonetik, Gramer Tabloları ve Kelime Kartları">
+    <meta name="keywords" content="Eski Yunanca Sözlük, Ancient Greek Dictionary, Grekçe Türkçe Sözlük, Politeknik Yunanca, Klasik Filoloji, Liddell-Scott">
+    <meta name="author" content="Genar Altinisik">
+    <title>Genar's Master Ancient Greek | Eski Yunanca Sözlük & Gramer</title>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+</head>
+<body class="theme-parchment">
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="container">
+            <div class="top-bar">
+                <div class="brand-group">
+                    <div class="meander-icon" title="Meandros / Antik Yunan Motifi">Ω</div>
+                    <div>
+                        <h1 class="brand-title">Genar's <span class="accent">Master Ancient Greek</span></h1>
+                        <p class="brand-subtitle">Ἑλληνικὸν Λεξικόν • Kapsamlı Eski Yunanca Sözlük & Filoloji Portalı</p>
+                    </div>
+                </div>
+
+                <div class="top-actions">
+                    <button type="button" class="btn-scholarly btn-outline btn-sm" id="favorites-toggle-btn">
+                        ★ Favoriler (<span id="fav-count-badge">0</span>)
+                    </button>
+                    <button type="button" class="btn-scholarly btn-outline btn-sm" id="theme-toggle-btn">
+                        🌙 Gece Mermeri
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navigation Tabs -->
+            <nav class="nav-tabs-wrapper" aria-label="Ana Menü">
+                <button type="button" class="nav-tab active" data-tab="dictionary">
+                    📖 Sözlük (<span id="total-word-count">...</span>)
+                </button>
+                <button type="button" class="nav-tab" data-tab="alphabet">
+                    🔤 Alfabe & Fonetik
+                </button>
+                <button type="button" class="nav-tab" data-tab="grammar">
+                    🏛️ Gramer & Büküm Tabloları
+                </button>
+                <button type="button" class="nav-tab" data-tab="flashcards">
+                    🗂️ Kelime Kartları (Quiz)
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container">
+
+        <!-- ==========================================
+             VIEW 1: DICTIONARY TAB
+             ========================================== -->
+        <section id="view-dictionary" class="tab-view active-tab-content">
+            
+            <!-- Word of the Day Banner -->
+            <div class="wotd-section" id="wotd-container">
+                <!-- Injected via JavaScript -->
+            </div>
+
+            <!-- Search Section -->
+            <div class="search-section">
+                <div class="search-bar-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="search-input" 
+                        placeholder="Grekçe kelime (λόγος), Beta Code (lo/gos), Latince (logos) veya Türkçe anlam (akıl, söz) arayın..."
+                        autocomplete="off"
+                        spellcheck="false"
+                    >
+                    <div class="search-actions">
+                        <button type="button" class="btn-icon-action" id="search-clear-btn" title="Aramayı Temizle">✕</button>
+                        <button type="button" class="btn-scholarly btn-sm" id="toggle-keyboard-btn" title="Grekçe Sanal Klavyeyi Aç/Kapat">
+                            ⌨️ Sanal Klavye
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Search Controls & Filters -->
+                <div class="search-controls">
+                    <div class="category-pills" id="category-pills-bar">
+                        <button type="button" class="cat-pill active" data-category="all">Tümü</button>
+                        <button type="button" class="cat-pill" data-category="Felsefe">Felsefe & Düşünce</button>
+                        <button type="button" class="cat-pill" data-category="Politika & Toplum">Politika & Toplum</button>
+                        <button type="button" class="cat-pill" data-category="Doğa & Bilim">Doğa & Bilim</button>
+                        <button type="button" class="cat-pill" data-category="Mitoloji & İnanç">Mitoloji & İnanç</button>
+                        <button type="button" class="cat-pill" data-category="Edebiyat & Sanat">Edebiyat & Sanat</button>
+                        <button type="button" class="cat-pill" data-category="Temel Fiiller">Temel Fiiller</button>
+                        <button type="button" class="cat-pill" data-category="Günlük Yaşam">Günlük Yaşam</button>
+                    </div>
+
+                    <div class="dropdown-filters">
+                        <select id="pos-filter-select" class="scholarly-select" title="Kelime Türü Filtresi">
+                            <option value="all">Tüm Türler (İsim, Fiil...)</option>
+                            <option value="İsim">İsimler</option>
+                            <option value="Fiil">Fiiller</option>
+                            <option value="Sıfat">Sıfatlar</option>
+                            <option value="Edat">Edatlar & Bağlaçlar</option>
+                        </select>
+
+                        <select id="sort-select" class="scholarly-select" title="Sıralama Ölçütü">
+                            <option value="frequency">En Sık Kullanılanlar</option>
+                            <option value="alpha-greek">Alfabetik (Grekçe Α-Ω)</option>
+                            <option value="alpha-tr">Türkçe Anlama Göre (A-Z)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search Status Bar -->
+            <div class="search-status-bar">
+                <span id="search-result-count">Yükleniyor...</span>
+                <span class="search-hint">💡 İpucu: Beta Code ile vurgulu arama yapabilirsiniz (örn: <code>lo/gos</code> = <code>λόγος</code>, <code>a)/nqrwpos</code> = <code>ἄνθρωπος</code>)</span>
+            </div>
+
+            <!-- Dictionary Grid Container -->
+            <div class="dictionary-grid" id="dictionary-grid">
+                <!-- Word Cards rendered dynamically -->
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VIEW 2: ALPHABET & PHONETICS TAB
+             ========================================== -->
+        <section id="view-alphabet" class="tab-view">
+            <div class="wotd-section">
+                <div class="wotd-banner">
+                    <div class="wotd-label">🏛️ Fonetik ve Alfabe Rehberi</div>
+                    <p>Antik Grek alfabesi 24 harften oluşur. İyonya kökenli bu alfabe Klasik Attika çağında resmi alfabe haline gelmiştir. Aşağıdaki tabloda Erasmian (akademik) okunuş ile Yeniden Yapılandırılmış Klasik Attika sesletimlerini karşılaştırmalı olarak inceleyebilirsiniz.</p>
+                </div>
+            </div>
+
+            <div class="scholarly-table-wrapper">
+                <table class="scholarly-table">
+                    <thead>
+                        <tr>
+                            <th>Harf (Büyük/Küçük)</th>
+                            <th>İsim</th>
+                            <th>IPA Fonetik</th>
+                            <th>Erasmian Telaffuz</th>
+                            <th>Klasik Attika Telaffuz</th>
+                            <th>Sayısal Değeri</th>
+                            <th>Örnek Kelime</th>
+                        </tr>
+                    </thead>
+                    <tbody id="alphabet-table-body">
+                        <!-- Populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Diacritics Section -->
+            <h3 style="font-family: var(--font-heading); margin-bottom: 16px;">Vurgu ve Soluk İşaretleri (Diacritics / Polytonic Marks)</h3>
+            <div class="diacritics-grid" id="diacritics-grid">
+                <!-- Populated by JavaScript -->
+            </div>
+
+            <!-- Diphthongs Section -->
+            <h3 style="font-family: var(--font-heading); margin-bottom: 16px;">Çift Ünlüler (Diphthongs / Diftonlar)</h3>
+            <div class="diphthongs-grid" id="diphthongs-grid">
+                <!-- Populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VIEW 3: GRAMMAR & DECLENSIONS TAB
+             ========================================== -->
+        <section id="view-grammar" class="tab-view">
+            <div class="wotd-section">
+                <div class="wotd-banner">
+                    <div class="wotd-label">🏛️ Klasik Grekçe Gramer & Çekim Tabloları</div>
+                    <p>Eski Yunanca yüksek düzeyde bükümlü (inflected) bir dildir. İsimler 3 büküm grubuna (1., 2. ve 3. çekim) ayrılır ve 5 hâl (Nominativ, Genitiv, Dativ, Accusativ, Vocativ) ile 3 sayıda (Tekil, Çoğul, İkil) çekimlenir.</p>
+                </div>
+            </div>
+
+            <div class="grammar-grid">
+                <!-- Definite Article Box -->
+                <div id="grammar-article-box"></div>
+
+                <!-- Declension 2 Box -->
+                <div id="grammar-declension2-box"></div>
+
+                <!-- Verb Luo Box -->
+                <div id="grammar-verb-box"></div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VIEW 4: FLASHCARDS TAB
+             ========================================== -->
+        <section id="view-flashcards" class="tab-view">
+            <div id="flashcards-container">
+                <!-- Managed by FlashcardTrainer class -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Word Detail Modal Overlay -->
+    <div id="word-detail-modal" class="modal-overlay hidden" role="dialog" aria-modal="true">
+        <div class="modal-container">
+            <button type="button" class="modal-close-btn" id="modal-close-btn" title="Kapat">✕</button>
+            <div id="modal-body-content">
+                <!-- Populated by JavaScript showWordModal -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Favorites Drawer -->
+    <aside id="favorites-drawer" class="favorites-drawer" aria-label="Favori Kelimeler">
+        <div class="drawer-header">
+            <h3>★ Favori Kelimelerim</h3>
+            <button type="button" class="btn-icon-action" id="close-fav-drawer-btn">✕</button>
+        </div>
+        <div class="drawer-body" id="fav-drawer-list">
+            <!-- Populated by JavaScript -->
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="container footer-content">
+            <div>
+                <strong>Genar's Master Ancient Greek</strong> © 2026. Açık Kaynak Klasik Filoloji Sözlüğü.
+            </div>
+            <div class="footer-greek-motto">
+                « Γνῶθι σεαυτόν • Μηδὲν ἄγαν • Ἐγγύα πάρα δ' ἄτα »
+            </div>
+            <div>
+                Hosted on GitHub Pages 🏛️
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts (Ordered Dependency Execution) -->
+    <script src="data/alphabet.js"></script>
+    <script src="data/grammar_tables.js"></script>
+    <script src="data/dictionary.js"></script>
+    <script src="js/greek-utils.js"></script>
+    <script src="js/virtual-keyboard.js"></script>
+    <script src="js/flashcards.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
