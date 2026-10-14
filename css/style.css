@@ -46,6 +46,8 @@
 }
 
 /* Dark Theme (Athenian Onyx) */
+html.theme-dark,
+html.theme-dark body,
 body.theme-dark {
     --bg-page: #0f1216;
     --bg-surface: #181d24;

@@ -11,8 +11,29 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+
+    <script>
+        // Automatic system theme detection (no flash on load)
+        (function() {
+            var saved = localStorage.getItem('genar_greek_theme');
+            var isDark = false;
+            if (saved === 'theme-dark') {
+                isDark = true;
+            } else if (saved === 'theme-parchment') {
+                isDark = false;
+            } else {
+                // System preference
+                isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            }
+            if (isDark) {
+                document.documentElement.classList.add('theme-dark');
+            } else {
+                document.documentElement.classList.add('theme-parchment');
+            }
+        })();
+    </script>
 </head>
-<body class="theme-parchment">
+<body>
 
     <!-- Header -->
     <header class="app-header">

@@ -117,23 +117,78 @@ class GreekApp {
     }
 
     initTheme() {
-        const savedTheme = localStorage.getItem('genar_greek_theme') || 'theme-parchment';
-        document.body.className = savedTheme;
+        this.themeSetting = localStorage.getItem('genar_greek_theme') || 'auto';
+        this.applyTheme();
+
+        // Listen for OS system theme changes in real-time
+        if (window.matchMedia) {
+            const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            const handleSystemChange = () => {
+                if (this.themeSetting === 'auto') {
+                    this.applyTheme();
+                }
+            };
+            if (mediaQuery.addEventListener) {
+                mediaQuery.addEventListener('change', handleSystemChange);
+            } else if (mediaQuery.addListener) {
+                mediaQuery.addListener(handleSystemChange);
+            }
+        }
+    }
+
+    applyTheme() {
+        let isDark = false;
+        if (this.themeSetting === 'theme-dark') {
+            isDark = true;
+        } else if (this.themeSetting === 'theme-parchment') {
+            isDark = false;
+        } else {
+            // 'auto' / System theme detection
+            isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        }
+
+        document.body.classList.toggle('theme-dark', isDark);
+        document.body.classList.toggle('theme-parchment', !isDark);
+        document.documentElement.classList.toggle('theme-dark', isDark);
+        document.documentElement.classList.toggle('theme-parchment', !isDark);
+
+        this.updateThemeButton();
+    }
+
+    updateThemeButton() {
         const themeBtn = document.getElementById('theme-toggle-btn');
-        if (themeBtn) {
-            themeBtn.textContent = savedTheme === 'theme-dark' ? '☀️ Parşömen Modu' : '🌙 Gece Mermeri';
+        if (!themeBtn) return;
+
+        const isCurrentlyDark = document.body.classList.contains('theme-dark');
+        if (this.themeSetting === 'auto') {
+            themeBtn.innerHTML = `🌓 Sistem (${isCurrentlyDark ? 'Koyu' : 'Açık'})`;
+            themeBtn.title = 'Sistem teması aktif. Tıklayarak temayı manuel sabitleyebilirsiniz.';
+        } else if (this.themeSetting === 'theme-dark') {
+            themeBtn.innerHTML = `🌙 Gece (Koyu)`;
+            themeBtn.title = 'Koyu tema sabit. Tıklayarak Açık temaya geçebilirsiniz.';
+        } else {
+            themeBtn.innerHTML = `☀️ Parşömen (Açık)`;
+            themeBtn.title = 'Açık tema sabit. Tıklayarak Otomatik Sistem temasına dönebilirsiniz.';
         }
     }
 
     toggleTheme() {
-        const isDark = document.body.classList.contains('theme-dark');
-        const newTheme = isDark ? 'theme-parchment' : 'theme-dark';
-        document.body.className = newTheme;
-        localStorage.setItem('genar_greek_theme', newTheme);
-        const themeBtn = document.getElementById('theme-toggle-btn');
-        if (themeBtn) {
-            themeBtn.textContent = newTheme === 'theme-dark' ? '☀️ Parşömen Modu' : '🌙 Gece Mermeri';
+        if (this.themeSetting === 'auto') {
+            const isSystemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            this.themeSetting = isSystemDark ? 'theme-parchment' : 'theme-dark';
+        } else if (this.themeSetting === 'theme-dark') {
+            this.themeSetting = 'theme-parchment';
+        } else if (this.themeSetting === 'theme-parchment') {
+            this.themeSetting = 'auto'; // Return back to automatic system default
         }
+
+        if (this.themeSetting === 'auto') {
+            localStorage.removeItem('genar_greek_theme');
+        } else {
+            localStorage.setItem('genar_greek_theme', this.themeSetting);
+        }
+
+        this.applyTheme();
     }
 
     renderStats() {
