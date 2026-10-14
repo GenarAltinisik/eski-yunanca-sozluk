@@ -1762,3 +1762,126 @@ body.theme-dark .badge-athenaze {
     color: var(--text-secondary);
 }
 
+/* ==========================================
+   EMEL HOCA CURATED LIST SPECIAL STYLES & BADGES
+   ========================================== */
+.cat-pill.emel-pill {
+    background: linear-gradient(135deg, rgba(142, 68, 173, 0.09) 0%, rgba(214, 51, 132, 0.16) 100%);
+    border: 1.5px solid #a569bd;
+    color: #6c3483;
+    font-weight: 700;
+    padding: 6px 16px;
+    box-shadow: 0 2px 6px rgba(142, 68, 173, 0.15);
+}
+
+.cat-pill.emel-pill:hover {
+    background: linear-gradient(135deg, rgba(142, 68, 173, 0.18) 0%, rgba(214, 51, 132, 0.24) 100%);
+    border-color: #8e44ad;
+    color: #512e5f;
+    transform: translateY(-1px);
+}
+
+.cat-pill.emel-pill.active {
+    background: linear-gradient(135deg, #6c3483 0%, #884ea0 100%);
+    color: #ffffff;
+    border-color: #d7bde2;
+    box-shadow: 0 0 12px rgba(142, 68, 173, 0.45);
+    font-weight: 800;
+}
+
+body.theme-dark .cat-pill.emel-pill {
+    background: rgba(165, 105, 189, 0.18);
+    color: #f5b7b1;
+    border-color: #bb8fce;
+}
+
+body.theme-dark .cat-pill.emel-pill:hover {
+    background: rgba(165, 105, 189, 0.28);
+    color: #fadbd8;
+    border-color: #d7bde2;
+}
+
+body.theme-dark .cat-pill.emel-pill.active {
+    background: linear-gradient(135deg, #7d3c98 0%, #a569bd 100%);
+    color: #ffffff;
+    font-weight: 800;
+    box-shadow: 0 0 12px rgba(187, 143, 206, 0.5);
+}
+
+/* Emel Hoca Badges on Word Cards */
+.badge-emel {
+    background: linear-gradient(135deg, #6c3483 0%, #9b59b6 100%);
+    color: #ffffff;
+    border: 1px solid #d7bde2;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+body.theme-dark .badge-emel {
+    background: linear-gradient(135deg, #4a235a 0%, #6c3483 100%);
+    color: #f5cba7;
+    border: 1px solid #bb8fce;
+}
+
+.word-emel-preview {
+    font-size: 13px;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    background: rgba(142, 68, 173, 0.08);
+    border-left: 3px solid #9b59b6;
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+    line-height: 1.5;
+}
+
+body.theme-dark .word-emel-preview {
+    background: rgba(142, 68, 173, 0.18);
+    border-left-color: #bb8fce;
+}
+
+.word-emel-preview .emel-label {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #7d3c98;
+    margin-right: 4px;
+}
+
+body.theme-dark .word-emel-preview .emel-label {
+    color: #d7bde2;
+}
+
+/* Emel Hoca Section in Modal */
+.emel-modal-section {
+    background: var(--bg-page);
+    border: 1px solid var(--border-accent);
+    border-left: 5px solid #9b59b6;
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+}
+
+body.theme-dark .emel-modal-section {
+    border-left-color: #bb8fce;
+}
+
+.emel-modal-section h4 {
+    color: #6c3483;
+    margin-bottom: 8px;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+body.theme-dark .emel-modal-section h4 {
+    color: #d7bde2;
+}
+
+.emel-notes-box {
+    margin-top: 4px;
+    font-size: 15px;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+

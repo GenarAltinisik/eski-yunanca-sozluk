@@ -35,6 +35,8 @@ class FlashcardTrainer {
             this.currentDeck = [...this.fullDeck];
         } else if (category === 'athenaze') {
             this.currentDeck = this.fullDeck.filter(item => item.isAthenaze === true || (item.tags && item.tags.includes('athenaze')));
+        } else if (category === 'emel_hoca') {
+            this.currentDeck = this.fullDeck.filter(item => item.isEmelHoca === true || (item.tags && item.tags.includes('emel_hoca')));
         } else {
             this.currentDeck = this.fullDeck.filter(item => item.category === category);
         }
@@ -51,6 +53,7 @@ class FlashcardTrainer {
                         <select id="fc-category-select" class="scholarly-select">
                             <option value="all">Tüm Kelimeler (${this.fullDeck.length})</option>
                             <option value="athenaze">📚 Athenaze: Book I (1α – 3β)</option>
+                            <option value="emel_hoca">🌸 Emel Hoca'nın Seçtikleri</option>
                             <option value="Felsefe">Felsefe & Düşünce</option>
                             <option value="Politika & Toplum">Politika & Toplum</option>
                             <option value="Tarım & Doğa">Tarım & Doğa</option>

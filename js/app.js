@@ -62,6 +62,8 @@ class GreekApp {
                 translit,
                 athenazeForms,
                 isAthenaze: !!item.isAthenaze,
+                isEmelHoca: !!item.isEmelHoca,
+                emelNotes: (item.emel_notes || '').toLowerCase(),
                 trText,
                 enText,
                 etymText,
@@ -239,6 +241,8 @@ class GreekApp {
         if (this.activeCategory !== 'all') {
             if (this.activeCategory === 'athenaze') {
                 filtered = filtered.filter(item => item.isAthenaze === true || (item.raw.tags && item.raw.tags.includes('athenaze')));
+            } else if (this.activeCategory === 'emel_hoca') {
+                filtered = filtered.filter(item => item.isEmelHoca === true || (item.raw.tags && item.raw.tags.includes('emel_hoca')));
             } else {
                 filtered = filtered.filter(item => item.raw.category === this.activeCategory);
             }
@@ -357,6 +361,7 @@ class GreekApp {
 
                     <div class="word-badges">
                         ${item.isAthenaze ? `<span class="badge badge-athenaze" title="Athenaze Book I (1α-3β) Kelimesi">📚 Athenaze I</span>` : ''}
+                        ${item.isEmelHoca ? `<span class="badge badge-emel" title="Emel Hoca'nın Seçtikleri">🌸 Emel Hoca</span>` : ''}
                         <span class="badge badge-pos">${item.partOfSpeech || 'Kelime'}</span>
                         <span class="badge badge-cat">${item.category || 'Genel'}</span>
                         <span class="badge badge-stars" title="Kullanım Sıklığı">${stars}</span>
@@ -369,6 +374,12 @@ class GreekApp {
                     ${item.athenaze_forms ? `
                         <div class="word-athenaze-preview">
                             <span class="ath-label">Metin Formları:</span> ${item.athenaze_forms}
+                        </div>
+                    ` : ''}
+
+                    ${item.emel_notes ? `
+                        <div class="word-emel-preview">
+                            <span class="emel-label">🌸 Emel Hoca:</span> ${item.emel_notes}
                         </div>
                     ` : ''}
 
@@ -490,6 +501,7 @@ class GreekApp {
 
             <div class="modal-badges-bar">
                 ${item.isAthenaze ? `<span class="badge badge-athenaze">📚 Athenaze: Book I (1α – 3β)</span>` : ''}
+                ${item.isEmelHoca ? `<span class="badge badge-emel">🌸 Emel Hoca'nın Seçtikleri</span>` : ''}
                 <span class="badge badge-pos">${item.partOfSpeech || ''}</span>
                 <span class="badge badge-cat">${item.category || ''}</span>
                 <span class="badge badge-stars" title="Sıklık">${stars}</span>
@@ -500,6 +512,15 @@ class GreekApp {
                     <h4>📚 Athenaze (1α – 3β) Metin ve Çekim Formları</h4>
                     <div class="athenaze-forms-box">
                         <strong>Metinde Geçen Biçimler:</strong> ${item.athenaze_forms}
+                    </div>
+                </div>
+            ` : ''}
+
+            ${item.emel_notes ? `
+                <div class="detail-section emel-modal-section">
+                    <h4>🌸 Emel Hoca'nın Seçtikleri & Ders Açıklaması</h4>
+                    <div class="emel-notes-box">
+                        ${item.emel_notes}
                     </div>
                 </div>
             ` : ''}
