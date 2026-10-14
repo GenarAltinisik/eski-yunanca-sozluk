@@ -147,16 +147,17 @@ body {
 }
 
 .brand-title {
-    font-family: var(--font-heading);
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
+    font-family: var(--font-greek), Georgia, 'Times New Roman', serif;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
     color: var(--text-primary);
     line-height: 1.2;
 }
 
 .brand-title .accent {
     color: var(--gold);
+    font-weight: 700;
 }
 
 .brand-subtitle {
