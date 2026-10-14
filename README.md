@@ -8,11 +8,11 @@ Kapsamlı, politeknik Grekçe destekli, interaktif sanal klavyeli ve dil bilgisi
 
 ## ✨ Temel Özellikler
 
-- **📖 Kapsamlı Sözlük Veritabanı:**
-  - 130+ derinlemesine incelenmiş temel ve klasik Eski Yunanca sözcük (Attika, İon ve Homeros Grekçesi).
-  - Her kelimede tam politeknik lemma (`λόγος, -ου, ὁ`), büküm bilgisi, transkripsiyon (`lógos`), Türkçe ve İngilizce (Liddell-Scott-Jones) tanımlar.
-  - **Etimoloji ve Türkçe Türevler:** Kelimelerin Proto-Hint-Avrupa kökenleri ve günümüz Türkçesi ile Batı dillerindeki türevleri (*felsefe*, *tarih*, *demokrasi*, *biyoloji*, *psikoloji*, *arkeoloji*, *kriz*, *monarşi*, vb.).
-  - **Klasik Alıntılar:** Platon, Homeros, Aristoteles, Sophokles, Herodotos, Thukydides ve Ksenophon'dan orijinal Grekçe pasajlar ve Türkçe çevirileri.
+- **📖 Kapsamlı Sözlük Veritabanı (267+ Kelime):**
+  - **Athenaze: Book I (Bölüm 1α – 3β) Tüm Kelimeleri:** 159 kelimelik tam ders kitabı sözlüğü; metinde geçen çekim ve emir formları, gramer notları ve okuma parçalarıyla zenginleştirilmiştir.
+  - **Özel Athenaze Filtresi:** Tek tıkla sadece Athenaze kitabında geçen kelimeleri listeleme ve çalışma olanağı.
+  - **Klasik Felsefe & Edebiyat Sözlüğü:** Platon, Homeros, Aristoteles, Sophokles, Herodotos, Thukydides ve Ksenophon metinlerinden alıntılar ve tam politeknik lemmalar (`λόγος, -ου, ὁ`).
+  - **Etimoloji ve Türkçe Türevler:** Kelimelerin Proto-Hint-Avrupa kökenleri ve günümüz Türkçesi ile dünya dillerindeki türevleri (*felsefe*, *tarih*, *demokrasi*, *biyoloji*, *psikoloji*, *arkeoloji*, *kriz*, *monarşi*, vb.).
 
 - **🔍 Çok Yönlü Akıllı Arama:**
   - Grekçe arama (vurgulu veya vurgusuz: `λόγος` ya da `λογος`).

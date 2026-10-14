@@ -1654,3 +1654,109 @@ body {
         font-size: 17px;
     }
 }
+
+/* ==========================================
+   ATHENAZE BOOK I SPECIAL STYLES & BADGES
+   ========================================== */
+.cat-pill.athenaze-pill {
+    background: linear-gradient(135deg, rgba(30, 61, 89, 0.08) 0%, rgba(212, 175, 55, 0.22) 100%);
+    border: 1.5px solid var(--gold);
+    color: var(--primary);
+    font-weight: 700;
+    padding: 6px 16px;
+    box-shadow: 0 2px 6px rgba(212, 175, 55, 0.15);
+}
+
+.cat-pill.athenaze-pill:hover {
+    background: var(--gold-bg);
+    border-color: var(--gold);
+    color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.cat-pill.athenaze-pill.active {
+    background: linear-gradient(135deg, #1e3d59 0%, #2b5b84 100%);
+    color: #ffffff;
+    border-color: var(--gold-light);
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.45);
+    font-weight: 800;
+}
+
+body.theme-dark .cat-pill.athenaze-pill {
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--gold-light);
+    border-color: var(--gold);
+}
+
+body.theme-dark .cat-pill.athenaze-pill.active {
+    background: var(--gold);
+    color: #121517;
+    font-weight: 800;
+}
+
+/* Athenaze Badges on Word Cards */
+.badge-athenaze {
+    background: linear-gradient(135deg, #7a2236 0%, #a83232 100%);
+    color: #ffffff;
+    border: 1px solid #d4af37;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+body.theme-dark .badge-athenaze {
+    background: linear-gradient(135deg, #4d1421 0%, #7a2236 100%);
+    color: #ffd700;
+    border: 1px solid #d4af37;
+}
+
+.word-athenaze-preview {
+    font-size: 13px;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    background: var(--gold-bg);
+    border-left: 3px solid var(--gold);
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-greek);
+}
+
+.word-athenaze-preview .ath-label {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-right: 4px;
+}
+
+/* Athenaze Section in Modal */
+.athenaze-modal-section {
+    background: var(--bg-page);
+    border: 1px solid var(--border-accent);
+    border-left: 5px solid var(--gold);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+}
+
+.athenaze-modal-section h4 {
+    color: var(--primary);
+    margin-bottom: 8px;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.athenaze-forms-box {
+    margin-top: 4px;
+    font-family: var(--font-greek);
+    font-size: 16px;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.athenaze-forms-box strong {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+

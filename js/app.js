@@ -48,6 +48,7 @@ class GreekApp {
             const normLemma = window.GreekUtils.normalizeGreek(item.lemma);
             const latinWord = window.GreekUtils.toLatinSearchKey(item.word);
             const translit = (item.transliteration || '').toLowerCase();
+            const athenazeForms = (item.athenaze_forms || '').toLowerCase();
             const trText = (item.meanings_tr || []).join(' ').toLowerCase();
             const enText = (item.meanings_en || []).join(' ').toLowerCase();
             const etymText = (item.etymology || '').toLowerCase();
@@ -59,6 +60,8 @@ class GreekApp {
                 normLemma,
                 latinWord,
                 translit,
+                athenazeForms,
+                isAthenaze: !!item.isAthenaze,
                 trText,
                 enText,
                 etymText,
@@ -179,7 +182,11 @@ class GreekApp {
 
         // Category filter
         if (this.activeCategory !== 'all') {
-            filtered = filtered.filter(item => item.raw.category === this.activeCategory);
+            if (this.activeCategory === 'athenaze') {
+                filtered = filtered.filter(item => item.isAthenaze === true || (item.raw.tags && item.raw.tags.includes('athenaze')));
+            } else {
+                filtered = filtered.filter(item => item.raw.category === this.activeCategory);
+            }
         }
 
         // POS filter
@@ -198,6 +205,9 @@ class GreekApp {
                 // Exact or partial Greek
                 if (item.normWord.includes(normQ) || item.normLemma.includes(normQ)) return true;
                 if (normBeta && item.normWord.includes(normBeta)) return true;
+
+                // Athenaze forms search (e.g. βοῦν, βόες, ἀγρόν)
+                if (item.athenazeForms && (item.athenazeForms.includes(q) || item.athenazeForms.includes(normQ))) return true;
 
                 // Latin transliteration
                 if (item.latinWord.includes(latinQ) || item.translit.includes(latinQ)) return true;
@@ -291,6 +301,7 @@ class GreekApp {
                     <div class="word-lemma">${item.lemma}</div>
 
                     <div class="word-badges">
+                        ${item.isAthenaze ? `<span class="badge badge-athenaze" title="Athenaze Book I (1α-3β) Kelimesi">📚 Athenaze I</span>` : ''}
                         <span class="badge badge-pos">${item.partOfSpeech || 'Kelime'}</span>
                         <span class="badge badge-cat">${item.category || 'Genel'}</span>
                         <span class="badge badge-stars" title="Kullanım Sıklığı">${stars}</span>
@@ -299,6 +310,12 @@ class GreekApp {
                     <div class="word-tr-meaning">
                         ${trMeanings}
                     </div>
+
+                    ${item.athenaze_forms ? `
+                        <div class="word-athenaze-preview">
+                            <span class="ath-label">Metin Formları:</span> ${item.athenaze_forms}
+                        </div>
+                    ` : ''}
 
                     ${item.derivatives && item.derivatives.length > 0 ? `
                         <div class="word-derivatives-preview">
@@ -417,10 +434,20 @@ class GreekApp {
             </div>
 
             <div class="modal-badges-bar">
+                ${item.isAthenaze ? `<span class="badge badge-athenaze">📚 Athenaze: Book I (1α – 3β)</span>` : ''}
                 <span class="badge badge-pos">${item.partOfSpeech || ''}</span>
                 <span class="badge badge-cat">${item.category || ''}</span>
                 <span class="badge badge-stars" title="Sıklık">${stars}</span>
             </div>
+
+            ${item.athenaze_forms ? `
+                <div class="detail-section athenaze-modal-section">
+                    <h4>📚 Athenaze (1α – 3β) Metin ve Çekim Formları</h4>
+                    <div class="athenaze-forms-box">
+                        <strong>Metinde Geçen Biçimler:</strong> ${item.athenaze_forms}
+                    </div>
+                </div>
+            ` : ''}
 
             <div class="detail-section">
                 <h4>📖 Türkçe Tanımlar & Anlam Nüansları</h4>

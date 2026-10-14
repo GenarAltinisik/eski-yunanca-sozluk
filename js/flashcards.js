@@ -33,6 +33,8 @@ class FlashcardTrainer {
     filterCategory(category) {
         if (!category || category === 'all') {
             this.currentDeck = [...this.fullDeck];
+        } else if (category === 'athenaze') {
+            this.currentDeck = this.fullDeck.filter(item => item.isAthenaze === true || (item.tags && item.tags.includes('athenaze')));
         } else {
             this.currentDeck = this.fullDeck.filter(item => item.category === category);
         }
@@ -48,13 +50,15 @@ class FlashcardTrainer {
                         <label for="fc-category-select">Kategori:</label>
                         <select id="fc-category-select" class="scholarly-select">
                             <option value="all">Tüm Kelimeler (${this.fullDeck.length})</option>
+                            <option value="athenaze">📚 Athenaze: Book I (1α – 3β)</option>
                             <option value="Felsefe">Felsefe & Düşünce</option>
                             <option value="Politika & Toplum">Politika & Toplum</option>
+                            <option value="Tarım & Doğa">Tarım & Doğa</option>
                             <option value="Doğa & Bilim">Doğa & Bilim</option>
                             <option value="Mitoloji & İnanç">Mitoloji & İnanç</option>
-                            <option value="Edebiyat & Sanat">Edebiyat & Sanat</option>
                             <option value="Temel Fiiller">Temel Fiiller</option>
                             <option value="Günlük Yaşam">Günlük Yaşam</option>
+                            <option value="Zarflar & Edatlar">Zarflar & Edatlar</option>
                         </select>
                     </div>
 

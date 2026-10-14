@@ -1,4 +1,4 @@
-// Ancient Greek Comprehensive Vocabulary Dataset
+// Ancient Greek Comprehensive Vocabulary Dataset (Includes Athenaze Book I 1a-3b)
 window.ANCIENT_GREEK_DICTIONARY = [
   {
     "id": "logos",
@@ -857,7 +857,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Protagoras",
         "work": "Fragman 1"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "οἱ ἄνθρωποι"
   },
   {
     "id": "soma",
@@ -937,6 +942,10 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Platon",
         "work": "Sokrates'in Savunması 38a"
       }
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
     ]
   },
   {
@@ -1015,7 +1024,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Platon",
         "work": "Epigramlar"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "τὸν χρόνον"
   },
   {
     "id": "theos",
@@ -1212,7 +1226,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "tr": "Bildiğim bir şey var, o da hiçbir şey bilmediğimdir.",
         "author": "Sokrates"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "εἶ, ἐστί[ν], εἰσί[ν], ἴσθι"
   },
   {
     "id": "lego",
@@ -1253,7 +1272,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Herodotos",
         "work": "Tarih 7.152"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "λέγει"
   },
   {
     "id": "gignosko",
@@ -1379,7 +1403,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "tr": "Zincirleri çözdü ve özgürlük verdi.",
         "author": "Ksenophon"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "λύουσι"
   },
   {
     "id": "horao",
@@ -1577,7 +1606,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Solon / Platon",
         "work": "Devlet 435c"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "καλός"
   },
   {
     "id": "kakos",
@@ -1653,7 +1687,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "tr": "Büyük İskender.",
         "author": "Tarihsel lakap"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "μέγαν"
   },
   {
     "id": "pas",
@@ -1721,7 +1760,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Julius Caesar",
         "work": "Suetonius, On İki Sezar"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "καί"
   },
   {
     "id": "en",
@@ -1754,7 +1798,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Yuhanna İncili",
         "work": "1:1"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "ἐν (+ Dat.)"
   },
   {
     "id": "eis",
@@ -1786,7 +1835,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "tr": "Kente doğru gidiyor.",
         "author": "Klasik Örnek"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "εἰς (+ Acc.)"
   },
   {
     "id": "ek",
@@ -1819,7 +1873,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "tr": "Hiçten hiçbir şey çıkmaz (ex nihilo nihil fit).",
         "author": "Parmenides / Lucretius"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "ἐκ / ἐξ (+ Gen.)"
   },
   {
     "id": "ou",
@@ -1851,7 +1910,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "tr": "Çünkü bir başkası yoktur.",
         "author": "Platon"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "οὐ / οὐκ / οὐχ"
   },
   {
     "id": "polemos",
@@ -2038,7 +2102,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Aristoteles",
         "work": "Politika 1252b"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "τὸν οἶκον, τοῦ οἴκου, τῷ οἴκῳ"
   },
   {
     "id": "helios",
@@ -2075,6 +2144,10 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Herakleitos",
         "work": "Fragman B94"
       }
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
     ]
   },
   {
@@ -2306,7 +2379,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "tr": "Haydi şimdi getir bakalım!",
         "author": "Platon"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "φέρει, φέρουσιν, φέρε, φέρειν"
   },
   {
     "id": "echo",
@@ -2379,7 +2457,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "tr": "İleriye doğru yürü!",
         "author": "Homer"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "βαίνει"
   },
   {
     "id": "doxa",
@@ -4029,7 +4112,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Homeros",
         "work": "İlyada"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "ὦ πάτερ, τὸν πατέρα"
   },
   {
     "id": "meter",
@@ -4130,7 +4218,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "tr": "Eğitim (paideia), çocuk için itidal ve erdemdir.",
         "author": "Menandros"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "ὦ παῖ"
   },
   {
     "id": "kyon",
@@ -4400,7 +4493,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Aristoteles",
         "work": "Politika 1254b"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "τὸν δοῦλον"
   },
   {
     "id": "stratos",
@@ -4536,7 +4634,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "tr": "Taş üstünde taş bırakılmayacak.",
         "author": "Matta İncili 24:2"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "τὸν λίθον, οἱ λίθοι, τοὺς λίθους"
   },
   {
     "id": "selene",
@@ -4634,7 +4737,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Apollodoros",
         "work": "Bibliotheke"
       }
-    ]
+    ],
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "athenaze_forms": "τὸν πόδα, τοῦ ποδός"
   },
   {
     "id": "glossa",
@@ -4701,6 +4809,4458 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "greek": "αἷμα καὶ ὕδωρ.",
         "tr": "Kan ve su.",
         "author": "Yuhanna İncili 19:34"
+      }
+    ]
+  },
+  {
+    "id": "ath_agrs",
+    "word": "ἀγρός",
+    "lemma": "ὁ ἀγρός, τοῦ ἀγροῦ",
+    "transliteration": "agrós",
+    "athenaze_forms": "τὸν ἀγρόν, τοῦ ἀγροῦ, τῷ ἀγρῷ, τοῖς ἀγροῖς",
+    "partOfSpeech": "İsim (Eril, 2. Çekim)",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Tarla, kır, arazi (çoğul: kırsal bölge, taşra)"
+    ],
+    "meanings_en": [
+      "field, countryside, land"
+    ],
+    "etymology": "Hint-Avrupa kökü *h₂éǵros (tarla, otlak; krş. Latince ager/agri, İngilizce acre).",
+    "derivatives": [
+      "tarım bilimi (agronomi), agronom, agrobiyoloji"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "οἰκεῖ δὲ ὁ Δικαιόπολις οὐκ ἐν ταῖς Ἀθήναις ἀλλ' ἐν τοῖς ἀγροῖς.",
+        "tr": "Dikaiopolis Atina'da değil, kırsalda (tarlalarda) yaşar.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_rotos",
+    "word": "ἄροτος",
+    "lemma": "ὁ ἄροτος, τοῦ ἀρότου",
+    "transliteration": "árotos",
+    "athenaze_forms": "ὁ ἄροτος",
+    "partOfSpeech": "İsim (Eril, 2. Çekim)",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Çift sürme, toprağı sabanla sürme eylemi",
+      "Ekin zamanı"
+    ],
+    "meanings_en": [
+      "ploughing, tilling of the soil"
+    ],
+    "etymology": "ἀρόω (çift sürmek) fiilinden türemiştir.",
+    "derivatives": [
+      "arable (tarıma elverişli toprak)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "χαλεπός ἐστιν ὁ ἄροτος.",
+        "tr": "Çift sürmek zordur.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_rotron",
+    "word": "ἄροτρον",
+    "lemma": "τὸ ἄροτρον, τοῦ ἀρότρου",
+    "transliteration": "árotron",
+    "athenaze_forms": "τὸ ἄροτρον",
+    "partOfSpeech": "İsim (Nötr, 2. Çekim)",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Saban, pulluk"
+    ],
+    "meanings_en": [
+      "plough"
+    ],
+    "etymology": "Hint-Avrupa kökü *h₂orh₃trom (saban; krş. Latince aratrum).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἕλκουσι δὲ τὸ ἄροτρον οἱ βόες.",
+        "tr": "Öküzler sabanı çekerler.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_autourgs",
+    "word": "αὐτουργός",
+    "lemma": "ὁ αὐτουργός, τοῦ αὐτουργοῦ",
+    "transliteration": "autourgós",
+    "athenaze_forms": "ὁ αὐτουργός",
+    "partOfSpeech": "İsim (Eril, 2. Çekim)",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Kendi toprağını bizzat işleyen çiftçi, kendi emeğiyle geçinen köylü"
+    ],
+    "meanings_en": [
+      "one who works his own land, smallholder farmer"
+    ],
+    "etymology": "αὐτός (kendi) + ἔργον (iş, emek). 'Kendi işini kendi yapan' demektir.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὁ γὰρ Δικαιόπολις αὐτουργός ἐστιν.",
+        "tr": "Çünkü Dikaiopolis kendi toprağını işleyen bir çiftçidir.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_bos",
+    "word": "βοῦς",
+    "lemma": "ὁ / ἡ βοῦς, βοός",
+    "transliteration": "boûs",
+    "athenaze_forms": "τὸν βοῦν, οἱ βόες, ὦ βόες, τοὺς βοῦς",
+    "partOfSpeech": "İsim (Ortak Cinsiyet, Düzensiz 3. Çekim)",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Öküz, sığır, inek"
+    ],
+    "meanings_en": [
+      "ox, bull, cow, cattle"
+    ],
+    "etymology": "Hint-Avrupa kökü *gʷōws (sığır/inek; krş. Latince bos/bovis, İngilizce cow, Sanskritçe go).",
+    "derivatives": [
+      "bostan (Persçe üzerinden akraba kök), bukolik (çoban şiiri)",
+      "Bosphorus / Boğaziçi (Boos-poros = İnek/Öküz Geçidi!)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἐλαύνει τοὺς βοῦς εἰς τὸν ἀγρόν.",
+        "tr": "Öküzleri tarlaya doğru sürer.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_depnon",
+    "word": "δεῖπνον",
+    "lemma": "τὸ δεῖπνον, τοῦ δείπνου",
+    "transliteration": "deîpnon",
+    "athenaze_forms": "τὸ δεῖπνον",
+    "partOfSpeech": "İsim (Nötr, 2. Çekim)",
+    "category": "Günlük Yaşam",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Akşam yemeği, ana yemek, ziyafet"
+    ],
+    "meanings_en": [
+      "dinner, evening meal"
+    ],
+    "etymology": "Hint-Avrupa kökü *dap- (pay etmek, yemek sunmak; krş. Latince daps).",
+    "derivatives": [
+      "deipnosofist (sofra bilgesi)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "καὶ μετὰ τὸ δεῖπνον καθεύδει.",
+        "tr": "Ve yemekten sonra uyur.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_dndron",
+    "word": "δένδρον",
+    "lemma": "τὸ δένδρον, τοῦ δένδρου",
+    "transliteration": "déndron",
+    "athenaze_forms": "τῷ δένδρῳ",
+    "partOfSpeech": "İsim (Nötr, 2. Çekim)",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Ağaç, fidan"
+    ],
+    "meanings_en": [
+      "tree"
+    ],
+    "etymology": "Hint-Avrupa kökü *deru- (ağaç, odun; krş. İngilizce tree).",
+    "derivatives": [
+      "dendroloji (ağaç bilimi), dendrokronoloji (ağaç halkalarıyla tarihleme)",
+      "rododendron (orman gülü)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἡσυχάζει ὑπὸ τῷ δένδρῳ.",
+        "tr": "Ağacın altında dinlenir.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_despts",
+    "word": "δεσπότης",
+    "lemma": "ὁ δεσπότης, τοῦ δεσπότου",
+    "transliteration": "despótēs",
+    "athenaze_forms": "ὦ δέσποτα",
+    "partOfSpeech": "İsim (Eril, 1. Çekim - ης)",
+    "category": "Politika & Toplum",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Efendi, ev sahibi, mevla, hükümdar"
+    ],
+    "meanings_en": [
+      "master, lord of the house, despot"
+    ],
+    "etymology": "Hint-Avrupa kökü *dems-pótis (evin efendisi; krş. Latince dominus, Sanskritçe dampati).",
+    "derivatives": [
+      "despot, despotizm, despotik"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "χαλεπός ἐστιν ὁ δεσπότης.",
+        "tr": "Efendi çok huysuzdur / serttir.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_hrma",
+    "word": "ἕρμα",
+    "lemma": "τὸ ἕρμα, τοῦ ἕρματος",
+    "transliteration": "hérma",
+    "athenaze_forms": "τὸ ἕρμα",
+    "partOfSpeech": "İsim (Nötr, 3. Çekim)",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Taş yığını, tarla temizlenirken toplanan taş tepeciği",
+      "Gemi safrası",
+      "Hermes kültüyle ilişkili yol sınırı taşları"
+    ],
+    "meanings_en": [
+      "heap of stones, sunken rock, ballast"
+    ],
+    "etymology": "Hermes (Ἑρμῆς) tanrı adıyla yakından akrabadır.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "αἴρουσι τοὺς λίθους καὶ ἕρμα ποιοῦσιν.",
+        "tr": "Taşları kaldırırlar ve bir taş yığını yaparlar.",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_zygn",
+    "word": "ζυγόν",
+    "lemma": "τὸ ζυγόν, τοῦ ζυγοῦ",
+    "transliteration": "zygón",
+    "athenaze_forms": "τὸ ζυγόν",
+    "partOfSpeech": "İsim (Nötr, 2. Çekim)",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Boyunduruk, koşum takımı",
+      "Terazi kefesi, çifte bağ"
+    ],
+    "meanings_en": [
+      "yoke (for oxen), crossbar, balance"
+    ],
+    "etymology": "Hint-Avrupa kökü *yugóm (birbirine bağlamak; krş. Latince iugum, İngilizce yoke, Sanskritçe yoga).",
+    "derivatives": [
+      "zigot (döllenmiş yumurta / birleşen hücre)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "προσάπτει τὸ ζυγὸν τοῖς βουσίν.",
+        "tr": "Boyunduruğu öküzlere bağlar.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_kntron",
+    "word": "κέντρον",
+    "lemma": "τὸ κέντρον, τοῦ κέντρου",
+    "transliteration": "kéntron",
+    "athenaze_forms": "τὸ κέντρον",
+    "partOfSpeech": "İsim (Nötr, 2. Çekim)",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Üvendire (öküzleri dürtmek için ucu sivri değnek)",
+      "Diken, sokucu iğne (arı/akrep)",
+      "Dairenin merkezi (pergelin sabit sivri ayağının bastığı nokta!)"
+    ],
+    "meanings_en": [
+      "goad (for driving oxen), sharp point, center of a circle"
+    ],
+    "etymology": "κεντέω (dürtmek, batırmak) fiilinden türemiştir.",
+    "derivatives": [
+      "merkez (center, centre, santral)",
+      "merkezcil, santrifüj"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "τῷ κέντρῳ κεντεῖ τοὺς βοῦς.",
+        "tr": "Üvendire ile öküzleri dürter.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_klros",
+    "word": "κλῆρος",
+    "lemma": "ὁ κλῆρος, τοῦ κλήρου",
+    "transliteration": "klêros",
+    "athenaze_forms": "τὸν κλῆρον",
+    "partOfSpeech": "İsim (Eril, 2. Çekim)",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Çiftlik, tarla payı, kurayla düşen arazi hissesi",
+      "Kura, talih"
+    ],
+    "meanings_en": [
+      "lot, allotment of land, farm, portion"
+    ],
+    "etymology": "Kura çekme taşı kökünden.",
+    "derivatives": [
+      "klerik (din adamı / Tanrı payı alan kleros)",
+      "kleriklik"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "γεωργεῖ τὸν κλῆρον.",
+        "tr": "Çiftliğini (toprağını) işler.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_mastigas",
+    "word": "μαστιγίας",
+    "lemma": "ὁ μαστιγίας, τοῦ μαστιγίου",
+    "transliteration": "mastigías",
+    "athenaze_forms": "ὦ μαστιgία / ὦ μαστιγία",
+    "partOfSpeech": "İsim (Eril, 1. Çekim)",
+    "category": "Günlük Yaşam",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Kırbaçlanmayı hak eden haydut, tembel köle, alçak kerata (komedya ve günlük konuşma hakareti)"
+    ],
+    "meanings_en": [
+      "rogue, scoundrel (one who deserves a whipping)"
+    ],
+    "etymology": "μάστιξ (mástix = kırbaç) kelimesinden türetilmiştir.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "τί ποιεῖς, ὦ μαστιγία; οὐ κάμνεις;",
+        "tr": "Ne yapıyorsun bre kerata? Çalışmıyor musun?",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_mschos",
+    "word": "μόσχος",
+    "lemma": "ὁ μόσχος, τοῦ μόσχου",
+    "transliteration": "móschos",
+    "athenaze_forms": "τὸν μόσχον",
+    "partOfSpeech": "İsim (Eril, 2. Çekim)",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Buzağı, dana, yavru sığır",
+      "Genç sürgün, fidan"
+    ],
+    "meanings_en": [
+      "calf, young bull, shoot"
+    ],
+    "etymology": "Hint-Avrupa kökenli taze yavru kelimesi.",
+    "derivatives": [
+      "Moskofor (Moschophoros = Atina Akropolis Müzesindeki ünlü 'Buzağı Taşıyan Adam' heykeli)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὁ μόσχος ἐν τῷ ἀγρῷ βαδίζει.",
+        "tr": "Buzağı tarlada yürür.",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_pnos",
+    "word": "πόνος",
+    "lemma": "ὁ πόνος, τοῦ πόνου",
+    "transliteration": "pónos",
+    "athenaze_forms": "ὁ πόνος",
+    "partOfSpeech": "İsim (Eril, 2. Çekim)",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "İş, emek, zahmet, meşakkat, ağır çalışma"
+    ],
+    "meanings_en": [
+      "toil, hard work, labor, trouble"
+    ],
+    "etymology": "πένομαι (çalışmak, yoksul olmak) kökünden.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "μακρός ἐστιν ὁ πόνος καὶ χαλεπός.",
+        "tr": "İş (zahmet) uzun ve çetindir.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_stos",
+    "word": "σῖτος",
+    "lemma": "ὁ σῖτος, τοῦ σίτου (çoğul nötr: τὰ σῖτα)",
+    "transliteration": "sîtos",
+    "athenaze_forms": "τὸν σῖτον",
+    "partOfSpeech": "İsim (Eril, 2. Çekim)",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Tahıl, buğday, arpa",
+      "Yiyecek, ekmek, gıda"
+    ],
+    "meanings_en": [
+      "grain, wheat, food, bread"
+    ],
+    "etymology": "Ön-Grekçe Akdeniz kökenli tarım kelimesidir.",
+    "derivatives": [
+      "parazit (para + sitos = başkasının ekmeğinden yiyen!)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "πολὺν σῖτον παρέχει ὁ ἀγρός.",
+        "tr": "Tarla bol tahıl sağlar.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_sprma",
+    "word": "σπέρμα",
+    "lemma": "τὸ σπέρμα, τοῦ σπέρματος",
+    "transliteration": "spérma",
+    "athenaze_forms": "τὸ σπέρμα",
+    "partOfSpeech": "İsim (Nötr, 3. Çekim)",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Tohum, dane",
+      "Döl, soy, zürriyet"
+    ],
+    "meanings_en": [
+      "seed, sowing, origin, offspring"
+    ],
+    "etymology": "σπείρω (tohum ekmek, saçmak) fiilinden türemiştir.",
+    "derivatives": [
+      "sperm, spermatozoit, anjiyosperm, jimnosperm (açık tohumlu bitkiler)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "σπείρει τὸ σπέρμα εἰς τὴν γῆν.",
+        "tr": "Tohumu toprağa eker.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_huis",
+    "word": "υἱός",
+    "lemma": "ὁ υἱός, τοῦ υἱοῦ",
+    "transliteration": "huiós",
+    "athenaze_forms": "ὁ υἱός",
+    "partOfSpeech": "İsim (Eril, 2. Çekim)",
+    "category": "Günlük Yaşam",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Oğul, erkek evlat"
+    ],
+    "meanings_en": [
+      "son, child"
+    ],
+    "etymology": "Hint-Avrupa kökü *suHyús (oğul; krş. Sanskritçe sunu, İngilizce son).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὁ δὲ Φίλιππος υἱός ἐστι τοῦ Δικαιοπόλιδος.",
+        "tr": "Philippos ise Dikaiopolis'in oğludur.",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_athnaos",
+    "word": "Ἀθηναῖος",
+    "lemma": "Ἀθηναῖος, -α, -ον",
+    "transliteration": "Athēnaîos",
+    "athenaze_forms": "Ἀθηναῖος",
+    "partOfSpeech": "Özel Sıfat / İsim",
+    "category": "Özel İsimler",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Atinalı, Atina yurttaşı"
+    ],
+    "meanings_en": [
+      "Athenian"
+    ],
+    "etymology": "Ἀθῆναι (Atina kenti) adından.",
+    "derivatives": [
+      "Atinalı"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὁ Δικαιόπολις Ἀθηναῖός ἐστιν.",
+        "tr": "Dikaiopolis Atinalıdır.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_athnai",
+    "word": "Ἀθῆναι",
+    "lemma": "αἱ Ἀθῆναι, τῶν Ἀθηνῶν",
+    "transliteration": "Athênai",
+    "athenaze_forms": "ταῖς Ἀθήναις",
+    "partOfSpeech": "Özel İsim (Dişil Çoğul)",
+    "category": "Özel İsimler",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Atina (Antik Atina kenti, daima çoğul kullanılır)"
+    ],
+    "meanings_en": [
+      "Athens"
+    ],
+    "etymology": "Tanrıça Athena (Ἀθηνᾶ) adından türemiştir.",
+    "derivatives": [
+      "Atina"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "οὐκ οἰκεῖ ἐν ταῖς Ἀθήναις.",
+        "tr": "Atina'da yaşamaz.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_dmtr",
+    "word": "Δημήτηρ",
+    "lemma": "ἡ Δημήτηρ, Δήμητρος",
+    "transliteration": "Dēmḗtēr",
+    "athenaze_forms": "ὦ Δήμητερ, τὴν Δήμητρα",
+    "partOfSpeech": "Özel İsim (Dişil, 3. Çekim)",
+    "category": "Mitoloji & İnanç",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Demeter (Bereket, tarım, tahıl ve hasat tanrıçası; Persephone'nin annesi)"
+    ],
+    "meanings_en": [
+      "Demeter (goddess of agriculture and harvest)"
+    ],
+    "etymology": "δᾶ (Toprak) + μήτηρ (Anne). 'Toprak Ana' demektir.",
+    "derivatives": [
+      "Dimitri, Demet"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἵλεως ἴσθι, ὦ Δήμητερ, καὶ πλήθυνε τὸν σῖτον.",
+        "tr": "Lütfet ey Demeter, ve tahılımızı bereketlendir!",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_dikaipolis",
+    "word": "Δικαιόπολις",
+    "lemma": "ὁ Δικαιόπολις, -ιδος",
+    "transliteration": "Dikaiópolis",
+    "athenaze_forms": "τοῦ Δικαιοπόλιδος",
+    "partOfSpeech": "Özel İsim (Eril)",
+    "category": "Özel İsimler",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Dikaiopolis (Athenaze kitabının dürüst ve çalışkan çiftçi ana karakteri; kelime anlamı: 'Adil Şehirli')"
+    ],
+    "meanings_en": [
+      "Dikaiopolis ('Just City' - main character of Athenaze)"
+    ],
+    "etymology": "δίκαιος (adil) + πόλις (şehir).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὁ Δικαιόπολις ἐν τῷ ἀγρῷ πονεῖ.",
+        "tr": "Dikaiopolis tarlada çalışır.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_zes",
+    "word": "Ζεύς",
+    "lemma": "ὁ Ζεύς, Διός",
+    "transliteration": "Zeús",
+    "athenaze_forms": "ὦ Ζεῦ",
+    "partOfSpeech": "Özel İsim (Eril, Düzensiz 3. Çekim)",
+    "category": "Mitoloji & İnanç",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Zeus (Olympos tanrılarının kralı, göklerin ve şimşeklerin efendisi)"
+    ],
+    "meanings_en": [
+      "Zeus (king of the gods)"
+    ],
+    "etymology": "Hint-Avrupa kökü *dyēws (parlak gökyüzü; krş. Latince Iuppiter, Sanskritçe Dyaus).",
+    "derivatives": [
+      "Jüpiter (Iovis pater)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὦ Ζεῦ, βοήθει μοι.",
+        "tr": "Ey Zeus, bana yardım et!",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_xanthas",
+    "word": "Ξανθίας",
+    "lemma": "ὁ Ξανθίας, τοῦ Ξανθίου",
+    "transliteration": "Xanthías",
+    "athenaze_forms": "ὦ Ξανθία, τὸν Ξανθίαν",
+    "partOfSpeech": "Özel İsim (Eril)",
+    "category": "Özel İsimler",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Ksanthias (Dikaiopolis'in kölesinin adı; sarışın/kızıl saçlı manasında)"
+    ],
+    "meanings_en": [
+      "Xanthias (slave's name, lit. 'blonde/redhead')"
+    ],
+    "etymology": "ξανθός (sarı, sarışın) kelimesinden.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὁ δὲ Ξανθίας δοῦλός ἐστιν ἀργός.",
+        "tr": "Ksanthias ise tembel bir köledir.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_phlippos",
+    "word": "Φίλιππος",
+    "lemma": "ὁ Φίλιππος, τοῦ Φιλίππου",
+    "transliteration": "Phílippos",
+    "athenaze_forms": "ὁ Φίλιππος",
+    "partOfSpeech": "Özel İsim (Eril)",
+    "category": "Özel İsimler",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Philippos (Dikaiopolis'in oğlu; kelime anlamı: 'At seven / at dostu')"
+    ],
+    "meanings_en": [
+      "Philip (Dikaiopolis's son, lit. 'lover of horses')"
+    ],
+    "etymology": "φίλος (seven) + ἵππος (at).",
+    "derivatives": [
+      "Filip, Philip"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὁ Φίλιππος βαδίζει πρὸς τὸν πατέρα.",
+        "tr": "Philippos babasına doğru yürür.",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_g",
+    "word": "ἄγω",
+    "lemma": "ἄγω",
+    "transliteration": "ágō",
+    "athenaze_forms": "ἄγει",
+    "partOfSpeech": "Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Götürmek, sevketmek, sürmek, yönlendirmek",
+      "Geçirmek (zaman)"
+    ],
+    "meanings_en": [
+      "to lead, take, drive, conduct"
+    ],
+    "etymology": "Hint-Avrupa kökü *h₂eǵ- (sürmek, gütmek; krş. Latince agere).",
+    "derivatives": [
+      "pedagog (çocuk yönlendiren), demagog (halk avcısı/sürücüsü)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἄγει τοὺς βοῦς εἰς τὸν ἀγρόν.",
+        "tr": "Öküzleri tarlaya sürer.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_ar",
+    "word": "αἴρω",
+    "lemma": "αἴρω",
+    "transliteration": "aírō",
+    "athenaze_forms": "αἴρει, αἴρουσι, αἶρε, αἴρειν",
+    "partOfSpeech": "Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Kaldırmak, yukarı çekmek, taşımak"
+    ],
+    "meanings_en": [
+      "to lift, raise, take up"
+    ],
+    "etymology": "ἀείρω kökünden türemiştir.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "αἶρε τὸν λίθον, ὦ Ξανθία.",
+        "tr": "Taşı kaldır ey Ksanthias!",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_akolouth",
+    "word": "ἀκολουθέω",
+    "lemma": "ἀκολουθέω, ἀκολουθῶ (+ dativ)",
+    "transliteration": "akolouthéō",
+    "athenaze_forms": "ἀκολουθεῖ",
+    "partOfSpeech": "Büzüşmeli Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Takip etmek, izlemek, ardından gitmek, boyun eğmek"
+    ],
+    "meanings_en": [
+      "to follow, accompany (+ dat)"
+    ],
+    "etymology": "ἀ- (birlikte) + κέλευθος (yol). 'Aynı yolda yürümek' demektir.",
+    "derivatives": [
+      "akolit (kilise çömezi / rahibi takip eden)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὁ δοῦλος ἀκολουθεῖ τῷ δεσπότῃ.",
+        "tr": "Köle efendisini takip eder.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_ar",
+    "word": "ἀρόω",
+    "lemma": "ἀρόω, ἀρῶ",
+    "transliteration": "aróō",
+    "athenaze_forms": "ἀροῦτε, ἀροῦν",
+    "partOfSpeech": "Büzüşmeli Fiil",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Çift sürmek, toprağı sabanla sürmek"
+    ],
+    "meanings_en": [
+      "to plow, till"
+    ],
+    "etymology": "Hint-Avrupa kökü *h₂orh₃- (sürmek; krş. Latince arare).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἀροῦσι τὸν ἀγρόν.",
+        "tr": "Tarlayı sürerler.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_badz",
+    "word": "βαδίζω",
+    "lemma": "βαδίζω",
+    "transliteration": "badízō",
+    "athenaze_forms": "βαδίζει, βαδίζουσιν, βάδιζε",
+    "partOfSpeech": "Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Yürümek, adım adım gitmek, yol almak"
+    ],
+    "meanings_en": [
+      "to walk, go, step"
+    ],
+    "etymology": "βαίνω ve βάδος (adım) kökünden.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "βαδίζει πρὸς τὸν οἶκον.",
+        "tr": "Eve doğru yürür.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_blp",
+    "word": "βλέπω",
+    "lemma": "βλέπω",
+    "transliteration": "blépō",
+    "athenaze_forms": "βλέπει",
+    "partOfSpeech": "Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Bakmak, görmek, göz gezdirmek"
+    ],
+    "meanings_en": [
+      "to look, see, look at"
+    ],
+    "etymology": "Ön-Grekçe kök.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "βλέπει πρὸς τὸν ἥλιον.",
+        "tr": "Güneşe doğru bakar.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_gerg",
+    "word": "γεωργέω",
+    "lemma": "γεωργέω, γεωργῶ",
+    "transliteration": "geōrgéō",
+    "athenaze_forms": "γεωργεῖ",
+    "partOfSpeech": "Büzüşmeli Fiil",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Çiftçilik yapmak, toprağı işlemek"
+    ],
+    "meanings_en": [
+      "to farm, cultivate the earth"
+    ],
+    "etymology": "γῆ (toprak) + ἔργον (iş). 'Toprakla uğraşmak' demektir.",
+    "derivatives": [
+      "George / Yorgi (çiftçi ismi!)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "γεωργεῖ τὸν κλῆρον καὶ πονεῖ ἐν τοῖς ἀγροῖς.",
+        "tr": "Toprağını işler ve tarlalarda emek verir.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_deipn",
+    "word": "δειπνέω",
+    "lemma": "δειπνέω, δειπνῶ",
+    "transliteration": "deipnéō",
+    "athenaze_forms": "δειπνοῦσιν, δείπνει",
+    "partOfSpeech": "Büzüşmeli Fiil",
+    "category": "Günlük Yaşam",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Yemek yemek, akşam yemeği yemek"
+    ],
+    "meanings_en": [
+      "to dine, eat dinner"
+    ],
+    "etymology": "δεῖπνον (yemek) isminden.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἐν τῷ οἴκῳ δειπνοῦσιν.",
+        "tr": "Evde akşam yemeği yerler.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_eisg",
+    "word": "εἰσάγω",
+    "lemma": "εἰσάγω",
+    "transliteration": "eiságō",
+    "athenaze_forms": "εἰσάγει",
+    "partOfSpeech": "Bileşik Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "İçeri götürmek, içeri sokmak, içeri sevk etmek"
+    ],
+    "meanings_en": [
+      "to lead in, bring in"
+    ],
+    "etymology": "εἰς (içine) + ἄγω (götürmek).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "εἰσάγει τοὺς βοῦς εἰς τὴν αὐλήν.",
+        "tr": "Öküzleri avlunun içine sokar.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_eisban",
+    "word": "εἰσβαίνω",
+    "lemma": "εἰσβαίνω",
+    "transliteration": "eisbaínō",
+    "athenaze_forms": "εἰσβαίνει",
+    "partOfSpeech": "Bileşik Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "İçeri girmek, içeri adım atmak"
+    ],
+    "meanings_en": [
+      "to enter, step into"
+    ],
+    "etymology": "εἰς (içine) + βαίνω (adım atmak).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "εἰσβαίνει εἰς τὸν οἶκον.",
+        "tr": "Evin içine girer.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_ekban",
+    "word": "ἐκβαίνω",
+    "lemma": "ἐκβαίνω",
+    "transliteration": "ekbaínō",
+    "athenaze_forms": "ἐκβαίνει",
+    "partOfSpeech": "Bileşik Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Dışarı çıkmak, dışarı adım atmak"
+    ],
+    "meanings_en": [
+      "to step out, come out"
+    ],
+    "etymology": "ἐκ (dışarı) + βαίνω (adım atmak).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἐκβαίνει ἐκ τοῦ οἴκου.",
+        "tr": "Evden dışarı çıkar.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_ekphr",
+    "word": "ἐκφέρω",
+    "lemma": "ἐκφέρω",
+    "transliteration": "ekphérō",
+    "athenaze_forms": "ἐκφέρουσιν, ἔκφερε, ἐκφέρειν",
+    "partOfSpeech": "Bileşik Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Dışarı taşımak, dışarı çıkarmak, defnetmek"
+    ],
+    "meanings_en": [
+      "to carry out, bring forth"
+    ],
+    "etymology": "ἐκ (dışarı) + φέρω (taşımak).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἔκφερε τὸ ἄροtron, ὦ Ξανθία.",
+        "tr": "Sabanı dışarı çıkar ey Ksanthias!",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_elan",
+    "word": "ἐλαύνω",
+    "lemma": "ἐλαύνω",
+    "transliteration": "elaúnō",
+    "athenaze_forms": "ἐλαύνει",
+    "partOfSpeech": "Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Sürmek, gütmek, hızla sevketmek, kürek çekmek"
+    ],
+    "meanings_en": [
+      "to drive, drive on, strike"
+    ],
+    "etymology": "Hint-Avrupa kökü *el- (hareket ettirmek).",
+    "derivatives": [
+      "elastik"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἐλαύνει τοὺς βοῦς.",
+        "tr": "Öküzleri sürer.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_hlk",
+    "word": "ἕλκω",
+    "lemma": "ἕλκω",
+    "transliteration": "hélkō",
+    "athenaze_forms": "ἕλκουσι[ν], ἕλκετε",
+    "partOfSpeech": "Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Çekmek, sürüklemek, asılmak"
+    ],
+    "meanings_en": [
+      "to drag, draw, pull"
+    ],
+    "etymology": "Hint-Avrupa kökü *selk- (çekmek; krş. Latince sulcus = saban izi).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἕλκετε, ὦ βόες, ἕλκετε τὸ ἄροτρον.",
+        "tr": "Çekin ey öküzler, sabanı çekin!",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_empodz",
+    "word": "ἐμποδίζω",
+    "lemma": "ἐμποδίζω",
+    "transliteration": "empodízō",
+    "athenaze_forms": "ἐμποδίζει",
+    "partOfSpeech": "Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Engel olmak, ayak bağı olmak, önünü kesmek"
+    ],
+    "meanings_en": [
+      "to entangle the feet, hinder, impede"
+    ],
+    "etymology": "ἐν (içinde) + πούς / ποδός (ayak). 'Ayağına dolanmak / köstek olmak' demektir.",
+    "derivatives": [
+      "empedans (elektrikte engel/direnç)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "οἱ λίθοι ἐμποδίζουσι τῷ ἀρότρῳ.",
+        "tr": "Taşlar sabana engel olur.",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_epar",
+    "word": "ἐπαίρω",
+    "lemma": "ἐπαίρω",
+    "transliteration": "epaírō",
+    "athenaze_forms": "ἐπαίρει (ἐπαίρει ἑαυτόν)",
+    "partOfSpeech": "Bileşik Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Yukarı kaldırmak (ἐπαίρει ἑαυτόν: kendini kaldırmak, ayağa kalkmak)"
+    ],
+    "meanings_en": [
+      "to lift up, raise (epairei heauton: to get up)"
+    ],
+    "etymology": "ἐπί (üzerine) + αἴρω (kaldırmak).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "μόλις ἐπαίρει ἑαυτόν.",
+        "tr": "Kendini güçlükle ayağa kaldırır.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_rchomai",
+    "word": "ἔρχομαι",
+    "lemma": "ἔρχομαι",
+    "transliteration": "érchomai",
+    "athenaze_forms": "ἐλθέ",
+    "partOfSpeech": "Düzensiz Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Gelmek, gitmek, varmak (emir: ἐλθέ = gel!)"
+    ],
+    "meanings_en": [
+      "to come, go (imperative: elthe = come!)"
+    ],
+    "etymology": "Polirizik fiil: praesens ἔρχομαι, aorist ἦλθον (kök: ἐλθ-).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἐλθὲ δεῦρο, ὦ δοῦλε.",
+        "tr": "Buraya gel ey köle!",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_hsychz",
+    "word": "ἡσυχάζω",
+    "lemma": "ἡσυχάζω",
+    "transliteration": "hēsycházō",
+    "athenaze_forms": "ἡσυχάζει",
+    "partOfSpeech": "Fiil",
+    "category": "Günlük Yaşam",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Dinlenmek, istirahat etmek, sessizce durmak"
+    ],
+    "meanings_en": [
+      "to rest, be quiet, keep still"
+    ],
+    "etymology": "ἥσυχος (sessiz, sakin) sıfatından.",
+    "derivatives": [
+      "hesychasm (Hristiyan mistisizminde sessizlik/iç huzur namazı)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἡσυχάζει ὑπὸ τῷ δένδρῳ.",
+        "tr": "Ağacın altında dinlenir.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_kathed",
+    "word": "καθεύδω",
+    "lemma": "καθεύδω",
+    "transliteration": "katheúdō",
+    "athenaze_forms": "καθεύδεις, καθεύδει, κάθευδε",
+    "partOfSpeech": "Fiil",
+    "category": "Günlük Yaşam",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Uyumak, uykuya dalmak, yatmak"
+    ],
+    "meanings_en": [
+      "to sleep, lie down to sleep"
+    ],
+    "etymology": "κατά (aşağı) + εὕδω (uyumak).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "σὺ δὲ καθεύδεις; οὐ πονεῖς;",
+        "tr": "Sen uyuyor musun? Çalışmıyor musun?",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_kathz",
+    "word": "καθίζω",
+    "lemma": "καθίζω",
+    "transliteration": "kathízō",
+    "athenaze_forms": "καθίζει, καθίζουσιν, κάθιζε",
+    "partOfSpeech": "Fiil",
+    "category": "Günlük Yaşam",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Oturmak, oturtmak, çökmek"
+    ],
+    "meanings_en": [
+      "to sit down, seat"
+    ],
+    "etymology": "κατά (aşağı) + ἵζω (oturmak; Hint-Avrupa *sed- / sit).",
+    "derivatives": [
+      "katedral (piskoposun makam koltuğu kathedra'dan gelir)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "καθίζει ὑπὸ τῷ δένδρῳ.",
+        "tr": "Ağacın altına oturur.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_kal",
+    "word": "καλέω",
+    "lemma": "καλέω, καλῶ",
+    "transliteration": "kaléō",
+    "athenaze_forms": "καλεῖ",
+    "partOfSpeech": "Büzüşmeli Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Çağırmak, seslenmek, davet etmek, adlandırmak"
+    ],
+    "meanings_en": [
+      "to call, summon, name"
+    ],
+    "etymology": "Hint-Avrupa kökü *kelh₁- (bağırmak, çağırmak; krş. Latince clamare / calare).",
+    "derivatives": [
+      "kilise (ek-klesia = çağrılmışlar meclisi)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "καλεῖ τὸν δοῦλον μέγα βοῶν.",
+        "tr": "Köleyi yüksek sesle bağırarak çağırır.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_kmn",
+    "word": "κάμνω",
+    "lemma": "κάμνω",
+    "transliteration": "kámnō",
+    "athenaze_forms": "κάμνει",
+    "partOfSpeech": "Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Yorulmak, bitkin düşmek, zahmet çekmek, hastalanmak"
+    ],
+    "meanings_en": [
+      "to be weary, be tired, work hard"
+    ],
+    "etymology": "Hint-Avrupa kökü *ḱemh₂- (yorulmak).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὁ δὲ Δικαιόπολις κάμνει.",
+        "tr": "Dikaiopolis ise yorulur.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_katabll",
+    "word": "καταβάλλω",
+    "lemma": "καταβάλλω",
+    "transliteration": "katabállō",
+    "athenaze_forms": "καταβάλλει",
+    "partOfSpeech": "Bileşik Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Düşürmek, yere atmak, fırlatıp devirmek"
+    ],
+    "meanings_en": [
+      "to throw down, drop"
+    ],
+    "etymology": "κατά (aşağı) + βάλλω (atmak, fırlatmak).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "καταβάλλει τὸν λίθον χαμαί.",
+        "tr": "Taşı yere düşürür/bırakır.",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_katadn",
+    "word": "καταδύνω",
+    "lemma": "καταδύνω",
+    "transliteration": "katadýnō",
+    "athenaze_forms": "καταδύνει",
+    "partOfSpeech": "Bileşik Fiil",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Batmak, ufukta kaybolmak (güneş ve gök cisimleri için)"
+    ],
+    "meanings_en": [
+      "to go down, sink, set (of the sun)"
+    ],
+    "etymology": "κατά (aşağı) + δύνω (dalmak, batmak).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "καταδύνει ὁ ἥλιος εἰς τὴν θάλατταν.",
+        "tr": "Güneş denize doğru batar.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_katatrb",
+    "word": "κατατρίβω",
+    "lemma": "κατατρίβω",
+    "transliteration": "katatríbō",
+    "athenaze_forms": "κατατρίβει",
+    "partOfSpeech": "Bileşik Fiil",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Yıpratmak, tüketmek, bitkin düşürmek, aşındırmak"
+    ],
+    "meanings_en": [
+      "to wear down, exhaust, wear out"
+    ],
+    "etymology": "κατά (iyice) + τρίβω (ovalamak, sürtmek, aşındırmak).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὁ πόνος κατατρίβει τὸν ἄνθρωπον.",
+        "tr": "Zahmetli iş insanı tüketir/yıpratır.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_kent",
+    "word": "κεντέω",
+    "lemma": "κεντέω, κεντῶ",
+    "transliteration": "kentéō",
+    "athenaze_forms": "κεντεῖ",
+    "partOfSpeech": "Büzüşmeli Fiil",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Dürtmek, üvendire ile dürtmek, batırmak"
+    ],
+    "meanings_en": [
+      "to prick, goad, spur on"
+    ],
+    "etymology": "κέντρον (üvendire/sivri uç) kelimesiyle aynı kökten.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "κεντεῖ τοὺς βοῦς τῷ κέντρῳ.",
+        "tr": "Öküzleri üvendire ile dürter.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_lambn",
+    "word": "λαμβάνω",
+    "lemma": "λαμβάνω",
+    "transliteration": "lambánō",
+    "athenaze_forms": "λαμβάνει, λάμβανε",
+    "partOfSpeech": "Düzensiz Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Almak, tutmak, yakalamak, kavramak"
+    ],
+    "meanings_en": [
+      "to take, grasp, seize, receive"
+    ],
+    "etymology": "Hint-Avrupa kökü *sleh₂gʷ- (yakalamak).",
+    "derivatives": [
+      "dilemma (iki kez tutma / ikilem)",
+      "epilepsi (ani yakalanma)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "λαμβάνει τὸ ἄροτρον.",
+        "tr": "Sabanı tutar / eline alır.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_lep",
+    "word": "λείπω",
+    "lemma": "λείπω",
+    "transliteration": "leípō",
+    "athenaze_forms": "λείπει, λείπουσιν",
+    "partOfSpeech": "Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Bırakmak, terk etmek, geride bırakmak, eksik olmak"
+    ],
+    "meanings_en": [
+      "to leave, abandon, forsake"
+    ],
+    "etymology": "Hint-Avrupa kökü *leymkʷ- (bırakmak; krş. Latince linquere).",
+    "derivatives": [
+      "elips (eksik halka), elipsis (üç nokta / sözcük eksiltisi)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "λείπουσι τὸν ἀγρὸν καὶ οἴκαδε βαδίζουσιν.",
+        "tr": "Tarlayı bırakırlar ve eve doğru yürürler.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_mn",
+    "word": "μένω",
+    "lemma": "μένω",
+    "transliteration": "ménō",
+    "athenaze_forms": "μένει, μένουσι[ν], μένε, μένετε",
+    "partOfSpeech": "Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Kalmak, beklemek, durmak, sebat etmek"
+    ],
+    "meanings_en": [
+      "to stay, remain, wait"
+    ],
+    "etymology": "Hint-Avrupa kökü *men- (kalmak; krş. Latince manere / malikane).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "μένετε, ὦ βόες, μένετε.",
+        "tr": "Durun ey öküzler, bekleyin!",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_oik",
+    "word": "οἰκέω",
+    "lemma": "οἰκέω, οἰκῶ",
+    "transliteration": "oikéō",
+    "athenaze_forms": "οἰκεῖ",
+    "partOfSpeech": "Büzüşmeli Fiil",
+    "category": "Günlük Yaşam",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Yaşamak, ikamet etmek, oturmak, evi yönetmek"
+    ],
+    "meanings_en": [
+      "to inhabit, live, dwell"
+    ],
+    "etymology": "οἶκος (ev) kelimesinden türetilmiştir.",
+    "derivatives": [
+      "ekümenopolis (dünya şehri)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "οἰκεῖ δὲ ὁ Δικαιόπολις ἐν τοῖς ἀγροῖς.",
+        "tr": "Dikaiopolis kırsalda yaşar.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_preimi",
+    "word": "πάρειμι",
+    "lemma": "πάρειμι",
+    "transliteration": "páreimi",
+    "athenaze_forms": "πάρεστι[ν]",
+    "partOfSpeech": "Bileşik Yardımcı Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Hazır bulunmak, burada/orada olmak, mevcut olmak"
+    ],
+    "meanings_en": [
+      "to be present, be near, be here"
+    ],
+    "etymology": "παρά (yanında) + εἰμί (olmak).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὁ δὲ Ξανθίας οὐ πάρεστιν.",
+        "tr": "Ksanthias ise ortalıkta yoktur (hazır bulunmaz).",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_parch",
+    "word": "παρέχω",
+    "lemma": "παρέχω",
+    "transliteration": "paréchō",
+    "athenaze_forms": "παρέχει",
+    "partOfSpeech": "Bileşik Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Sağlamak, vermek, sunmak, temin etmek"
+    ],
+    "meanings_en": [
+      "to furnish, provide, supply"
+    ],
+    "etymology": "παρά (yanında) + ἔχω (tutmak, vermek).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "πολὺν σῖτον παρέχει ὁ κλῆρος.",
+        "tr": "Çiftlik bol tahıl sağlar.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_ppt",
+    "word": "πίπτω",
+    "lemma": "πίπτω",
+    "transliteration": "píptō",
+    "athenaze_forms": "πίπτει",
+    "partOfSpeech": "Düzensiz Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Düşmek, yere serilmek, yıkılmak"
+    ],
+    "meanings_en": [
+      "to fall, fall down"
+    ],
+    "etymology": "Hint-Avrupa kökü *peth₂- (uçmak, düşmek; krş. Latince petere).",
+    "derivatives": [
+      "semptom (birlikte düşen/gelen belirti)",
+      "asemptomatik"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "πταίει καὶ πίπτει χαμαί.",
+        "tr": "Tökezler ve yere düşer.",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_plthn",
+    "word": "πληθύνω",
+    "lemma": "πληθύνω",
+    "transliteration": "plēthýnō",
+    "athenaze_forms": "πλήθυνε",
+    "partOfSpeech": "Fiil",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Çoğaltmak, bereketlendirmek, artırmak"
+    ],
+    "meanings_en": [
+      "to increase, multiply"
+    ],
+    "etymology": "πλῆθος (çokluk, kalabalık) kelimesinden.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "πλήθυνε τὸν σῖτον, ὦ Δήμητερ.",
+        "tr": "Tahılımızı bereketlendir ey Demeter!",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_pon",
+    "word": "πονέω",
+    "lemma": "πονέω, πονῶ",
+    "transliteration": "ponéō",
+    "athenaze_forms": "πονεῖ, πονοῦσιν, πόνει",
+    "partOfSpeech": "Büzüşmeli Fiil",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Çalışmak, emek vermek, zahmet çekmek, didinmek"
+    ],
+    "meanings_en": [
+      "to work, toil, suffer hardship"
+    ],
+    "etymology": "πόνος (emek/zahmet) kelimesinden.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἀεὶ πονεῖ ὁ Δικαιόπολις.",
+        "tr": "Dikaiopolis daima çalışır.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_prospt",
+    "word": "προσάπτω",
+    "lemma": "προσάπτω",
+    "transliteration": "prosáptō",
+    "athenaze_forms": "προσάπτει",
+    "partOfSpeech": "Bileşik Fiil",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Bağlamak, takmak, iliştirmek"
+    ],
+    "meanings_en": [
+      "to attach, bind to, fasten"
+    ],
+    "etymology": "πρός (yanına) + ἅπτω (bağlamak, dokunmak).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "προσάπτει τὸ ἄροτρον τῷ ζυγῷ.",
+        "tr": "Sabanı boyunduruğa bağlar.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_proschr",
+    "word": "προσχωρέω",
+    "lemma": "προσχωρέω, προσχωρῶ (+ dativ)",
+    "transliteration": "proschōréō",
+    "athenaze_forms": "προσχωρεῖ",
+    "partOfSpeech": "Büzüşmeli Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Yaklaşmak, -e doğru gitmek, yanına varmak"
+    ],
+    "meanings_en": [
+      "to approach, come near to (+ dat)"
+    ],
+    "etymology": "πρός (-e doğru) + χωρέω (ilerlemek, yer açmak).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "προσχωρεῖ τῷ πατρί.",
+        "tr": "Babasına doğru yaklaşır.",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_pta",
+    "word": "πταίω",
+    "lemma": "πταίω",
+    "transliteration": "ptaíō",
+    "athenaze_forms": "πταίει",
+    "partOfSpeech": "Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Tökezlemek, ayağı takılmak, sendelemek"
+    ],
+    "meanings_en": [
+      "to stumble, trip, strike against"
+    ],
+    "etymology": "Ön-Grekçe kök.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "πταίει πρὸς λίθον.",
+        "tr": "Taşa çarparak tökezler.",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_skpt",
+    "word": "σκάπτω",
+    "lemma": "σκάπτω",
+    "transliteration": "skáptō",
+    "athenaze_forms": "σκάπτει, σκάπτε",
+    "partOfSpeech": "Fiil",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Kazmak, çapalamak, toprağı kazıp açmak"
+    ],
+    "meanings_en": [
+      "to dig, hoe"
+    ],
+    "etymology": "Hint-Avrupa kökü *skep- (kazmak, yontmak).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "σκάπτει τοὺς ἀγρούς.",
+        "tr": "Tarlaları kazar.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_sper",
+    "word": "σπείρω",
+    "lemma": "σπείρω",
+    "transliteration": "speírō",
+    "athenaze_forms": "σπείρει, σπεῖρε",
+    "partOfSpeech": "Fiil",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "(Tohum) ekmek, tohum saçmak, saçmak"
+    ],
+    "meanings_en": [
+      "to sow, scatter seed"
+    ],
+    "etymology": "Hint-Avrupa kökü *sper- (saçmak).",
+    "derivatives": [
+      "spor (bitki tohumcuğu), diaspora (toplulukların saçılması)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "σπεῖρε τὸ σπέρμα, ὦ παῖ.",
+        "tr": "Tohumu ek ey çocuk!",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_sped",
+    "word": "σπεύδω",
+    "lemma": "σπεύδω",
+    "transliteration": "speúdō",
+    "athenaze_forms": "σπεύδει, σπεῦδε, σπεύdete",
+    "partOfSpeech": "Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Acele etmek, tez davranmak, çabalamak"
+    ],
+    "meanings_en": [
+      "to hurry, hasten, be eager"
+    ],
+    "etymology": "Hint-Avrupa kökü *spewd- (acele etmek).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "σπεῦδε, ὦ Ξανθία.",
+        "tr": "Acele et ey Ksanthias!",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_stenz",
+    "word": "στενάζω",
+    "lemma": "στενάζω",
+    "transliteration": "stenázō",
+    "athenaze_forms": "στενάζει",
+    "partOfSpeech": "Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "İnlemek, iç çekmek, sızlanmak"
+    ],
+    "meanings_en": [
+      "to groan, sigh, moan"
+    ],
+    "etymology": "στενός (dar) ve στενάχω kökünden.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "στενάζει καὶ λέγει· 'φεῦ τοῦ ποδός.'",
+        "tr": "İnler ve der ki: 'Ah ayağım!'",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_syllambn",
+    "word": "συλλαμβάνω",
+    "lemma": "συλλαμβάνω (+ dativ)",
+    "transliteration": "syllambánō",
+    "athenaze_forms": "συλλαμβάνει, συλλάμβανε",
+    "partOfSpeech": "Bileşik Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Yardım etmek, el atmak, birlikte tutmak, yakalamak"
+    ],
+    "meanings_en": [
+      "to help, assist (+ dat); to seize, bring together"
+    ],
+    "etymology": "σύν (birlikte) + λαμβάνω (tutmak). 'Bir işi birlikte tutmak' manasındadır.",
+    "derivatives": [
+      "hece (syllabe / seslerin birlikte tutulması)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "συλλάμβανέ μοι, ὦ Ξανθία.",
+        "tr": "Bana yardım et ey Ksanthias!",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_phm",
+    "word": "φημί",
+    "lemma": "φημί",
+    "transliteration": "phēmí",
+    "athenaze_forms": "φησί[ν]",
+    "partOfSpeech": "Düzensiz Atematik Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Demek, söylemek, iddia etmek, beyan etmek"
+    ],
+    "meanings_en": [
+      "to say, assert, speak"
+    ],
+    "etymology": "Hint-Avrupa kökü *bʰeh₂- (konuşmak; krş. Latince fari).",
+    "derivatives": [
+      "eufemizm (güzel adlandırma)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "φησὶν ὅτι χαλεπός ἐστιν ὁ πόνος.",
+        "tr": "Zahmetin çetin olduğunu söyler.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_phil",
+    "word": "φιλέω",
+    "lemma": "φιλέω, φιλῶ",
+    "transliteration": "philéō",
+    "athenaze_forms": "φιλεῖ",
+    "partOfSpeech": "Büzüşmeli Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Sevmek, hoşlanmak, öpmek, adet edinmek"
+    ],
+    "meanings_en": [
+      "to love, like, be accustomed to"
+    ],
+    "etymology": "φίλος (dost/sevgili) isminden.",
+    "derivatives": [
+      "felsefe (philosophia)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "φιλεῖ τὸν ἀγρόν.",
+        "tr": "Tarlasını sever.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_phlg",
+    "word": "φλέγω",
+    "lemma": "φλέγω",
+    "transliteration": "phlégō",
+    "athenaze_forms": "φλέγει",
+    "partOfSpeech": "Fiil",
+    "category": "Doğa & Bilim",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Yakmak, kavurmak, alev alev parlamak"
+    ],
+    "meanings_en": [
+      "to burn, scorch, blaze"
+    ],
+    "etymology": "Hint-Avrupa kökü *bʰle-g- (parlamak; krş. Latince flagrare).",
+    "derivatives": [
+      "balgam (phlegm / antik tıbbın dört hıltından biri)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὁ ἥλιος φλέγει.",
+        "tr": "Güneş kavurur / yakar.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_phlyar",
+    "word": "φλυαρέω",
+    "lemma": "φλυαρέω, φλυαρῶ",
+    "transliteration": "phlyaréō",
+    "athenaze_forms": "φλυάρει",
+    "partOfSpeech": "Büzüşmeli Fiil",
+    "category": "Günlük Yaşam",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Saçmalamak, boş konuşmak, gevezelik etmek"
+    ],
+    "meanings_en": [
+      "to talk nonsense, play the fool"
+    ],
+    "etymology": "φλύαρος (geveze, boşboğaz) kelimesinden.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "μὴ φλυάρει, ὦ Ξανθία.",
+        "tr": "Saçmalama ey Ksanthias!",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_char",
+    "word": "χαίρω",
+    "lemma": "χαίρω",
+    "transliteration": "chaírō",
+    "athenaze_forms": "χαίρει",
+    "partOfSpeech": "Fiil",
+    "category": "Günlük Yaşam",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Sevinmek, mutlu olmak, neşelenmek",
+      "Selamlaşma: χαῖρε = Selam! Esen kal!"
+    ],
+    "meanings_en": [
+      "to rejoice, be glad; (imperative: chaire = greetings!)"
+    ],
+    "etymology": "Hint-Avrupa kökü *ǵʰer- (arzu etmek; krş. kharis = lütuf).",
+    "derivatives": [
+      "karizma (kharisma = lütuf/çekicilik)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "χαίρει ὁ Δικαιόπολις.",
+        "tr": "Dikaiopolis sevinir.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_atios",
+    "word": "αἴτιος",
+    "lemma": "αἴτιος, -α, -ον",
+    "transliteration": "aítios",
+    "athenaze_forms": "αἴτιος",
+    "partOfSpeech": "Sıfat (1. ve 2. Çekim)",
+    "category": "Felsefe",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Sorumlu, sebep olan, suçlu, mesul"
+    ],
+    "meanings_en": [
+      "responsible, blameworthy, cause of (+ gen)"
+    ],
+    "etymology": "αἰτία (sebep, neden, suçlama) isminden.",
+    "derivatives": [
+      "etyoloji (tıpta hastalık nedenleri bilimi)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "σὺ αἴτιος εἶ τοῦ πόνου.",
+        "tr": "Zahmetin sebebi sensin.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_andreos",
+    "word": "ἀνδρεῖος",
+    "lemma": "ἀνδρεῖος, -α, -ον",
+    "transliteration": "andreîos",
+    "athenaze_forms": "ἀνδρεῖος",
+    "partOfSpeech": "Sıfat (1. ve 2. Çekim)",
+    "category": "Felsefe",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Cesur, yiğit, mert, erkeğe yakışır"
+    ],
+    "meanings_en": [
+      "brave, manly, courageous"
+    ],
+    "etymology": "ἀνήρ (erkek/er) isminden.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὁ δὲ Δικαιόπολις ἀνδρεῖός ἐστιν.",
+        "tr": "Dikaiopolis ise cesurdur.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_antos",
+    "word": "ἀνόητος",
+    "lemma": "ἀνόητος, -ον",
+    "transliteration": "anóētos",
+    "athenaze_forms": "ὦ ἀνόητε",
+    "partOfSpeech": "Sıfat (2 sonlanışlı)",
+    "category": "Günlük Yaşam",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Akılsız, ahmak, düşüncesiz, aptal"
+    ],
+    "meanings_en": [
+      "foolish, senseless, unintelligent"
+    ],
+    "etymology": "ἀ- (olumsuzluk) + νοέω (düşünmek, akıl etmek). 'Aklı olmayan' demektir.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "μὴ οὕτω ποίει, ὦ ἀνόητε.",
+        "tr": "Öyle yapma ey akılsız!",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_oknos",
+    "word": "ἄοκνος",
+    "lemma": "ἄοκνος, -ον",
+    "transliteration": "áoknos",
+    "athenaze_forms": "ἄοκνος",
+    "partOfSpeech": "Sıfat (2 sonlanışlı)",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Enerjik, gayretli, yorulmak bilmez, tereddütsüz"
+    ],
+    "meanings_en": [
+      "resolute, energetic, untiring"
+    ],
+    "etymology": "ἀ- (olumsuzluk) + ὄκνος (tereddüt, üşengeçlik).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἄοκνος γάρ ἐστιν ὁ αὐτουργός.",
+        "tr": "Çünkü çiftçi gayretli ve çalışkandır.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_aprantos",
+    "word": "ἀπέραντος",
+    "lemma": "ἀπέραντος, -ον",
+    "transliteration": "apérantos",
+    "athenaze_forms": "ἀπέραντος",
+    "partOfSpeech": "Sıfat (2 sonlanışlı)",
+    "category": "Felsefe",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Sonsuz, bitmek tükenmek bilmeyen, sınırsız"
+    ],
+    "meanings_en": [
+      "endless, boundless, infinite"
+    ],
+    "etymology": "ἀ- (olumsuzluk) + περαίνω (sona erdirmek, bitirmek).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἀπέραντός ἐστιν ὁ πόνος.",
+        "tr": "İş/zahmet bitmek tükenmek bilmez.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_args",
+    "word": "ἀργός",
+    "lemma": "ἀργός, -όν",
+    "transliteration": "argós",
+    "athenaze_forms": "ἀργός",
+    "partOfSpeech": "Sıfat (2 sonlanışlı)",
+    "category": "Günlük Yaşam",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Tembel, işsiz, boş duran, atıl"
+    ],
+    "meanings_en": [
+      "idle, lazy, not working"
+    ],
+    "etymology": "ἀ- (olumsuzluk) + ἔργον (iş). 'İşsiz, çalışmayan' demektir.",
+    "derivatives": [
+      "argon (kimyasal soy gaz = tepkimeye girmeyen tembel gaz!)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὁ δὲ Ξανθίας ἀργός ἐστι δοῦλος.",
+        "tr": "Ksanthias ise tembel bir köledir.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_dynats",
+    "word": "δυνατός",
+    "lemma": "δυνατός, -ή, -όν",
+    "transliteration": "dynatós",
+    "athenaze_forms": "δυνατόν",
+    "partOfSpeech": "Sıfat (1. ve 2. Çekim)",
+    "category": "Felsefe",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Güçlü, muktedir; nötr (δυνατόν): Mümkün, olası"
+    ],
+    "meanings_en": [
+      "strong, powerful, able; (neut.) possible"
+    ],
+    "etymology": "δύναμαι (gücü yetmek) fiilinden.",
+    "derivatives": [
+      "dinamik, dinamit, hanedan (dynasty)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "οὐ δυνατόν ἐστιν αἴρειν τὸν λίθον.",
+        "tr": "Taşı kaldırmak mümkün değildir.",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_211",
+    "word": "ἐλεύθερος",
+    "lemma": "ἐλεύθερος",
+    "transliteration": "",
+    "athenaze_forms": "ἐλεύθερος",
+    "partOfSpeech": "Kelime",
+    "category": "Politika & Toplum",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [],
+    "meanings_en": [],
+    "etymology": "",
+    "derivatives": [],
+    "grammar": {},
+    "examples": []
+  },
+  {
+    "id": "ath_hikans",
+    "word": "ἱκανός",
+    "lemma": "ἱκανός, -ή, -όν",
+    "transliteration": "hikanós",
+    "athenaze_forms": "ἱκανόν",
+    "partOfSpeech": "Sıfat (1. ve 2. Çekim)",
+    "category": "Günlük Yaşam",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Yeterli, kafi, elverişli, yetkin"
+    ],
+    "meanings_en": [
+      "sufficient, enough, capable"
+    ],
+    "etymology": "ἱκάνω (ulaşmak, yetmek) fiilinden.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἱκανόν ἐστι τὸ δεῖπνον.",
+        "tr": "Yemek yeterlidir.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_hles",
+    "word": "ἵλεως",
+    "lemma": "ἵλεως, -ων (Attik 2. çekim)",
+    "transliteration": "híleōs",
+    "athenaze_forms": "ἵλεως",
+    "partOfSpeech": "Sıfat (Attik Çekim)",
+    "category": "Mitoloji & İnanç",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Lütfeden, merhametli, inayeti bol, esirgeyen"
+    ],
+    "meanings_en": [
+      "propitious, gracious, merciful"
+    ],
+    "etymology": "Dua ve yakarışlarda tanrılara hitaben kullanılır.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἵλεως ἴσθι, ὦ Δήμητερ.",
+        "tr": "Lütfet / merhametli ol ey Demeter!",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_ischyrs",
+    "word": "ἰσχυρός",
+    "lemma": "ἰσχυρός, -ά, -όν",
+    "transliteration": "ischyrós",
+    "athenaze_forms": "ἰσχυρός",
+    "partOfSpeech": "Sıfat (1. ve 2. Çekim)",
+    "category": "Doğa & Bilim",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Güçlü, kuvvetli, sağlam, zorlu"
+    ],
+    "meanings_en": [
+      "strong, mighty, powerful"
+    ],
+    "etymology": "ἰσχύς (güç, kuvvet) isminden.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὁ δὲ Δικαιόπολις ἰσχυρός ἐστιν.",
+        "tr": "Dikaiopolis ise kuvvetlidir.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_katratos",
+    "word": "κατάρατος",
+    "lemma": "κατάρατος, -ον",
+    "transliteration": "katáratos",
+    "athenaze_forms": "ὦ κατάρατε",
+    "partOfSpeech": "Sıfat (2 sonlanışlı)",
+    "category": "Günlük Yaşam",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Lanetli, kahrolası, melun"
+    ],
+    "meanings_en": [
+      "accursed, abominable"
+    ],
+    "etymology": "κατά (üzerine) + ἀράομαι (beddua etmek).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἐλθὲ δεῦρο, ὦ κατάρατε δοῦλε.",
+        "tr": "Buraya gel ey lanet olası köle!",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_makrs",
+    "word": "μακρός",
+    "lemma": "μακρός, -ά, -όν",
+    "transliteration": "makrós",
+    "athenaze_forms": "μακρός",
+    "partOfSpeech": "Sıfat (1. ve 2. Çekim)",
+    "category": "Sıfatlar & Zarflar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Uzun, büyük, geniş, vakit alan"
+    ],
+    "meanings_en": [
+      "long, large, distant"
+    ],
+    "etymology": "Hint-Avrupa kökü *mak- (uzun; krş. Latince macer).",
+    "derivatives": [
+      "makro (makroekonomi, makromolekül, makrokozmos)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "μακρός ἐστιν ὁ πόνος.",
+        "tr": "İş uzundur.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_mikrs",
+    "word": "μικρός",
+    "lemma": "μικρός, -ά, -όν",
+    "transliteration": "mikrós",
+    "athenaze_forms": "μικρός",
+    "partOfSpeech": "Sıfat (1. ve 2. Çekim)",
+    "category": "Sıfatlar & Zarflar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Küçük, ufak, önemsiz, kısa"
+    ],
+    "meanings_en": [
+      "small, little, short"
+    ],
+    "etymology": "Hint-Avrupa kökü *smeyk- (küçük).",
+    "derivatives": [
+      "mikro (mikroskop, mikrobiyoloji, mikrofon, mikron)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "μικρός ἐστιν ὁ κλῆρος.",
+        "tr": "Çiftlik küçüktür.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_olgos",
+    "word": "ὀλίγος",
+    "lemma": "ὀλίγος, -η, -ον",
+    "transliteration": "olígos",
+    "athenaze_forms": "ὀλίγου (δι' ὀλίγου)",
+    "partOfSpeech": "Sıfat (1. ve 2. Çekim)",
+    "category": "Sıfatlar & Zarflar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Az, küçük; deyim: δι' ὀλίγου = kısa süre sonra"
+    ],
+    "meanings_en": [
+      "few, little, small (di' oligou: soon)"
+    ],
+    "etymology": "Hint-Avrupa kökü *h₃leyg-.",
+    "derivatives": [
+      "oligarşi (azınlık yönetimi), oligopol"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "δι' ὀλίγου οἴκαδε βαδίζουσιν.",
+        "tr": "Kısa süre sonra eve doğru yürürler.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_pols",
+    "word": "πολύς",
+    "lemma": "πολύς, πολλή, πολύ",
+    "transliteration": "polýs",
+    "athenaze_forms": "πολύν, πολλοί",
+    "partOfSpeech": "Düzensiz Sıfat",
+    "category": "Sıfatlar & Zarflar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Çok, bol, büyük; çoğul (πολλοί): Birçok kimse, halk çoğunluğu"
+    ],
+    "meanings_en": [
+      "much, many, great"
+    ],
+    "etymology": "Hint-Avrupa kökü *pleh₁- (dolmak, çok olmak; krş. Latince plus/plenus, İngilizce full).",
+    "derivatives": [
+      "poli- ön eki (politeizm, poliglot, poliklinik, polimer)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "πολὺν σῖτον παρέχει ὁ ἀγρός.",
+        "tr": "Tarla bol tahıl sağlar.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_skais",
+    "word": "σκαιός",
+    "lemma": "σκαιός, -ά, -όν",
+    "transliteration": "skaiós",
+    "athenaze_forms": "σκαιός",
+    "partOfSpeech": "Sıfat (1. ve 2. Çekim)",
+    "category": "Günlük Yaşam",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Sakar, beceriksiz, hantal; sol (sol taraf uğursuz sayıldığı için)"
+    ],
+    "meanings_en": [
+      "clumsy, awkward; left, unlucky"
+    ],
+    "etymology": "Hint-Avrupa kökü *skayw- (sol; krş. Latince scaevus).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὦ σκαιὲ δοῦλε, τί ποιεῖς;",
+        "tr": "Ey sakar köle, ne yapıyorsun?",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_tosotos",
+    "word": "τοσοῦτος",
+    "lemma": "τοσοῦτος, τοσαύτη, τοσοῦτο(ν)",
+    "transliteration": "tosoûtos",
+    "athenaze_forms": "τοσούτους",
+    "partOfSpeech": "Gösterme Sıfatı / Zamiri",
+    "category": "Sıfatlar & Zarflar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Bu kadar büyük, böylesine iri; çoğul: Bu kadar çok"
+    ],
+    "meanings_en": [
+      "so great, so large; (pl.) so many"
+    ],
+    "etymology": "τόσος + οὗτος.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "τοσούτους λίθους ἔχει ὁ ἀγρός.",
+        "tr": "Tarla bu kadar çok taşa sahiptir.",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_chaleps",
+    "word": "χαλεπός",
+    "lemma": "χαλεπός, -ή, -όν",
+    "transliteration": "chalepós",
+    "athenaze_forms": "χαλεπός",
+    "partOfSpeech": "Sıfat (1. ve 2. Çekim)",
+    "category": "Sıfatlar & Zarflar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Zor, çetin, güç, sert, huysuz"
+    ],
+    "meanings_en": [
+      "difficult, hard, harsh, severe"
+    ],
+    "etymology": "Klasik Grek ahlakında 'χαλεπὰ τὰ καλά' (güzel şeyler zordur) deyişiyle ünlüdür.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "χαλεπός ἐστιν ὁ βίος.",
+        "tr": "Hayat zordur / çetindir.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_ho_h_to",
+    "word": "ὁ, ἡ, τό",
+    "lemma": "ὁ, ἡ, τό",
+    "transliteration": "ho, hē, to",
+    "athenaze_forms": "τὸν, τοῦ, τῷ, τὴν, οἱ, τοὺς, τοῖς, ταῖς",
+    "partOfSpeech": "Belirli Tanımlık (Article)",
+    "category": "Gramer & Zamirler",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Belirli tanımlık (harf-i tarif; İngilizce 'the')"
+    ],
+    "meanings_en": [
+      "the (definite article)"
+    ],
+    "etymology": "Hint-Avrupa kökü *so, *seh₂, *tod.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὁ ἄνθρωπος, ἡ γυνή, τὸ δένδρον.",
+        "tr": "Adam, kadın, ağaç.",
+        "author": "Athenaze I"
+      }
+    ]
+  },
+  {
+    "id": "ath_224",
+    "word": "ἐγώ",
+    "lemma": "ἐγώ",
+    "transliteration": "",
+    "athenaze_forms": "μοι",
+    "partOfSpeech": "Kelime",
+    "category": "Gramer & Zamirler",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [],
+    "meanings_en": [],
+    "etymology": "",
+    "derivatives": [],
+    "grammar": {},
+    "examples": []
+  },
+  {
+    "id": "ath_225",
+    "word": "σύ",
+    "lemma": "σύ",
+    "transliteration": "",
+    "athenaze_forms": "σύ",
+    "partOfSpeech": "Kelime",
+    "category": "Gramer & Zamirler",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [],
+    "meanings_en": [],
+    "etymology": "",
+    "derivatives": [],
+    "grammar": {},
+    "examples": []
+  },
+  {
+    "id": "ath_226",
+    "word": "αὐτός",
+    "lemma": "αὐτός",
+    "transliteration": "",
+    "athenaze_forms": "αὐτόν, αὐτό",
+    "partOfSpeech": "Kelime",
+    "category": "Gramer & Zamirler",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [],
+    "meanings_en": [],
+    "etymology": "",
+    "derivatives": [],
+    "grammar": {},
+    "examples": []
+  },
+  {
+    "id": "ath_heautn",
+    "word": "ἑαυτόν",
+    "lemma": "ἑαυτόν, ἑαυτήν, ἑαυτό",
+    "transliteration": "heautón",
+    "athenaze_forms": "ἑαυτόν",
+    "partOfSpeech": "Dönüşlü Zamir (Reflexive)",
+    "category": "Gramer & Zamirler",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Kendini, kendi kendini (3. şahıs dönüşlü zamiri)"
+    ],
+    "meanings_en": [
+      "himself, herself, itself"
+    ],
+    "etymology": "ἕ (kendi) + αὐτός.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἐπαίρει ἑαυτόν.",
+        "tr": "Kendini ayağa kaldırır.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_hotos",
+    "word": "οὗτος",
+    "lemma": "οὗτος, αὕτη, τοῦτο",
+    "transliteration": "hoûtos",
+    "athenaze_forms": "τούτῳ (ἐν δὲ τούτῳ)",
+    "partOfSpeech": "Gösterme Zamiri (Demonstrative)",
+    "category": "Gramer & Zamirler",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Bu, şu; kalıp: ἐν δὲ τούτῳ = bu sırada, bu esnada"
+    ],
+    "meanings_en": [
+      "this, these (en de toutōi: meanwhile)"
+    ],
+    "etymology": "Grekçe temel işaret zamiri.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἐν δὲ τούτῳ προσχωρεῖ ὁ Φίλιππος.",
+        "tr": "Bu sırada ise Philippos yaklaşır.",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_hs",
+    "word": "ὅς",
+    "lemma": "ὅς, ἥ, ὅ",
+    "transliteration": "hós",
+    "athenaze_forms": "ᾧ (ἐν ᾧ)",
+    "partOfSpeech": "İlgi Zamiri (Relative Pronoun)",
+    "category": "Gramer & Zamirler",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Ki o, -en, -diği (ilgi zamiri); kalıp: ἐν ᾧ = -dığı sırada, -iken"
+    ],
+    "meanings_en": [
+      "who, which, that (en hōi: while)"
+    ],
+    "etymology": "Hint-Avrupa kökü *yos.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἐν ᾧ δὲ καθεύδει ὁ δοῦλος, προσέρχεται ὁ δεσπότης.",
+        "tr": "Köle uyurken (uyuduğu sırada) efendi gelir.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_ae",
+    "word": "ἀεί",
+    "lemma": "ἀεί",
+    "transliteration": "aeí",
+    "athenaze_forms": "ἀεί",
+    "partOfSpeech": "Zarf",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Her zaman, daima, sürekli"
+    ],
+    "meanings_en": [
+      "always, forever, constantly"
+    ],
+    "etymology": "Hint-Avrupa kökü *h₂eyw- (ömür; krş. Latince aevum / eon).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἀεὶ πονεῖ ὁ Δικαιόπολις.",
+        "tr": "Dikaiopolis daima çalışır.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_hma",
+    "word": "ἅμα",
+    "lemma": "ἅμα",
+    "transliteration": "háma",
+    "athenaze_forms": "ἅμα",
+    "partOfSpeech": "Zarf / Edat",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Birlikte, aynı anda, beraberce (+ dativ)"
+    ],
+    "meanings_en": [
+      "at the same time, together with (+ dat)"
+    ],
+    "etymology": "Hint-Avrupa kökü *sem- (bir, birlikte; krş. İngilizce same).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἅμα δὲ τῷ ἡλίῳ ἐκβαίνει.",
+        "tr": "Güneşle birlikte dışarı çıkar.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_athis",
+    "word": "αὖθις",
+    "lemma": "αὖθις",
+    "transliteration": "aûthis",
+    "athenaze_forms": "αὖθις",
+    "partOfSpeech": "Zarf",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Tekrar, yeniden, bir daha, gene"
+    ],
+    "meanings_en": [
+      "again, back again"
+    ],
+    "etymology": "αὖ (tekrar) kökünden.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "αὖθις πονεῖ.",
+        "tr": "Yeniden çalışır.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_brads",
+    "word": "βραδέως",
+    "lemma": "βραδέως",
+    "transliteration": "bradéōs",
+    "athenaze_forms": "βραδέως",
+    "partOfSpeech": "Zarf",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Yavaşça, ağır ağır, aheste"
+    ],
+    "meanings_en": [
+      "slowly"
+    ],
+    "etymology": "βραδύς (yavaş) sıfatından.",
+    "derivatives": [
+      "bradikardi (kalbin yavaş atması)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "βραδέως βαδίζουσιν οἱ βόες.",
+        "tr": "Öküzler yavaşça yürürler.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2α"
+      }
+    ]
+  },
+  {
+    "id": "ath_dero",
+    "word": "δεῦρο",
+    "lemma": "δεῦρο",
+    "transliteration": "deûro",
+    "athenaze_forms": "δεῦρο",
+    "partOfSpeech": "Zarf",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Buraya, bu tarafa"
+    ],
+    "meanings_en": [
+      "hither, here, to this place"
+    ],
+    "etymology": "Grekçe yönelme zarfı.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἐλθὲ δεῦρο, ὦ Ξανθία.",
+        "tr": "Buraya gel ey Ksanthias!",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_peita",
+    "word": "ἔπειτα",
+    "lemma": "ἔπειτα",
+    "transliteration": "épeita",
+    "athenaze_forms": "ἔπειτα",
+    "partOfSpeech": "Zarf",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Sonra, ondan sonra, ardından"
+    ],
+    "meanings_en": [
+      "then, next, thereupon"
+    ],
+    "etymology": "ἐπί + εἶτα.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἔπειτα δὲ δειπνεῖ.",
+        "tr": "Ondan sonra ise yemek yer.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_ti",
+    "word": "ἔτι",
+    "lemma": "ἔτι",
+    "transliteration": "éti",
+    "athenaze_forms": "ἔτι",
+    "partOfSpeech": "Zarf",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Hâlâ, henüz, daha da, bundan başka"
+    ],
+    "meanings_en": [
+      "yet, still, further"
+    ],
+    "etymology": "Hint-Avrupa kökü *eti (ayrıca; krş. Latince et).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἔτι καθεύδει ὁ δοῦλος.",
+        "tr": "Köle hâlâ uyuyor.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_d",
+    "word": "ἤδη",
+    "lemma": "ἤδη",
+    "transliteration": "ḗdē",
+    "athenaze_forms": "ἤδη",
+    "partOfSpeech": "Zarf",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Zaten, artık, şimdi, hemen"
+    ],
+    "meanings_en": [
+      "already, now, by this time"
+    ],
+    "etymology": "Zaman zarfı.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἤδη καταδύνει ὁ ἥλιος.",
+        "tr": "Artık güneş batıyor.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_mla",
+    "word": "μάλα",
+    "lemma": "μάλα",
+    "transliteration": "mála",
+    "athenaze_forms": "μάλα",
+    "partOfSpeech": "Zarf",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Çok, pek, gayet"
+    ],
+    "meanings_en": [
+      "very, very much, exceedingly"
+    ],
+    "etymology": "Pekiştirme zarfı.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "μάλα κάμνει ὁ ἀνήρ.",
+        "tr": "Adam pek çok yorulur.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_m",
+    "word": "μή",
+    "lemma": "μή",
+    "transliteration": "mḗ",
+    "athenaze_forms": "μή",
+    "partOfSpeech": "Olumsuzluk Parçacığı",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Değil (emir ve istek kipleriyle: yapma!)"
+    ],
+    "meanings_en": [
+      "not (with imperatives, conditions, wishes)"
+    ],
+    "etymology": "Hint-Avrupa kökü *mē (öznel olumsuzluk; krş. Sanskritçe ma).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "μὴ φλυάρει.",
+        "tr": "Saçmalama!",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_mkti",
+    "word": "μηκέτι",
+    "lemma": "μηκέτι",
+    "transliteration": "mēkéti",
+    "athenaze_forms": "μηκέτι",
+    "partOfSpeech": "Olumsuzluk Zarfı",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Artık ... yapma! Bundan böyle ... etme!"
+    ],
+    "meanings_en": [
+      "no longer, no more (with imperative)"
+    ],
+    "etymology": "μή + ἔτι.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "μηκέτι κάθευδε.",
+        "tr": "Artık uyuma!",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_mlis",
+    "word": "μόλις",
+    "lemma": "μόλις",
+    "transliteration": "mólis",
+    "athenaze_forms": "μόλις",
+    "partOfSpeech": "Zarf",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Zorlukla, güçbela, zar zor, ancak"
+    ],
+    "meanings_en": [
+      "with difficulty, scarcely, hardly"
+    ],
+    "etymology": "μόλος (zahmet, savaş meşakkati) kökünden.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "μόλις ἐπαίρει τὸν λίθον.",
+        "tr": "Taşı güçbela kaldırır.",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_nn",
+    "word": "νῦν",
+    "lemma": "νῦν",
+    "transliteration": "nŷn",
+    "athenaze_forms": "νῦν",
+    "partOfSpeech": "Zarf",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Şimdi, şu anda"
+    ],
+    "meanings_en": [
+      "now, at present"
+    ],
+    "etymology": "Hint-Avrupa kökü *nu (şimdi; krş. Latince nunc, İngilizce now, Almanca nun).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "νῦν δὲ οἴκαδε βαδίζει.",
+        "tr": "Şimdi ise eve doğru yürür.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_pisthen",
+    "word": "ὄπισθεν",
+    "lemma": "ὄπισθεν",
+    "transliteration": "ópisthen",
+    "athenaze_forms": "ὄπισθεν",
+    "partOfSpeech": "Zarf / Edat",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Arkadan, arkada, geride (+ genitiv)"
+    ],
+    "meanings_en": [
+      "behind, in back, from behind"
+    ],
+    "etymology": "ὀπίσω kökünden.",
+    "derivatives": [
+      "opistodomos (antik tapınakların arka odası)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὄπισθεν δὲ βαδίζει ὁ παῖς.",
+        "tr": "Arkadan ise çocuk yürür.",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_oukti",
+    "word": "οὐκέτι",
+    "lemma": "οὐκέτι",
+    "transliteration": "oukéti",
+    "athenaze_forms": "οὐκέτι",
+    "partOfSpeech": "Zarf",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Artık değil, bundan böyle değil"
+    ],
+    "meanings_en": [
+      "no longer, no more"
+    ],
+    "etymology": "οὐκ + ἔτι.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "οὐκέτι φλέγει ὁ ἥλιος.",
+        "tr": "Güneş artık yakmıyor.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_on",
+    "word": "οὖν",
+    "lemma": "οὖν",
+    "transliteration": "oûn",
+    "athenaze_forms": "οὖν",
+    "partOfSpeech": "Bağlaç / Parçacık (Postpositive)",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Öyleyse, bu yüzden, o halde, binaenaleyh"
+    ],
+    "meanings_en": [
+      "so, therefore, then"
+    ],
+    "etymology": "Mantıksal bağlaç.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "χαλεπὸς οὖν ἐστιν ὁ βίος.",
+        "tr": "Öyleyse hayat zordur.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_hots__hot",
+    "word": "οὕτως",
+    "lemma": "οὕτως / οὕτω",
+    "transliteration": "hoútōs / hoútō",
+    "athenaze_forms": "οὕτως / οὕτω",
+    "partOfSpeech": "Zarf",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Böyle, bu şekilde, bu kadar"
+    ],
+    "meanings_en": [
+      "thus, in this way, so"
+    ],
+    "etymology": "οὗτος zamirinden türemiştir.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "μὴ οὕτω ποίει.",
+        "tr": "Öyle yapma!",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_pollkis",
+    "word": "πολλάκις",
+    "lemma": "πολλάκις",
+    "transliteration": "pollákis",
+    "athenaze_forms": "πολλάκις",
+    "partOfSpeech": "Zarf",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Sık sık, çoğu kez, defalarca"
+    ],
+    "meanings_en": [
+      "many times, often"
+    ],
+    "etymology": "πολύς (çok) sıfatından türetilmiş sıklık zarfı.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "πολλάκις πταίει.",
+        "tr": "Sık sık tökezler.",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_tlos",
+    "word": "τέλος",
+    "lemma": "τέλος, -ους, τό / τέλος (zarf)",
+    "transliteration": "télos",
+    "athenaze_forms": "τέλος",
+    "partOfSpeech": "Zarf / İsim",
+    "category": "Felsefe",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Sonunda, nihayet; İsim olarak: Son, amaç, gaye (Aristoteles teleolojisi)"
+    ],
+    "meanings_en": [
+      "finally, at last; (noun) end, purpose, goal"
+    ],
+    "etymology": "Hint-Avrupa kökü *kʷel- (dönmek, tamamlanmak).",
+    "derivatives": [
+      "teleoloji (amaçlılık bilimi)"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "τέλος δὲ καταδύνει ὁ ἥλιος.",
+        "tr": "Sonunda ise güneş batar.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_t",
+    "word": "τί;",
+    "lemma": "τί;",
+    "transliteration": "tí?",
+    "athenaze_forms": "τί;",
+    "partOfSpeech": "Soru Zamiri / Zarfı",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Neden? Niçin? Ne?"
+    ],
+    "meanings_en": [
+      "why? what?"
+    ],
+    "etymology": "Soru zamiri τίς, τί nötr formu.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "τί ποιεῖς, ὦ Ξανθία;",
+        "tr": "Ne yapıyorsun ey Ksanthias?",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_di",
+    "word": "διά",
+    "lemma": "διά / δι' (+ genitiv)",
+    "transliteration": "diá",
+    "athenaze_forms": "διά / δι' (+ Gen.)",
+    "partOfSpeech": "Edat",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "İçinden, arasından, boyunca (Genetivus ile); deyim: δι' ὀλίγου = kısa süre sonra"
+    ],
+    "meanings_en": [
+      "through (+ gen); because of (+ acc)"
+    ],
+    "etymology": "Hint-Avrupa kökü *dis- (ikiye, arasından).",
+    "derivatives": [
+      "diyalog, diyabet, diyagonal"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "δι' ὀλίγου βαδίζει.",
+        "tr": "Kısa süre sonra yürür.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_met",
+    "word": "μετά",
+    "lemma": "μετά / μετ' / μεθ'",
+    "transliteration": "metá",
+    "athenaze_forms": "μετά (+ Acc.)",
+    "partOfSpeech": "Edat",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "-den sonra (Accusativus ile); ile, birlikte (Genetivus ile)"
+    ],
+    "meanings_en": [
+      "after (+ acc); with (+ gen)"
+    ],
+    "etymology": "Hint-Avrupa kökü *medʰi- (arasında, ile).",
+    "derivatives": [
+      "metafor, metafizik, metamorfoz"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "καὶ μετὰ τὸ δεῖπνον καθεύδει.",
+        "tr": "Ve yemekten sonra uyur.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_prs",
+    "word": "πρός",
+    "lemma": "πρός",
+    "transliteration": "prós",
+    "athenaze_forms": "πρός (+ Acc.)",
+    "partOfSpeech": "Edat",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "-e doğru, yanına, üzerine, karşısında (Accusativus ile)"
+    ],
+    "meanings_en": [
+      "towards, to, against (+ acc)"
+    ],
+    "etymology": "Yönelme edatı.",
+    "derivatives": [
+      "prozodi"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "βαδίζει πρὸς τὸν ἀγρόν.",
+        "tr": "Tarlaya doğru yürür.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_hyp",
+    "word": "ὑπό",
+    "lemma": "ὑπό / ὑπ' / ὑφ'",
+    "transliteration": "hypó",
+    "athenaze_forms": "ὑπό (+ Dat. / + Acc.)",
+    "partOfSpeech": "Edat",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Altında (Dativus ile); altına (Accusativus ile); tarafından (Genetivus ile)"
+    ],
+    "meanings_en": [
+      "under (+ dat/acc); by (agent + gen)"
+    ],
+    "etymology": "Hint-Avrupa kökü *upo (altında; krş. Latince sub).",
+    "derivatives": [
+      "hipotez, hipotermi, hipotenüs"
+    ],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἡσυχάζει ὑπὸ τῷ δένδρῳ.",
+        "tr": "Ağacın altında dinlenir.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_all",
+    "word": "ἀλλά",
+    "lemma": "ἀλλά / ἀλλ'",
+    "transliteration": "allá",
+    "athenaze_forms": "ἀλλά / ἀλλ'",
+    "partOfSpeech": "Bağlaç",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Ama, fakat, lakin, bilakis"
+    ],
+    "meanings_en": [
+      "but, yet, on the contrary"
+    ],
+    "etymology": "ἄλλος (başka) kelimesinin çoğul nötr formundan.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "οὐκ ἐν ταῖς Ἀθήναις ἀλλ' ἐν τοῖς ἀγροῖς.",
+        "tr": "Atina'da değil, bilakis kırsalda.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_gr",
+    "word": "γάρ",
+    "lemma": "γάρ (postpositive)",
+    "transliteration": "gár",
+    "athenaze_forms": "γάρ",
+    "partOfSpeech": "Gerekçe Bağlacı",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Çünkü, zira (cümlede 2. sırada yer alır / postpositive)"
+    ],
+    "meanings_en": [
+      "for, because"
+    ],
+    "etymology": "γε + ἄρα birleşimi.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὁ γὰρ Δικαιόπολις αὐτουργός ἐστιν.",
+        "tr": "Çünkü Dikaiopolis kendi toprağını işleyen bir çiftçidir.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_d",
+    "word": "δέ",
+    "lemma": "δέ / δ' (postpositive)",
+    "transliteration": "dé",
+    "athenaze_forms": "δέ / δ'",
+    "partOfSpeech": "Bağlaç",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Ve, ama, ise (cümlede 2. sırada yer alır / postpositive)"
+    ],
+    "meanings_en": [
+      "and, but, on the other hand"
+    ],
+    "etymology": "Grekçe temel bağlaç.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "οἰκεῖ δὲ ἐν τοῖς ἀγροῖς.",
+        "tr": "Kırsalda ise ikamet eder.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1α"
+      }
+    ]
+  },
+  {
+    "id": "ath_ei",
+    "word": "εἰ",
+    "lemma": "εἰ",
+    "transliteration": "ei",
+    "athenaze_forms": "εἰ (εἰ μή)",
+    "partOfSpeech": "Koşul Bağlacı",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Eğer, şayet; kalıp: εἰ μή = eğer değilse, -medikçe"
+    ],
+    "meanings_en": [
+      "if (ei mē: unless, except)"
+    ],
+    "etymology": "Şart eki.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "εἰ μὴ πονεῖς, οὐδὲν ἔχεις.",
+        "tr": "Çalışmazsan hiçbir şeyin olmaz.",
+        "author": "Athenaze I"
+      }
+    ]
+  },
+  {
+    "id": "ath_epe",
+    "word": "ἐπεί",
+    "lemma": "ἐπεί",
+    "transliteration": "epeí",
+    "athenaze_forms": "ἐπεί",
+    "partOfSpeech": "Zaman / Sebep Bağlacı",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "-dığı zaman, -ınca, mademki, çünkü"
+    ],
+    "meanings_en": [
+      "when, after, since"
+    ],
+    "etymology": "ἐπί kökünden.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἐπεὶ δὲ καταδύνει ὁ ἥλιος, οἴκαδε βαδίζει.",
+        "tr": "Güneş batınca ise eve doğru yürür.",
+        "author": "Athenaze I",
+        "work": "Bölüm 1β"
+      }
+    ]
+  },
+  {
+    "id": "ath_mn__d_",
+    "word": "μέν ... δέ",
+    "lemma": "μέν ... δέ ...",
+    "transliteration": "mén ... dé ...",
+    "athenaze_forms": "μέν ... δέ ...",
+    "partOfSpeech": "Dengeleme / Karşılaştırma İlgeci",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Bir yandan ... diğer yandan ...; ... ise de ... (iki cümleyi dengeleyen klasik kalıp)"
+    ],
+    "meanings_en": [
+      "on the one hand... on the other hand..."
+    ],
+    "etymology": "Klasik Grekçe düşünce simetrisi yapısı.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὁ μὲν Δικαιόπολις πονεῖ, ὁ δὲ Ξανθίας καθεύδει.",
+        "tr": "Dikaiopolis çalışırken, Ksanthias ise uyur.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_te__ka",
+    "word": "τε ... καί",
+    "lemma": "τε ... καί / τε καί",
+    "transliteration": "te ... kaí",
+    "athenaze_forms": "τε ... καί / τε καί",
+    "partOfSpeech": "Çifte Bağlaç",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Hem ... hem de ..."
+    ],
+    "meanings_en": [
+      "both... and..."
+    ],
+    "etymology": "τε (enklitik ve) + καί.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "τόν τε πατέρα καὶ τὸν υἱὸν φιλεῖ.",
+        "tr": "Hem babayı hem de oğulu sever.",
+        "author": "Athenaze I"
+      }
+    ]
+  },
+  {
+    "id": "ath_ido",
+    "word": "ἰδού",
+    "lemma": "ἰδού",
+    "transliteration": "idoú",
+    "athenaze_forms": "ἰδού",
+    "partOfSpeech": "Ünlem",
+    "category": "Ünlemler & Kalıplar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Bak! İşte! Gör!"
+    ],
+    "meanings_en": [
+      "look! behold! see!"
+    ],
+    "etymology": "εἶδον (gördüm) fiilinin orta çatı emir formu ἰδοῦ vurgu kaymasıyla ünlemleşmiştir.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἰδού, ὦ πάτερ, ἕτοιμός ἐστιν ὁ βοῦς.",
+        "tr": "Bak ey baba, öküz hazırdır!",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_phe",
+    "word": "φεῦ",
+    "lemma": "φεῦ (+ genitiv)",
+    "transliteration": "pheû",
+    "athenaze_forms": "φεῦ (φεῦ τοῦ ποδός)",
+    "partOfSpeech": "Ünlem",
+    "category": "Ünlemler & Kalıplar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Ah! Eyvah! Yazık! (Genetivus ile acı kaynağını belirtir: φεῦ τοῦ ποδός = Ah ayağım!)"
+    ],
+    "meanings_en": [
+      "alas! oh! woe! (pheu tou podos: alas for my foot!)"
+    ],
+    "etymology": "Doğal iç çekiş yansıması.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "φεῦ τοῦ ποδός· πταίω γὰρ πρὸς λίθον.",
+        "tr": "Ah ayağım! Çünkü taşa çarptım.",
+        "author": "Athenaze I",
+        "work": "Bölüm 3α"
+      }
+    ]
+  },
+  {
+    "id": "ath_263",
+    "word": "ὦ",
+    "lemma": "ὦ (+ vocativ)",
+    "transliteration": "ô",
+    "athenaze_forms": "ὦ",
+    "partOfSpeech": "Seslenme Ünlemi",
+    "category": "Ünlemler & Kalıplar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Ey! (Vocativus / Hitap hali ile zorunlu ve saygılı seslenme ünlemi)"
+    ],
+    "meanings_en": [
+      "O! (used with vocative case)"
+    ],
+    "etymology": "Klasik Grekçe seslenme edatı.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ὦ Ξανθία, ἐλθὲ δεῦρο.",
+        "tr": "Ey Ksanthias, buraya gel!",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_di_olgou",
+    "word": "δι' ὀλίγου",
+    "lemma": "δι' ὀλίγου (deyim)",
+    "transliteration": "di' olígou",
+    "athenaze_forms": "δι' ὀλίγου",
+    "partOfSpeech": "Kalıp İfade / Deyim",
+    "category": "Ünlemler & Kalıplar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Kısa süre sonra, çok geçmeden, az sonra"
+    ],
+    "meanings_en": [
+      "soon, after a little while"
+    ],
+    "etymology": "διά (içinden) + ὀλίγου (az bir sürenin).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "δι' ὀλίγου οἴκαδε βαδίζουσιν.",
+        "tr": "Az sonra eve doğru yürürler.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_ei_m",
+    "word": "εἰ μή",
+    "lemma": "εἰ μή (kalıp)",
+    "transliteration": "ei mḗ",
+    "athenaze_forms": "εἰ μή",
+    "partOfSpeech": "Kalıp İfade",
+    "category": "Ünlemler & Kalıplar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "-medikçe, eğer ... değilse, müstesna"
+    ],
+    "meanings_en": [
+      "unless, except, if not"
+    ],
+    "etymology": "εἰ (eğer) + μή (değil).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "εἰ μὴ πονεῖς, οὐ δειπνεῖς.",
+        "tr": "Çalışmazsan yemek yemezsin.",
+        "author": "Athenaze I"
+      }
+    ]
+  },
+  {
+    "id": "ath_en_d_toti",
+    "word": "ἐν δὲ τούτῳ",
+    "lemma": "ἐν δὲ τούτῳ (kalıp)",
+    "transliteration": "en dè toútōi",
+    "athenaze_forms": "ἐν δὲ τούτῳ",
+    "partOfSpeech": "Kalıp İfade",
+    "category": "Ünlemler & Kalıplar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "Bu sırada, bu esnada, tam o esnada"
+    ],
+    "meanings_en": [
+      "meanwhile, in the meantime"
+    ],
+    "etymology": "ἐν (içinde) + τούτῳ (bu zamanın).",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἐν δὲ τούτῳ προσέρχεται ὁ δεσπότης.",
+        "tr": "Bu esnada efendi çıkagelir.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
+      }
+    ]
+  },
+  {
+    "id": "ath_en_hi",
+    "word": "ἐν ᾧ",
+    "lemma": "ἐν ᾧ (kalıp)",
+    "transliteration": "en hôi",
+    "athenaze_forms": "ἐν ᾧ",
+    "partOfSpeech": "Kalıp İfade",
+    "category": "Ünlemler & Kalıplar",
+    "frequency": 4,
+    "isAthenaze": true,
+    "tags": [
+      "athenaze"
+    ],
+    "source": "Athenaze: Book I (1α – 3β)",
+    "meanings_tr": [
+      "-dığı sırada, -iken, o esnada"
+    ],
+    "meanings_en": [
+      "while, in which time"
+    ],
+    "etymology": "ἐν + ilgi zamiri ᾧ.",
+    "derivatives": [],
+    "grammar": {},
+    "examples": [
+      {
+        "greek": "ἐν ᾧ δὲ καθεύδει ὁ δοῦλος, πονεῖ ὁ δεσπότης.",
+        "tr": "Köle uyurken, efendi çalışır.",
+        "author": "Athenaze I",
+        "work": "Bölüm 2β"
       }
     ]
   }
