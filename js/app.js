@@ -63,7 +63,9 @@ class GreekApp {
                 athenazeForms,
                 isAthenaze: !!item.isAthenaze,
                 isEmelHoca: !!item.isEmelHoca,
+                isFilizHoca: !!item.isFilizHoca,
                 emelNotes: (item.emel_notes || '').toLowerCase(),
+                filizNotes: (item.filiz_notes || '').toLowerCase(),
                 trText,
                 enText,
                 etymText,
@@ -237,12 +239,14 @@ class GreekApp {
         const q = this.searchQuery.trim().toLowerCase();
         let filtered = this.indexedData;
 
-        // Category Scope filter (Tüm Kelimeler, Athenaze, Emel Hoca)
+        // Category Scope filter (Tüm Kelimeler, Athenaze, Emel Hoca, Filiz Hoca)
         if (this.activeCategory !== 'all') {
             if (this.activeCategory === 'athenaze') {
                 filtered = filtered.filter(item => item.isAthenaze === true || (item.raw.tags && item.raw.tags.includes('athenaze')));
             } else if (this.activeCategory === 'emel_hoca') {
                 filtered = filtered.filter(item => item.isEmelHoca === true || (item.raw.tags && item.raw.tags.includes('emel_hoca')));
+            } else if (this.activeCategory === 'filiz_hoca') {
+                filtered = filtered.filter(item => item.isFilizHoca === true || (item.raw.tags && item.raw.tags.includes('filiz_hoca')));
             }
         }
 
@@ -285,6 +289,10 @@ class GreekApp {
 
                 // Etymology
                 if (item.etymText.includes(q)) return true;
+
+                // Special notes (Emel Hoca & Filiz Hoca)
+                if (item.emelNotes && item.emelNotes.includes(q)) return true;
+                if (item.filizNotes && item.filizNotes.includes(q)) return true;
 
                 return false;
             });
@@ -370,6 +378,7 @@ class GreekApp {
                     <div class="word-badges">
                         ${item.isAthenaze ? `<span class="badge badge-athenaze" title="Athenaze Book I (1α-3β) Kelimesi">📚 Athenaze I</span>` : ''}
                         ${item.isEmelHoca ? `<span class="badge badge-emel" title="Emel Hoca'nın Seçtikleri">🌸 Emel Hoca</span>` : ''}
+                        ${item.isFilizHoca ? `<span class="badge badge-filiz" title="Filiz Hoca'nın Notlarından">🌿 Filiz Hoca</span>` : ''}
                         <span class="badge badge-pos">${item.partOfSpeech || 'Kelime'}</span>
                         <span class="badge badge-cat">${item.category || 'Genel'}</span>
                         <span class="badge badge-stars" title="Kullanım Sıklığı">${stars}</span>
@@ -388,6 +397,12 @@ class GreekApp {
                     ${item.emel_notes ? `
                         <div class="word-emel-preview">
                             <span class="emel-label">🌸 Emel Hoca:</span> ${item.emel_notes}
+                        </div>
+                    ` : ''}
+
+                    ${item.filiz_notes ? `
+                        <div class="word-filiz-preview">
+                            <span class="filiz-label">🌿 Filiz Hoca:</span> ${item.filiz_notes}
                         </div>
                     ` : ''}
 
@@ -510,6 +525,7 @@ class GreekApp {
             <div class="modal-badges-bar">
                 ${item.isAthenaze ? `<span class="badge badge-athenaze">📚 Athenaze: Book I (1α – 3β)</span>` : ''}
                 ${item.isEmelHoca ? `<span class="badge badge-emel">🌸 Emel Hoca'nın Seçtikleri</span>` : ''}
+                ${item.isFilizHoca ? `<span class="badge badge-filiz">🌿 Filiz Hoca'nın Notları</span>` : ''}
                 <span class="badge badge-pos">${item.partOfSpeech || ''}</span>
                 <span class="badge badge-cat">${item.category || ''}</span>
                 <span class="badge badge-stars" title="Sıklık">${stars}</span>
@@ -529,6 +545,15 @@ class GreekApp {
                     <h4>🌸 Emel Hoca'nın Seçtikleri & Ders Açıklaması</h4>
                     <div class="emel-notes-box">
                         ${item.emel_notes}
+                    </div>
+                </div>
+            ` : ''}
+
+            ${item.filiz_notes ? `
+                <div class="detail-section filiz-modal-section">
+                    <h4>🌿 Filiz Hoca'nın Notları & Açıklaması</h4>
+                    <div class="filiz-notes-box">
+                        ${item.filiz_notes}
                     </div>
                 </div>
             ` : ''}

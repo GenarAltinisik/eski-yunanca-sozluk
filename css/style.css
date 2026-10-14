@@ -1518,6 +1518,12 @@ body.theme-dark .btn-fc-reset {
     color: #ffffff;
 }
 
+.fc-pill.fc-pill-filiz.active {
+    background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+    border-color: #74c69d;
+    color: #ffffff;
+}
+
 body.theme-dark .fc-pill.active, body.theme-dark .fc-sub-pill.active {
     background: var(--gold);
     color: #121517;
@@ -1528,6 +1534,12 @@ body.theme-dark .fc-pill.fc-pill-emel.active {
     background: linear-gradient(135deg, #7d3c98 0%, #a569bd 100%);
     color: #ffffff;
     border-color: #bb8fce;
+}
+
+body.theme-dark .fc-pill.fc-pill-filiz.active {
+    background: linear-gradient(135deg, #2d6a4f 0%, #40916c 100%);
+    color: #ffffff;
+    border-color: #95d5b2;
 }
 
 /* 10-Word Batches Grid */
@@ -2669,5 +2681,125 @@ body.theme-dark .emel-modal-section h4 {
     color: var(--text-primary);
     line-height: 1.6;
 }
+
+/* ==========================================
+   FILIZ HOCA NOTLARI SPECIAL STYLES & BADGES
+   ========================================== */
+.cat-pill.filiz-pill {
+    background: linear-gradient(135deg, rgba(45, 106, 79, 0.09) 0%, rgba(64, 145, 108, 0.18) 100%);
+    border: 1.5px solid #52b788;
+    color: #1b4332;
+    font-weight: 700;
+    padding: 6px 16px;
+    box-shadow: 0 2px 6px rgba(45, 106, 79, 0.15);
+}
+
+.cat-pill.filiz-pill:hover {
+    background: linear-gradient(135deg, rgba(45, 106, 79, 0.18) 0%, rgba(64, 145, 108, 0.28) 100%);
+    border-color: #40916c;
+    color: #081c15;
+    transform: translateY(-1px);
+}
+
+.cat-pill.filiz-pill.active {
+    background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+    color: #ffffff;
+    border-color: #95d5b2;
+    box-shadow: 0 0 12px rgba(45, 106, 79, 0.45);
+    font-weight: 800;
+}
+
+body.theme-dark .cat-pill.filiz-pill {
+    background: rgba(82, 183, 136, 0.18);
+    color: #d8f3dc;
+    border-color: #74c69d;
+}
+
+body.theme-dark .cat-pill.filiz-pill:hover {
+    background: rgba(82, 183, 136, 0.28);
+    color: #ffffff;
+    border-color: #95d5b2;
+}
+
+body.theme-dark .cat-pill.filiz-pill.active {
+    background: linear-gradient(135deg, #2d6a4f 0%, #40916c 100%);
+    color: #ffffff;
+    font-weight: 800;
+    box-shadow: 0 0 12px rgba(82, 183, 136, 0.5);
+}
+
+/* Filiz Hoca Badges on Word Cards */
+.badge-filiz {
+    background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+    color: #ffffff;
+    border: 1px solid #74c69d;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+body.theme-dark .badge-filiz {
+    background: linear-gradient(135deg, #081c15 0%, #1b4332 100%);
+    color: #d8f3dc;
+    border: 1px solid #52b788;
+}
+
+.word-filiz-preview {
+    font-size: 13px;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    background: rgba(45, 106, 79, 0.08);
+    border-left: 3px solid #40916c;
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+    line-height: 1.5;
+}
+
+body.theme-dark .word-filiz-preview {
+    background: rgba(45, 106, 79, 0.18);
+    border-left-color: #74c69d;
+}
+
+.word-filiz-preview .filiz-label {
+    font-family: var(--font-body);
+    font-weight: 700;
+    color: #2d6a4f;
+}
+
+body.theme-dark .word-filiz-preview .filiz-label {
+    color: #74c69d;
+}
+
+.filiz-modal-section {
+    background: var(--bg-page);
+    border: 1px solid var(--border-accent);
+    border-left: 5px solid #2d6a4f;
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    margin-bottom: 20px;
+}
+
+body.theme-dark .filiz-modal-section {
+    border-left-color: #52b788;
+}
+
+.filiz-modal-section h4 {
+    color: #1b4332;
+    margin-bottom: 8px;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+body.theme-dark .filiz-modal-section h4 {
+    color: #95d5b2;
+}
+
+.filiz-notes-box {
+    margin-top: 4px;
+    font-size: 15px;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
 
 

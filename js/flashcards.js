@@ -121,6 +121,11 @@ class FlashcardTrainer {
                 item.isEmelHoca === true || (item.tags && item.tags.includes('emel_hoca'))
             );
         }
+        if (mainCat === 'filiz_hoca') {
+            return this.fullDictionary.filter(item => 
+                item.isFilizHoca === true || (item.tags && item.tags.includes('filiz_hoca'))
+            );
+        }
         return this.fullDictionary;
     }
 
@@ -199,6 +204,7 @@ class FlashcardTrainer {
     getMainCategoryLabel() {
         if (this.mainCategory === 'athenaze') return '📚 Athenaze I';
         if (this.mainCategory === 'emel_hoca') return "🌸 Emel Hoca";
+        if (this.mainCategory === 'filiz_hoca') return "🌿 Filiz Hoca";
         return '🌟 Tüm Sözlük';
     }
 
@@ -336,6 +342,9 @@ class FlashcardTrainer {
                                 </button>
                                 <button type="button" class="fc-pill fc-pill-emel ${this.mainCategory === 'emel_hoca' ? 'active' : ''}" data-main="emel_hoca">
                                     🌸 Emel Hoca'nın Seçtikleri (${this.getMainCategoryWords('emel_hoca').length})
+                                </button>
+                                <button type="button" class="fc-pill fc-pill-filiz ${this.mainCategory === 'filiz_hoca' ? 'active' : ''}" data-main="filiz_hoca">
+                                    🌿 Filiz Hoca'nın Notları (${this.getMainCategoryWords('filiz_hoca').length})
                                 </button>
                             </div>
                         </div>
@@ -501,6 +510,7 @@ class FlashcardTrainer {
         const originBadges = `
             ${item.isAthenaze ? `<span class="badge badge-athenaze" title="Athenaze Book I (1α-3β)">📚 Athenaze I</span>` : ''}
             ${item.isEmelHoca ? `<span class="badge badge-emel" title="Emel Hoca'nın Seçtikleri">🌸 Emel Hoca</span>` : ''}
+            ${item.isFilizHoca ? `<span class="badge badge-filiz" title="Filiz Hoca'nın Notlarından">🌿 Filiz Hoca</span>` : ''}
             <span class="badge badge-pos">${item.partOfSpeech || 'Kelime'}</span>
         `;
 
