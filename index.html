@@ -83,11 +83,6 @@
              ========================================== -->
         <section id="view-dictionary" class="tab-view active-tab-content">
             
-            <!-- Word of the Day Banner -->
-            <div class="wotd-section" id="wotd-container">
-                <!-- Injected via JavaScript -->
-            </div>
-
             <!-- Search Section -->
             <div class="search-section">
                 <div class="search-bar-wrapper">
@@ -111,22 +106,34 @@
                 <!-- Search Controls & Filters -->
                 <div class="search-controls">
                     <div class="category-pills" id="category-pills-bar">
-                        <button type="button" class="cat-pill active" data-category="all">Tümü</button>
+                        <button type="button" class="cat-pill active" data-category="all">Tüm Kelimeler</button>
                         <button type="button" class="cat-pill athenaze-pill" data-category="athenaze">📚 Athenaze (1α – 3β)</button>
                         <button type="button" class="cat-pill emel-pill" data-category="emel_hoca">🌸 Emel Hoca'nın Seçtikleri</button>
-                        <button type="button" class="cat-pill" data-category="Felsefe">Felsefe & Düşünce</button>
-                        <button type="button" class="cat-pill" data-category="Politika & Toplum">Politika & Toplum</button>
-                        <button type="button" class="cat-pill" data-category="Tarım & Doğa">Tarım & Doğa</button>
-                        <button type="button" class="cat-pill" data-category="Doğa & Bilim">Doğa & Bilim</button>
-                        <button type="button" class="cat-pill" data-category="Mitoloji & İnanç">Mitoloji & İnanç</button>
-                        <button type="button" class="cat-pill" data-category="Temel Fiiller">Temel Fiiller</button>
-                        <button type="button" class="cat-pill" data-category="Günlük Yaşam">Günlük Yaşam</button>
-                        <button type="button" class="cat-pill" data-category="Zarflar & Edatlar">Zarflar & Edatlar</button>
                     </div>
 
                     <div class="dropdown-filters">
+                        <select id="topic-filter-select" class="scholarly-select" title="Konu / Kategori Filtresi">
+                            <option value="all">🏷️ Tüm Konular / Kategoriler</option>
+                            <option value="Felsefe">🏛️ Felsefe & Düşünce</option>
+                            <option value="Politika & Toplum">⚖️ Politika & Toplum</option>
+                            <option value="Tarım & Doğa">🌾 Tarım & Doğa</option>
+                            <option value="Doğa & Bilim">🌿 Doğa & Bilim</option>
+                            <option value="Mitoloji & İnanç">⚡ Mitoloji & İnanç</option>
+                            <option value="Edebiyat & Sanat">🎭 Edebiyat & Sanat</option>
+                            <option value="Savaş & Tarih">⚔️ Savaş & Tarih</option>
+                            <option value="Günlük Yaşam">🏺 Günlük Yaşam</option>
+                            <option value="Temel Fiiller">⚡ Temel Fiiller</option>
+                            <option value="Zarflar & Edatlar">🔗 Zarflar & Edatlar</option>
+                            <option value="Sıfatlar & Zarflar">✨ Sıfatlar & Zarflar</option>
+                            <option value="Edatlar & Bağlaçlar">🖇️ Edatlar & Bağlaçlar</option>
+                            <option value="Özel İsimler">👑 Özel İsimler</option>
+                            <option value="Gramer & Zamirler">📖 Gramer & Zamirler</option>
+                            <option value="Ünlemler & Kalıplar">💬 Ünlemler & Kalıplar</option>
+                            <option value="Tarih & Kültür">📜 Tarih & Kültür</option>
+                        </select>
+
                         <select id="pos-filter-select" class="scholarly-select" title="Kelime Türü Filtresi">
-                            <option value="all">Tüm Türler (İsim, Fiil...)</option>
+                            <option value="all">🔤 Tüm Türler (İsim, Fiil...)</option>
                             <option value="İsim">İsimler</option>
                             <option value="Fiil">Fiiller</option>
                             <option value="Sıfat">Sıfatlar</option>

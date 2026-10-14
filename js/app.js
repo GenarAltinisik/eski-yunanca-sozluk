@@ -12,6 +12,7 @@ class GreekApp {
 
         this.favorites = this.loadFavorites();
         this.activeCategory = 'all';
+        this.activeTopic = 'all';
         this.activePOS = 'all';
         this.searchQuery = '';
         this.activeTab = 'dictionary';
@@ -28,7 +29,6 @@ class GreekApp {
         this.buildSearchIndex();
         this.initTheme();
         this.renderStats();
-        this.renderWordOfTheDay();
         this.renderDictionary();
         this.renderAlphabetView();
         this.renderGrammarView();
@@ -237,15 +237,18 @@ class GreekApp {
         const q = this.searchQuery.trim().toLowerCase();
         let filtered = this.indexedData;
 
-        // Category filter
+        // Category Scope filter (Tüm Kelimeler, Athenaze, Emel Hoca)
         if (this.activeCategory !== 'all') {
             if (this.activeCategory === 'athenaze') {
                 filtered = filtered.filter(item => item.isAthenaze === true || (item.raw.tags && item.raw.tags.includes('athenaze')));
             } else if (this.activeCategory === 'emel_hoca') {
                 filtered = filtered.filter(item => item.isEmelHoca === true || (item.raw.tags && item.raw.tags.includes('emel_hoca')));
-            } else {
-                filtered = filtered.filter(item => item.raw.category === this.activeCategory);
             }
+        }
+
+        // Topic / Category dropdown filter (Felsefe, Politika & Toplum, Tarım & Doğa, etc.)
+        if (this.activeTopic && this.activeTopic !== 'all') {
+            filtered = filtered.filter(item => item.raw.category === this.activeTopic);
         }
 
         // POS filter
@@ -330,7 +333,12 @@ class GreekApp {
                     const searchInput = document.getElementById('search-input');
                     if (searchInput) searchInput.value = '';
                     this.activeCategory = 'all';
+                    this.activeTopic = 'all';
                     this.activePOS = 'all';
+                    const topicSelect = document.getElementById('topic-filter-select');
+                    if (topicSelect) topicSelect.value = 'all';
+                    const posSelect = document.getElementById('pos-filter-select');
+                    if (posSelect) posSelect.value = 'all';
                     this.renderCategoryPills();
                     this.renderDictionary();
                 });
@@ -810,7 +818,7 @@ class GreekApp {
             });
         }
 
-        // Category Pills
+        // Category Scope Pills (Tüm Kelimeler, Athenaze, Emel Hoca)
         document.querySelectorAll('.cat-pill').forEach(pill => {
             pill.addEventListener('click', () => {
                 this.activeCategory = pill.dataset.category;
@@ -818,6 +826,15 @@ class GreekApp {
                 this.renderDictionary();
             });
         });
+
+        // Topic / Category Filter Select
+        const topicSelect = document.getElementById('topic-filter-select');
+        if (topicSelect) {
+            topicSelect.addEventListener('change', (e) => {
+                this.activeTopic = e.target.value;
+                this.renderDictionary();
+            });
+        }
 
         // POS Filter Select
         const posSelect = document.getElementById('pos-filter-select');
