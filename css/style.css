@@ -3,7 +3,7 @@
    Aesthetic: Classical Antiquity meets Modern Scholarly UI
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cinzel+Decorative:wght@700&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cinzel+Decorative:wght@700&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Serif+Display:ital,wght@0,600;0,700;0,800;1,700&family=Cardo:wght@700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
     /* Parchment Theme (Default) */
@@ -134,9 +134,10 @@ body {
 }
 
 .meander-icon {
-    font-family: var(--font-heading);
-    font-size: 28px;
-    font-weight: 800;
+    font-family: 'Noto Serif Display', 'Cardo', var(--font-greek), Georgia, serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
     color: var(--gold);
     display: flex;
     align-items: center;
@@ -149,11 +150,16 @@ body {
     box-shadow: 0 2px 8px rgba(181, 137, 0, 0.15);
     user-select: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
 }
 
 .meander-icon:hover {
     transform: scale(1.06);
     box-shadow: 0 4px 14px rgba(181, 137, 0, 0.3);
+}
+
+html.theme-dark .meander-icon {
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.45);
 }
 
 .brand-title {
