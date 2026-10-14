@@ -724,28 +724,62 @@ class FlashcardTrainer {
         }
     }
 
+    changeCard(newIndex) {
+        if (!this.currentDeck || this.currentDeck.length === 0) return;
+        if (this.isTransitioning) return;
+
+        const card = this.container.querySelector('#fc-card');
+
+        if (this.isFlipped) {
+            // Card is currently flipped showing the previous answer!
+            this.isTransitioning = true;
+            this.isFlipped = false;
+            
+            // 1. Immediately initiate turning back to the front face
+            if (card) {
+                card.classList.remove('is-flipped');
+            }
+
+            // 2. Wait 210ms until the card is perpendicular/edge-on (90 deg)
+            // Neither front nor back is visible at this exact moment.
+            // Swap content now so the user never sees the next card's answer!
+            setTimeout(() => {
+                this.currentIndex = newIndex;
+                this.renderCard();
+                this.isTransitioning = false;
+            }, 210);
+        } else {
+            // Card is already showing front face: smooth tactile switch
+            this.isTransitioning = true;
+            if (card) {
+                card.classList.add('fc-card-switching');
+            }
+            setTimeout(() => {
+                this.currentIndex = newIndex;
+                this.renderCard();
+                if (card) {
+                    card.classList.remove('fc-card-switching');
+                }
+                this.isTransitioning = false;
+            }, 80);
+        }
+    }
+
     next() {
         if (!this.currentDeck || this.currentDeck.length === 0) return;
-        if (this.currentIndex < this.currentDeck.length - 1) {
-            this.currentIndex++;
-        } else {
-            this.currentIndex = 0;
-        }
-        this.renderCard();
+        const newIndex = (this.currentIndex < this.currentDeck.length - 1) ? this.currentIndex + 1 : 0;
+        this.changeCard(newIndex);
     }
 
     prev() {
         if (!this.currentDeck || this.currentDeck.length === 0) return;
-        if (this.currentIndex > 0) {
-            this.currentIndex--;
-        } else {
-            this.currentIndex = this.currentDeck.length - 1;
-        }
-        this.renderCard();
+        const newIndex = (this.currentIndex > 0) ? this.currentIndex - 1 : this.currentDeck.length - 1;
+        this.changeCard(newIndex);
     }
 
     markCurrentLearned() {
         if (!this.currentDeck || this.currentDeck.length === 0) return;
+        if (this.isTransitioning) return;
         const item = this.currentDeck[this.currentIndex];
         this.setWordStatus(item.id, 'learned');
         this.updateProgressUI();
@@ -754,6 +788,7 @@ class FlashcardTrainer {
 
     markCurrentUnlearned() {
         if (!this.currentDeck || this.currentDeck.length === 0) return;
+        if (this.isTransitioning) return;
         const item = this.currentDeck[this.currentIndex];
         this.setWordStatus(item.id, 'unlearned');
         this.updateProgressUI();

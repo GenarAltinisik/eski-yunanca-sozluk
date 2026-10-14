@@ -1627,9 +1627,14 @@ body.theme-dark .fc-batch-card-btn.active {
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.42s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.12s ease;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
+}
+
+.fc-card.fc-card-switching {
+    opacity: 0.35;
+    transform: scale(0.985);
 }
 
 .fc-card.is-flipped {
