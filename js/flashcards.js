@@ -3,6 +3,9 @@
  * Comprehensive multi-tiered spaced repetition and review system
  * 
  * Features:
+ * - Card-Centric (Hero) Design: Flashcard is the primary focal element on screen.
+ * - Compact Control Bar (52px) with collapsible Deck & Filter Drawer.
+ * - Big Prominent Hero Answer: Main answer is displayed large & bold first; details scrollable below.
  * - 3 Main Categories: Tüm Kelimeler, Athenaze Book I, Emel Hoca'nın Seçtikleri
  * - Sub-categories / Parts of Speech: Tümü, İsimler, Fiiller, Sıfatlar, Edatlar & Bağlaçlar
  * - Batches of 10 words with individual progress tracking
@@ -32,6 +35,10 @@ class FlashcardTrainer {
         this.deckMode = this.prefs.deckMode || 'batch';            // 'batch' | 'known' | 'unknown' | 'all_pool'
         this.batchIndex = this.prefs.batchIndex || 0;              // 0, 1, 2...
         this.direction = this.prefs.direction || 'greek_to_tr';    // 'greek_to_tr' | 'tr_to_greek'
+
+        // Drawer & Menu UI states
+        this.isFilterDrawerOpen = false;
+        this.isResetMenuOpen = false;
 
         // Card navigation state
         this.currentDeck = [];
@@ -103,7 +110,6 @@ class FlashcardTrainer {
     /* ==========================================================================
        DATA FILTERING & HIERARCHY
        ========================================================================== */
-    // Returns words matching current Main Category
     getMainCategoryWords(mainCat = this.mainCategory) {
         if (mainCat === 'athenaze') {
             return this.fullDictionary.filter(item => 
@@ -118,7 +124,6 @@ class FlashcardTrainer {
         return this.fullDictionary;
     }
 
-    // Returns words matching current Main Category AND Sub-category (POS)
     getSubCategoryWords(mainCat = this.mainCategory, subCat = this.subCategory) {
         const pool = this.getMainCategoryWords(mainCat);
         if (!subCat || subCat === 'all') {
@@ -143,21 +148,16 @@ class FlashcardTrainer {
         return pool.filter(x => (x.partOfSpeech || '').includes(subCat) || x.category === subCat);
     }
 
-    // Build the active working deck based on deckMode and batchIndex
     buildActiveDeck() {
         const words = this.getSubCategoryWords(this.mainCategory, this.subCategory);
         
         if (this.deckMode === 'known') {
-            // All words marked as learned in this scope (no 10-limit)
             this.currentDeck = words.filter(w => this.isWordLearned(w.id));
         } else if (this.deckMode === 'unknown') {
-            // All words unlearned or never marked in this scope (no 10-limit)
             this.currentDeck = words.filter(w => !this.isWordLearned(w.id));
         } else if (this.deckMode === 'all_pool') {
-            // Entire pool in this scope
             this.currentDeck = [...words];
         } else {
-            // 'batch' mode (groups of 10)
             const totalBatches = Math.max(1, Math.ceil(words.length / 10));
             if (this.batchIndex >= totalBatches) {
                 this.batchIndex = 0;
@@ -167,7 +167,6 @@ class FlashcardTrainer {
             this.currentDeck = words.slice(start, end);
         }
 
-        // Keep currentIndex in bounds
         if (this.currentIndex >= this.currentDeck.length) {
             this.currentIndex = 0;
         }
@@ -197,6 +196,40 @@ class FlashcardTrainer {
         return this.getStatsForWords(batchWords);
     }
 
+    getMainCategoryLabel() {
+        if (this.mainCategory === 'athenaze') return '📚 Athenaze I';
+        if (this.mainCategory === 'emel_hoca') return "🌸 Emel Hoca";
+        return '🌟 Tüm Sözlük';
+    }
+
+    getSubCategoryLabel() {
+        if (this.subCategory === 'İsim') return 'İsimler';
+        if (this.subCategory === 'Fiil') return 'Fiiller';
+        if (this.subCategory === 'Sıfat') return 'Sıfatlar';
+        if (this.subCategory === 'Edat') return 'Edatlar';
+        return 'Tüm Türler';
+    }
+
+    getDeckSummaryLabel() {
+        const poolWords = this.getSubCategoryWords(this.mainCategory, this.subCategory);
+        const batchStats = this.getCurrentBatchStats();
+        
+        let modeLabel = '';
+        if (this.deckMode === 'known') {
+            const count = poolWords.filter(w => this.isWordLearned(w.id)).length;
+            modeLabel = `🏆 Bildiklerim (${count})`;
+        } else if (this.deckMode === 'unknown') {
+            const count = poolWords.filter(w => !this.isWordLearned(w.id)).length;
+            modeLabel = `⏳ Bilmediklerim (${count})`;
+        } else if (this.deckMode === 'all_pool') {
+            modeLabel = `📋 Tüm Havuz (${poolWords.length})`;
+        } else {
+            modeLabel = `📦 Grup ${this.batchIndex + 1} (${batchStats.learned}/${batchStats.total})`;
+        }
+
+        return `${this.getMainCategoryLabel()} • ${this.getSubCategoryLabel()} • ${modeLabel}`;
+    }
+
     /* ==========================================================================
        INITIALIZATION & RENDERING
        ========================================================================== */
@@ -212,146 +245,164 @@ class FlashcardTrainer {
         const totalBatches = Math.max(1, Math.ceil(poolWords.length / 10));
         const subStats = this.getCurrentSubCategoryStats();
         const batchStats = this.getCurrentBatchStats();
-
-        const mainWords = this.getMainCategoryWords(this.mainCategory);
-        const mainStats = this.getStatsForWords(mainWords);
-
-        // Calculate counts for smart decks
         const knownCount = poolWords.filter(w => this.isWordLearned(w.id)).length;
         const unknownCount = poolWords.length - knownCount;
+
+        const currentPercent = this.deckMode === 'batch' ? batchStats.percent : subStats.percent;
 
         this.container.innerHTML = `
             <div class="flashcards-wrapper">
                 
-                <!-- Main Header & Scope Selector -->
-                <div class="fc-header-card">
-                    <div class="fc-header-top">
-                        <div class="fc-header-title">
-                            <h3>🏛️ Antik Yunanca İnteraktif Kelime Kartları</h3>
-                            <p class="fc-header-subtitle">Modüler 10'luk paketler, başarı takibi ve çift yönlü aktif hatırlama sistemi.</p>
+                <!-- COMPACT HERO CONTROL STRIP (Sleek 52px Bar) -->
+                <div class="fc-hero-control-strip">
+                    
+                    <!-- Left: Active Deck Selector Button -->
+                    <button type="button" class="fc-deck-trigger-btn" id="fc-deck-trigger-btn" title="Kategori, Gramer Türü ve Paket Seçimi İçin Tıklayın">
+                        <span class="fc-deck-trigger-icon">🎯</span>
+                        <span class="fc-deck-trigger-text">${this.getDeckSummaryLabel()}</span>
+                        <span class="fc-deck-trigger-arrow">▾</span>
+                    </button>
+
+                    <!-- Center / Right Controls: Direction Toggle, Progress Badge, Reset, Shuffle -->
+                    <div class="fc-strip-actions">
+                        
+                        <!-- Direction Toggle -->
+                        <div class="fc-toggle-group" title="Çalışma Yönünü Değiştir">
+                            <button type="button" class="btn-fc-toggle ${this.direction === 'greek_to_tr' ? 'active' : ''}" data-direction="greek_to_tr" title="Grekçe ➔ Türkçe">
+                                🇬🇷 ➔ 🇹🇷
+                            </button>
+                            <button type="button" class="btn-fc-toggle ${this.direction === 'tr_to_greek' ? 'active' : ''}" data-direction="tr_to_greek" title="Türkçe ➔ Grekçe">
+                                🇹🇷 ➔ 🇬🇷
+                            </button>
                         </div>
-                        <div class="fc-direction-box">
-                            <span class="fc-direction-label">Çalışma Yönü:</span>
-                            <div class="fc-toggle-group">
-                                <button type="button" class="btn-fc-toggle ${this.direction === 'greek_to_tr' ? 'active' : ''}" data-direction="greek_to_tr" title="Grekçe kelimeyi görüp Türkçesini tahmin edin">
-                                    🇬🇷 Grekçe ➔ 🇹🇷 TR
+
+                        <!-- Progress Percent Pill -->
+                        <div class="fc-strip-percent-badge" title="Bu Paketteki Öğrenme Oranı">
+                            <span id="fc-progress-percent">%${currentPercent}</span>
+                        </div>
+
+                        <!-- Reset Menu Dropdown -->
+                        <div class="fc-reset-btn-wrapper">
+                            <button type="button" class="btn-scholarly btn-sm btn-fc-reset" id="fc-reset-toggle-btn" title="İlerlemeyi Sıfırla">
+                                🗑️ Sıfırla ▾
+                            </button>
+                            <div class="fc-reset-menu hidden" id="fc-reset-menu">
+                                <button type="button" class="fc-reset-item" data-action="reset-batch">
+                                    📦 Bu Paketi Sıfırla (${this.deckMode === 'batch' ? (this.batchIndex + 1) + '. Grup' : 'Mevcut Paket'})
                                 </button>
-                                <button type="button" class="btn-fc-toggle ${this.direction === 'tr_to_greek' ? 'active' : ''}" data-direction="tr_to_greek" title="Türkçe anlamı görüp Grekçe karşılığı zihninizde canlandırın">
-                                    🇹🇷 TR ➔ 🇬🇷 Grekçe
+                                <button type="button" class="fc-reset-item" data-action="reset-sub">
+                                    📑 Bu Alt Kategoriyi Sıfırla (${this.getSubCategoryLabel()})
+                                </button>
+                                <button type="button" class="fc-reset-item" data-action="reset-main">
+                                    🏛️ Bu Ana Kütüphaneyi Sıfırla (${this.getMainCategoryLabel()})
+                                </button>
+                                <div class="fc-reset-divider"></div>
+                                <button type="button" class="fc-reset-item danger" data-action="reset-all">
+                                    ⚠️ Tüm Sözlük Kart İlerlemesini Sıfırla
                                 </button>
                             </div>
                         </div>
+
+                        <!-- Shuffle Button -->
+                        <button type="button" class="btn-icon-action btn-sm" id="fc-shuffle-btn" title="Kartları Karıştır">🔀</button>
+
                     </div>
 
-                    <!-- 1. Layer: Main Scope Pills -->
-                    <div class="fc-scope-section">
-                        <span class="fc-scope-label">Ana Kütüphane / Kaynak:</span>
-                        <div class="fc-pills-row" id="fc-main-pills">
-                            <button type="button" class="fc-pill ${this.mainCategory === 'all' ? 'active' : ''}" data-main="all">
-                                🌟 Tüm Kelimeler <span class="pill-count">(${this.fullDictionary.length})</span>
-                            </button>
-                            <button type="button" class="fc-pill fc-pill-ath ${this.mainCategory === 'athenaze' ? 'active' : ''}" data-main="athenaze">
-                                📚 Athenaze: Book I <span class="pill-count">(${this.getMainCategoryWords('athenaze').length})</span>
-                            </button>
-                            <button type="button" class="fc-pill fc-pill-emel ${this.mainCategory === 'emel_hoca' ? 'active' : ''}" data-main="emel_hoca">
-                                🌸 Emel Hoca'nın Seçtikleri <span class="pill-count">(${this.getMainCategoryWords('emel_hoca').length})</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- 2. Layer: Sub-category / Part of Speech Pills -->
-                    <div class="fc-scope-section">
-                        <span class="fc-scope-label">Kelime Türü (Gramer):</span>
-                        <div class="fc-pills-row" id="fc-sub-pills">
-                            <button type="button" class="fc-sub-pill ${this.subCategory === 'all' ? 'active' : ''}" data-sub="all">
-                                Tüm Türler <span class="pill-count">(${mainWords.length})</span>
-                            </button>
-                            <button type="button" class="fc-sub-pill ${this.subCategory === 'İsim' ? 'active' : ''}" data-sub="İsim">
-                                İsimler <span class="pill-count">(${this.getSubCategoryWords(this.mainCategory, 'İsim').length})</span>
-                            </button>
-                            <button type="button" class="fc-sub-pill ${this.subCategory === 'Fiil' ? 'active' : ''}" data-sub="Fiil">
-                                Fiiller <span class="pill-count">(${this.getSubCategoryWords(this.mainCategory, 'Fiil').length})</span>
-                            </button>
-                            <button type="button" class="fc-sub-pill ${this.subCategory === 'Sıfat' ? 'active' : ''}" data-sub="Sıfat">
-                                Sıfatlar <span class="pill-count">(${this.getSubCategoryWords(this.mainCategory, 'Sıfat').length})</span>
-                            </button>
-                            <button type="button" class="fc-sub-pill ${this.subCategory === 'Edat' ? 'active' : ''}" data-sub="Edat">
-                                Edatlar & Bağlaçlar <span class="pill-count">(${this.getSubCategoryWords(this.mainCategory, 'Edat').length})</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- 3. Layer: Deck Mode & 10-Word Batches Bar -->
-                    <div class="fc-deck-controls-bar">
-                        <div class="fc-deck-selector-wrap">
-                            <label for="fc-deck-select" class="fc-label-sm">📦 Çalışma Paketi / Modu:</label>
-                            <select id="fc-deck-select" class="scholarly-select fc-select-deck">
-                                <optgroup label="── 10'arlık Çalışma Paketleri ──">
-                                    ${this.renderBatchOptions(poolWords, totalBatches)}
-                                </optgroup>
-                                <optgroup label="── Akıllı Filtreli Desteler (Tüm Liste) ──">
-                                    <option value="mode:known" ${this.deckMode === 'known' ? 'selected' : ''}>
-                                        🏆 Bildiğim Kelimeler (${knownCount} Kelime)
-                                    </option>
-                                    <option value="mode:unknown" ${this.deckMode === 'unknown' ? 'selected' : ''}>
-                                        ⏳ Bilmediklerim / Tekrar (${unknownCount} Kelime)
-                                    </option>
-                                    <option value="mode:all_pool" ${this.deckMode === 'all_pool' ? 'selected' : ''}>
-                                        📋 Tüm Havuz (${poolWords.length} Kelime)
-                                    </option>
-                                </optgroup>
-                            </select>
-                        </div>
-
-                        <!-- Progress Bar & Reset Action -->
-                        <div class="fc-progress-and-reset">
-                            <div class="fc-progress-overview">
-                                <div class="fc-progress-labels">
-                                    <span class="fc-progress-text" id="fc-progress-label">
-                                        ${this.getDeckProgressLabel(batchStats, subStats, knownCount, poolWords.length)}
-                                    </span>
-                                    <span class="fc-progress-percent" id="fc-progress-percent">
-                                        %${this.deckMode === 'batch' ? batchStats.percent : subStats.percent}
-                                    </span>
-                                </div>
-                                <div class="fc-progress-bar-bg">
-                                    <div class="fc-progress-bar-fill" id="fc-progress-bar-fill" style="width: ${this.deckMode === 'batch' ? batchStats.percent : subStats.percent}%"></div>
-                                </div>
-                            </div>
-
-                            <div class="fc-reset-btn-wrapper">
-                                <button type="button" class="btn-scholarly btn-sm btn-fc-reset" id="fc-reset-toggle-btn" title="İlerlemeyi Sıfırla">
-                                    🗑️ Sıfırla ▾
-                                </button>
-                                <div class="fc-reset-menu hidden" id="fc-reset-menu">
-                                    <button type="button" class="fc-reset-item" data-action="reset-batch">
-                                        📦 Bu Paketin İlerlemesini Sıfırla (10 Kelime)
-                                    </button>
-                                    <button type="button" class="fc-reset-item" data-action="reset-sub">
-                                        📑 Bu Alt Kategoriyi Sıfırla (${this.subCategory === 'all' ? 'Tüm Türler' : this.subCategory})
-                                    </button>
-                                    <button type="button" class="fc-reset-item" data-action="reset-main">
-                                        🏛️ Tüm Bu Ana Kütüphaneyi Sıfırla (${this.getMainCategoryLabel()})
-                                    </button>
-                                    <div class="fc-reset-divider"></div>
-                                    <button type="button" class="fc-reset-item danger" data-action="reset-all">
-                                        ⚠️ Tüm Sözlük Kart İlerlemesini Sıfırla
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Mini Progress Line under the strip -->
+                    <div class="fc-strip-progress-line">
+                        <div class="fc-strip-progress-fill" id="fc-progress-bar-fill" style="width: ${currentPercent}%"></div>
                     </div>
 
                 </div>
 
-                <!-- Card Scene (3D Flip Scene) -->
+                <!-- COLLAPSIBLE FILTER & DECK DRAWER / SHEET -->
+                <div class="fc-deck-drawer ${this.isFilterDrawerOpen ? 'open' : 'hidden'}" id="fc-deck-drawer">
+                    <div class="fc-drawer-content">
+                        
+                        <div class="fc-drawer-header">
+                            <h4>🎯 Çalışma Kütüphanesi, Gramer Türü ve Paket Seçimi</h4>
+                            <button type="button" class="btn-icon-action" id="fc-drawer-close-btn" title="Kapat">✕</button>
+                        </div>
+
+                        <!-- 1. Layer: Main Scope -->
+                        <div class="fc-drawer-section">
+                            <span class="fc-drawer-section-title">1. Ana Kaynak Kütüphanesi:</span>
+                            <div class="fc-pills-row" id="fc-main-pills">
+                                <button type="button" class="fc-pill ${this.mainCategory === 'all' ? 'active' : ''}" data-main="all">
+                                    🌟 Tüm Kelimeler (${this.fullDictionary.length})
+                                </button>
+                                <button type="button" class="fc-pill fc-pill-ath ${this.mainCategory === 'athenaze' ? 'active' : ''}" data-main="athenaze">
+                                    📚 Athenaze: Book I (${this.getMainCategoryWords('athenaze').length})
+                                </button>
+                                <button type="button" class="fc-pill fc-pill-emel ${this.mainCategory === 'emel_hoca' ? 'active' : ''}" data-main="emel_hoca">
+                                    🌸 Emel Hoca'nın Seçtikleri (${this.getMainCategoryWords('emel_hoca').length})
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 2. Layer: Sub-categories -->
+                        <div class="fc-drawer-section">
+                            <span class="fc-drawer-section-title">2. Kelime Türü (Gramer):</span>
+                            <div class="fc-pills-row" id="fc-sub-pills">
+                                <button type="button" class="fc-sub-pill ${this.subCategory === 'all' ? 'active' : ''}" data-sub="all">
+                                    Tüm Türler (${this.getMainCategoryWords(this.mainCategory).length})
+                                </button>
+                                <button type="button" class="fc-sub-pill ${this.subCategory === 'İsim' ? 'active' : ''}" data-sub="İsim">
+                                    İsimler (${this.getSubCategoryWords(this.mainCategory, 'İsim').length})
+                                </button>
+                                <button type="button" class="fc-sub-pill ${this.subCategory === 'Fiil' ? 'active' : ''}" data-sub="Fiil">
+                                    Fiiller (${this.getSubCategoryWords(this.mainCategory, 'Fiil').length})
+                                </button>
+                                <button type="button" class="fc-sub-pill ${this.subCategory === 'Sıfat' ? 'active' : ''}" data-sub="Sıfat">
+                                    Sıfatlar (${this.getSubCategoryWords(this.mainCategory, 'Sıfat').length})
+                                </button>
+                                <button type="button" class="fc-sub-pill ${this.subCategory === 'Edat' ? 'active' : ''}" data-sub="Edat">
+                                    Edatlar & Bağlaçlar (${this.getSubCategoryWords(this.mainCategory, 'Edat').length})
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 3. Layer: 10-Word Batches Grid -->
+                        <div class="fc-drawer-section">
+                            <span class="fc-drawer-section-title">3. 10'arlık Çalışma Paketleri:</span>
+                            <div class="fc-batches-grid" id="fc-batches-grid">
+                                ${this.renderDrawerBatchCards(poolWords, totalBatches)}
+                            </div>
+                        </div>
+
+                        <!-- 4. Layer: Smart Decks (Unrestricted size) -->
+                        <div class="fc-drawer-section">
+                            <span class="fc-drawer-section-title">4. Özel Akıllı Havuzlar (10 Sınırı Olmadan):</span>
+                            <div class="fc-smart-decks-row">
+                                <button type="button" class="fc-smart-deck-btn ${this.deckMode === 'known' ? 'active' : ''}" data-mode="known">
+                                    🏆 Bildiğim Kelimeler (${knownCount})
+                                </button>
+                                <button type="button" class="fc-smart-deck-btn ${this.deckMode === 'unknown' ? 'active' : ''}" data-mode="unknown">
+                                    ⏳ Bilmediğim / Tekrar (${unknownCount})
+                                </button>
+                                <button type="button" class="fc-smart-deck-btn ${this.deckMode === 'all_pool' ? 'active' : ''}" data-mode="all_pool">
+                                    📋 Tüm Havuz (${poolWords.length})
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="fc-drawer-footer">
+                            <button type="button" class="btn-scholarly btn-sm" id="fc-drawer-apply-btn">
+                                ✓ Kartlara Dön ve Çalışmaya Başla
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- HERO FLASHCARD SCENE (Dominates the screen) -->
                 <div class="fc-card-scene" id="fc-card-scene" title="Kartı çevirmek için tıkla (veya Boşluk tuşu)">
                     <div class="fc-card" id="fc-card">
                         <!-- Dynamic Card Faces rendered by renderCard() -->
                     </div>
                 </div>
 
-                <!-- Navigation & Answer Controls -->
+                <!-- BOTTOM ANSWER & NAVIGATION CONTROLS -->
                 <div class="fc-navigation">
                     <button type="button" class="btn-scholarly btn-fc-nav" id="fc-prev-btn" title="Önceki Kelime (Sol Ok)">
                         ◀ Önceki
@@ -373,7 +424,9 @@ class FlashcardTrainer {
                 <!-- Keyboard shortcuts bar -->
                 <div class="fc-shortcuts-hint">
                     <span>⌨️ Kısayollar: <strong>[Boşluk]</strong> Çevir • <strong>[Sol / Sağ Ok]</strong> Gezin • <strong>[1]</strong> Bilmiyorum • <strong>[2]</strong> Biliyorum</span>
-                    <button type="button" class="btn-icon-action btn-sm" id="fc-shuffle-btn" title="Kartları Karıştır">🔀 Karıştır</button>
+                    <span class="fc-counter-hint" id="fc-counter-hint">
+                        ${this.currentDeck.length > 0 ? (this.currentIndex + 1) + ' / ' + this.currentDeck.length : '0 / 0'}
+                    </span>
                 </div>
 
             </div>
@@ -382,7 +435,7 @@ class FlashcardTrainer {
         this.renderCard();
     }
 
-    renderBatchOptions(poolWords, totalBatches) {
+    renderDrawerBatchCards(poolWords, totalBatches) {
         let html = '';
         for (let i = 0; i < totalBatches; i++) {
             const start = i * 10;
@@ -390,37 +443,25 @@ class FlashcardTrainer {
             const batchWords = poolWords.slice(start, end);
             const stats = this.getStatsForWords(batchWords);
             const isSelected = this.deckMode === 'batch' && this.batchIndex === i;
-            
+
             html += `
-                <option value="batch:${i}" ${isSelected ? 'selected' : ''}>
-                    Grup ${i + 1} (${start + 1}–${end}) • ${stats.learned}/${stats.total} Öğrenildi (%${stats.percent})
-                </option>
+                <button type="button" class="fc-batch-card-btn ${isSelected ? 'active' : ''}" data-batch="${i}">
+                    <div class="batch-title">Grup ${i + 1} (${start + 1}–${end})</div>
+                    <div class="batch-stats-line">
+                        <span class="batch-learned-text">${stats.learned}/${stats.total} Öğrenildi</span>
+                        <span class="batch-percent">%${stats.percent}</span>
+                    </div>
+                    <div class="batch-progress-bar">
+                        <div class="batch-progress-fill" style="width: ${stats.percent}%"></div>
+                    </div>
+                </button>
             `;
         }
         return html;
     }
 
-    getDeckProgressLabel(batchStats, subStats, knownCount, totalPool) {
-        if (this.deckMode === 'known') {
-            return `🏆 Bildiklerim: ${knownCount} Kelime`;
-        }
-        if (this.deckMode === 'unknown') {
-            return `⏳ Bilmediklerim: ${totalPool - knownCount} Kelime`;
-        }
-        if (this.deckMode === 'all_pool') {
-            return `📋 Tüm Havuz: ${subStats.learned} / ${subStats.total} Öğrenildi`;
-        }
-        return `📦 Paket İlerlemesi: ${batchStats.learned} / ${batchStats.total} Kelime`;
-    }
-
-    getMainCategoryLabel() {
-        if (this.mainCategory === 'athenaze') return 'Athenaze I';
-        if (this.mainCategory === 'emel_hoca') return "Emel Hoca'nın Seçtikleri";
-        return 'Tüm Sözlük';
-    }
-
     /* ==========================================================================
-       RENDER CURRENT CARD (BIDIRECTIONAL)
+       RENDER CURRENT CARD (BIDIRECTIONAL WITH HERO ANSWERS)
        ========================================================================== */
     renderCard() {
         const cardContainer = this.container.querySelector('#fc-card');
@@ -463,6 +504,12 @@ class FlashcardTrainer {
             <span class="badge badge-pos">${item.partOfSpeech || 'Kelime'}</span>
         `;
 
+        // Update footer counter
+        const counterEl = this.container.querySelector('#fc-counter-hint');
+        if (counterEl) {
+            counterEl.textContent = `${this.currentIndex + 1} / ${this.currentDeck.length}`;
+        }
+
         // Reset flip state
         this.isFlipped = false;
         cardContainer.classList.remove('is-flipped');
@@ -472,7 +519,9 @@ class FlashcardTrainer {
 
         if (this.direction === 'greek_to_tr') {
             /* ---------------------------------------------------------
-               DIRECTION: GREEK ➔ TURKISH (Classic Reading Mode)
+               DIRECTION: GREEK ➔ TURKISH
+               Front: Greek Word (Question)
+               Back: BIG HERO TURKISH MEANING (Answer) + Scrollable Details
                --------------------------------------------------------- */
             frontHtml = `
                 <div class="fc-card-top-bar">
@@ -493,6 +542,9 @@ class FlashcardTrainer {
                 </div>
             `;
 
+            const primaryMeaning = (item.meanings_tr || [])[0] || 'Anlam';
+            const secondaryMeaning = (item.meanings_tr || []).slice(1).join(' • ');
+
             backHtml = `
                 <div class="fc-card-top-bar">
                     <div class="fc-back-title-wrap">
@@ -502,9 +554,21 @@ class FlashcardTrainer {
                     <button type="button" class="btn-audio-round btn-sm btn-fc-audio" data-word="${item.word}" title="Telaffuz Dinle">🔊</button>
                 </div>
 
-                <div class="fc-back-content">
+                <!-- BIG HERO ANSWER BLOCK (Prominent First View) -->
+                <div class="fc-hero-answer-block">
+                    <div class="fc-hero-answer-badge">🎯 Türkçe Karşılık</div>
+                    <div class="fc-hero-answer-title">${primaryMeaning}</div>
+                    ${secondaryMeaning ? `<div class="fc-hero-answer-sub">${secondaryMeaning}</div>` : ''}
+                </div>
+
+                <!-- SCROLLABLE EXTRA DETAILS BELOW -->
+                <div class="fc-scrollable-details">
+                    <div class="fc-details-divider">
+                        <span>📜 Gramer, Alıntılar ve Detaylar (Aşağı Kaydırın ▾)</span>
+                    </div>
+
                     <div class="fc-section">
-                        <span class="fc-section-label">📖 Türkçe Tanımlar:</span>
+                        <span class="fc-section-label">📖 Tüm Tanımlar:</span>
                         <ul class="fc-meanings-list">
                             ${(item.meanings_tr || []).map(m => `<li>${m}</li>`).join('')}
                         </ul>
@@ -531,6 +595,15 @@ class FlashcardTrainer {
                         </div>
                     ` : ''}
 
+                    ${item.grammar && item.grammar.principal_parts ? `
+                        <div class="fc-section">
+                            <span class="fc-section-label">🏛️ Fiil Zaman Formları:</span>
+                            <div class="fc-forms-grid">
+                                ${item.grammar.principal_parts.map(p => `<div>👉 ${p}</div>`).join('')}
+                            </div>
+                        </div>
+                    ` : ''}
+
                     ${item.examples && item.examples.length > 0 ? `
                         <div class="fc-quote-box">
                             <span class="fc-quote-greek">"${item.examples[0].greek}"</span>
@@ -547,7 +620,9 @@ class FlashcardTrainer {
             `;
         } else {
             /* ---------------------------------------------------------
-               DIRECTION: TURKISH ➔ GREEK (Active Recall Mode)
+               DIRECTION: TURKISH ➔ GREEK
+               Front: Turkish Meaning (Question)
+               Back: BIG HERO GREEK WORD (Answer) + Pronunciation + Details
                --------------------------------------------------------- */
             frontHtml = `
                 <div class="fc-card-top-bar">
@@ -566,24 +641,34 @@ class FlashcardTrainer {
 
                 <div class="fc-card-bottom-bar">
                     <span class="fc-card-counter">${this.currentIndex + 1} / ${this.currentDeck.length}</span>
-                    <span class="fc-hint">💡 Grekçe karşılığı düşünüp çevirin (Boşluk)</span>
+                    <span class="fc-hint">💡 Grekçe karşılığı zihninizde canlandırın (Boşluk)</span>
                 </div>
             `;
 
             backHtml = `
                 <div class="fc-card-top-bar">
                     <div class="fc-back-title-wrap">
-                        <span class="fc-back-greek-answer">${item.word}</span>
-                        <span class="fc-back-translit">(${item.transliteration || ''})</span>
+                        <span class="fc-back-word">${(item.meanings_tr || [])[0] || ''}</span>
                     </div>
-                    <button type="button" class="btn-audio-round btn-fc-audio" data-word="${item.word}" title="Telaffuz Dinle">🔊</button>
+                    <button type="button" class="btn-audio-round btn-sm btn-fc-audio" data-word="${item.word}" title="Telaffuz Dinle">🔊</button>
                 </div>
 
-                <div class="fc-back-content">
-                    <div class="fc-lemma-highlight">${item.lemma}</div>
+                <!-- BIG HERO GREEK ANSWER BLOCK -->
+                <div class="fc-hero-answer-block greek-hero">
+                    <div class="fc-hero-answer-badge">🎯 Grekçe Karşılık</div>
+                    <div class="fc-hero-greek-word">${item.word}</div>
+                    <div class="fc-hero-greek-translit">${item.transliteration || ''}</div>
+                    <div class="fc-hero-greek-lemma">${item.lemma}</div>
+                </div>
+
+                <!-- SCROLLABLE EXTRA DETAILS BELOW -->
+                <div class="fc-scrollable-details">
+                    <div class="fc-details-divider">
+                        <span>📜 Tüm Tanımlar ve Çekim Detayları (Aşağı Kaydırın ▾)</span>
+                    </div>
 
                     <div class="fc-section">
-                        <span class="fc-section-label">📖 Tüm Türkçe Anlamlar:</span>
+                        <span class="fc-section-label">📖 Türkçe Tanımlar:</span>
                         <ul class="fc-meanings-list">
                             ${(item.meanings_tr || []).map(m => `<li>${m}</li>`).join('')}
                         </ul>
@@ -688,45 +773,17 @@ class FlashcardTrainer {
 
     updateProgressUI() {
         const poolWords = this.getSubCategoryWords(this.mainCategory, this.subCategory);
-        const totalBatches = Math.max(1, Math.ceil(poolWords.length / 10));
         const subStats = this.getCurrentSubCategoryStats();
         const batchStats = this.getCurrentBatchStats();
-        const knownCount = poolWords.filter(w => this.isWordLearned(w.id)).length;
+        const currentPercent = this.deckMode === 'batch' ? batchStats.percent : subStats.percent;
 
-        // Update percent and fill bar
-        const percent = this.deckMode === 'batch' ? batchStats.percent : subStats.percent;
         const percentEl = this.container.querySelector('#fc-progress-percent');
         const fillEl = this.container.querySelector('#fc-progress-bar-fill');
-        const labelEl = this.container.querySelector('#fc-progress-label');
+        const triggerText = this.container.querySelector('.fc-deck-trigger-text');
 
-        if (percentEl) percentEl.textContent = `%${percent}`;
-        if (fillEl) fillEl.style.width = `${percent}%`;
-        if (labelEl) {
-            labelEl.textContent = this.getDeckProgressLabel(batchStats, subStats, knownCount, poolWords.length);
-        }
-
-        // Re-render batch options in dropdown to reflect new numbers
-        const selectEl = this.container.querySelector('#fc-deck-select');
-        if (selectEl) {
-            const val = selectEl.value;
-            selectEl.innerHTML = `
-                <optgroup label="── 10'arlık Çalışma Paketleri ──">
-                    ${this.renderBatchOptions(poolWords, totalBatches)}
-                </optgroup>
-                <optgroup label="── Akıllı Filtreli Desteler (Tüm Liste) ──">
-                    <option value="mode:known" ${this.deckMode === 'known' ? 'selected' : ''}>
-                        🏆 Bildiğim Kelimeler (${knownCount} Kelime)
-                    </option>
-                    <option value="mode:unknown" ${this.deckMode === 'unknown' ? 'selected' : ''}>
-                        ⏳ Bilmediklerim / Tekrar (${poolWords.length - knownCount} Kelime)
-                    </option>
-                    <option value="mode:all_pool" ${this.deckMode === 'all_pool' ? 'selected' : ''}>
-                        📋 Tüm Havuz (${poolWords.length} Kelime)
-                    </option>
-                </optgroup>
-            `;
-            selectEl.value = val;
-        }
+        if (percentEl) percentEl.textContent = `%${currentPercent}`;
+        if (fillEl) fillEl.style.width = `${currentPercent}%`;
+        if (triggerText) triggerText.textContent = this.getDeckSummaryLabel();
     }
 
     /* ==========================================================================
@@ -773,14 +830,46 @@ class FlashcardTrainer {
     }
 
     /* ==========================================================================
+       DRAWER CONTROLS
+       ========================================================================== */
+    toggleDrawer(forceOpen = null) {
+        const drawer = this.container.querySelector('#fc-deck-drawer');
+        if (!drawer) return;
+
+        if (forceOpen !== null) {
+            this.isFilterDrawerOpen = forceOpen;
+        } else {
+            this.isFilterDrawerOpen = !this.isFilterDrawerOpen;
+        }
+
+        if (this.isFilterDrawerOpen) {
+            drawer.classList.remove('hidden');
+            drawer.classList.add('open');
+        } else {
+            drawer.classList.remove('open');
+            drawer.classList.add('hidden');
+        }
+    }
+
+    /* ==========================================================================
        EVENT LISTENERS & INTERACTION
        ========================================================================== */
     bindEvents() {
-        // Card scene click to flip (ignore buttons)
         this.container.addEventListener('click', (e) => {
+            // Card scene click to flip (ignore buttons)
             const cardScene = e.target.closest('#fc-card-scene');
             if (cardScene && !e.target.closest('button')) {
                 this.flip();
+                return;
+            }
+
+            // Open / Close Drawer
+            if (e.target.closest('#fc-deck-trigger-btn')) {
+                this.toggleDrawer();
+                return;
+            }
+            if (e.target.closest('#fc-drawer-close-btn') || e.target.closest('#fc-drawer-apply-btn')) {
+                this.toggleDrawer(false);
                 return;
             }
 
@@ -796,7 +885,7 @@ class FlashcardTrainer {
                 return;
             }
 
-            // Main scope pills
+            // Main scope pills (inside Drawer)
             const mainPill = e.target.closest('#fc-main-pills .fc-pill');
             if (mainPill) {
                 const mainCat = mainPill.dataset.main;
@@ -809,11 +898,12 @@ class FlashcardTrainer {
                     this.savePreferences();
                     this.buildActiveDeck();
                     this.render();
+                    this.toggleDrawer(true); // keep drawer open to pick subcategory / batch
                 }
                 return;
             }
 
-            // Sub-category pills
+            // Sub-category pills (inside Drawer)
             const subPill = e.target.closest('#fc-sub-pills .fc-sub-pill');
             if (subPill) {
                 const subCat = subPill.dataset.sub;
@@ -825,6 +915,36 @@ class FlashcardTrainer {
                     this.savePreferences();
                     this.buildActiveDeck();
                     this.render();
+                    this.toggleDrawer(true); // keep drawer open to pick batch
+                }
+                return;
+            }
+
+            // 10-Word batch card button (inside Drawer)
+            const batchCardBtn = e.target.closest('.fc-batch-card-btn');
+            if (batchCardBtn) {
+                const batchIdx = parseInt(batchCardBtn.dataset.batch, 10) || 0;
+                this.deckMode = 'batch';
+                this.batchIndex = batchIdx;
+                this.currentIndex = 0;
+                this.savePreferences();
+                this.buildActiveDeck();
+                this.render();
+                this.toggleDrawer(false); // smoothly close drawer and focus on cards
+                return;
+            }
+
+            // Smart deck button (inside Drawer)
+            const smartBtn = e.target.closest('.fc-smart-deck-btn');
+            if (smartBtn) {
+                const mode = smartBtn.dataset.mode;
+                if (mode) {
+                    this.deckMode = mode;
+                    this.currentIndex = 0;
+                    this.savePreferences();
+                    this.buildActiveDeck();
+                    this.render();
+                    this.toggleDrawer(false); // smoothly close drawer
                 }
                 return;
             }
@@ -859,7 +979,8 @@ class FlashcardTrainer {
             const resetToggleBtn = e.target.closest('#fc-reset-toggle-btn');
             const resetMenu = this.container.querySelector('#fc-reset-menu');
             if (resetToggleBtn && resetMenu) {
-                resetMenu.classList.toggle('hidden');
+                this.isResetMenuOpen = !this.isResetMenuOpen;
+                resetMenu.classList.toggle('hidden', !this.isResetMenuOpen);
                 return;
             }
 
@@ -867,6 +988,7 @@ class FlashcardTrainer {
             const resetItem = e.target.closest('.fc-reset-item');
             if (resetItem) {
                 const action = resetItem.dataset.action;
+                this.isResetMenuOpen = false;
                 if (resetMenu) resetMenu.classList.add('hidden');
 
                 if (action === 'reset-batch') {
@@ -874,7 +996,7 @@ class FlashcardTrainer {
                         this.resetCurrentBatch();
                     }
                 } else if (action === 'reset-sub') {
-                    const subName = this.subCategory === 'all' ? 'Tüm Türler' : this.subCategory;
+                    const subName = this.getSubCategoryLabel();
                     if (confirm(`"${subName}" alt kategorisindeki tüm kelimelerin ilerlemesini sıfırlamak istiyor musunuz?`)) {
                         this.resetCurrentSubCategory();
                     }
@@ -889,31 +1011,14 @@ class FlashcardTrainer {
                 }
                 return;
             }
-
-            // Close reset menu if clicked outside
-            if (resetMenu && !resetMenu.classList.contains('hidden') && !e.target.closest('.fc-reset-btn-wrapper')) {
-                resetMenu.classList.add('hidden');
-            }
         });
 
-        // Deck / Batch select change
-        this.container.addEventListener('change', (e) => {
-            if (e.target.id === 'fc-deck-select') {
-                const val = e.target.value;
-                if (val.startsWith('batch:')) {
-                    this.deckMode = 'batch';
-                    this.batchIndex = parseInt(val.replace('batch:', ''), 10) || 0;
-                } else if (val === 'mode:known') {
-                    this.deckMode = 'known';
-                } else if (val === 'mode:unknown') {
-                    this.deckMode = 'unknown';
-                } else if (val === 'mode:all_pool') {
-                    this.deckMode = 'all_pool';
-                }
-                this.currentIndex = 0;
-                this.savePreferences();
-                this.buildActiveDeck();
-                this.render();
+        // Close reset menu when clicking outside anywhere on document
+        document.addEventListener('click', (e) => {
+            const resetMenu = this.container?.querySelector('#fc-reset-menu');
+            if (resetMenu && !resetMenu.classList.contains('hidden') && !e.target.closest('.fc-reset-btn-wrapper')) {
+                this.isResetMenuOpen = false;
+                resetMenu.classList.add('hidden');
             }
         });
 
@@ -922,7 +1027,14 @@ class FlashcardTrainer {
             const isTabActive = document.querySelector('#view-flashcards')?.classList.contains('active-tab-content');
             if (!isTabActive) return;
 
-            // Avoid shortcuts if user is typing in an input or select
+            // If drawer is open, escape closes it
+            if (this.isFilterDrawerOpen && e.code === 'Escape') {
+                e.preventDefault();
+                this.toggleDrawer(false);
+                return;
+            }
+
+            // Avoid shortcuts if user is typing in an input
             if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName)) return;
 
             if (e.code === 'Space' || e.code === 'ArrowUp') {
