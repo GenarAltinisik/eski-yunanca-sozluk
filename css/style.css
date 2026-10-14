@@ -134,7 +134,9 @@ body {
 }
 
 .meander-icon {
+    font-family: var(--font-heading);
     font-size: 28px;
+    font-weight: 800;
     color: var(--gold);
     display: flex;
     align-items: center;
@@ -144,6 +146,14 @@ body {
     background: var(--gold-bg);
     border-radius: var(--radius-md);
     border: 1px solid var(--gold-light);
+    box-shadow: 0 2px 8px rgba(181, 137, 0, 0.15);
+    user-select: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.meander-icon:hover {
+    transform: scale(1.06);
+    box-shadow: 0 4px 14px rgba(181, 137, 0, 0.3);
 }
 
 .brand-title {
