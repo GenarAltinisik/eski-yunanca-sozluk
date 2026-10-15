@@ -548,7 +548,6 @@ class FlashcardTrainer {
                     <div class="fc-greek-word">${item.word}</div>
                     <div class="fc-translit">${item.transliteration || ''}</div>
                     <div class="fc-lemma">${item.lemma}</div>
-                    <button type="button" class="btn-audio-round btn-fc-audio" data-word="${item.word}" title="Telaffuz Dinle">🔊</button>
                 </div>
 
                 <div class="fc-card-bottom-bar">
@@ -566,7 +565,6 @@ class FlashcardTrainer {
                         <span class="fc-back-word">${item.word}</span>
                         <span class="fc-back-translit">(${item.transliteration || ''})</span>
                     </div>
-                    <button type="button" class="btn-audio-round btn-sm btn-fc-audio" data-word="${item.word}" title="Telaffuz Dinle">🔊</button>
                 </div>
 
                 <!-- BIG HERO ANSWER BLOCK (Prominent First View) -->
@@ -665,7 +663,6 @@ class FlashcardTrainer {
                     <div class="fc-back-title-wrap">
                         <span class="fc-back-word">${(item.meanings_tr || [])[0] || ''}</span>
                     </div>
-                    <button type="button" class="btn-audio-round btn-sm btn-fc-audio" data-word="${item.word}" title="Telaffuz Dinle">🔊</button>
                 </div>
 
                 <!-- BIG HERO GREEK ANSWER BLOCK -->
@@ -715,17 +712,6 @@ class FlashcardTrainer {
             <div class="fc-card-face fc-card-front">${frontHtml}</div>
             <div class="fc-card-face fc-card-back">${backHtml}</div>
         `;
-
-        // Re-attach audio buttons
-        cardContainer.querySelectorAll('.btn-fc-audio').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const word = btn.dataset.word;
-                if (word && window.GreekUtils) {
-                    window.GreekUtils.speak(word);
-                }
-            });
-        });
     }
 
     /* ==========================================================================

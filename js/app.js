@@ -228,7 +228,6 @@ class GreekApp {
                     </div>
                     <div class="wotd-actions">
                         <button type="button" class="btn-scholarly btn-sm btn-wotd-detail" data-id="${wotd.id}">İncele</button>
-                        <button type="button" class="btn-audio-round btn-sm btn-speak-word" data-word="${wotd.word}">🔊</button>
                     </div>
                 </div>
             </div>
@@ -368,7 +367,6 @@ class GreekApp {
                             <span class="greek-translit">${item.transliteration || ''}</span>
                         </div>
                         <div class="card-top-actions">
-                            <button type="button" class="btn-audio-round btn-sm btn-speak-word" data-word="${item.word}" title="Sesli Telaffuz">🔊</button>
                             <button type="button" class="btn-fav-toggle ${isFav ? 'active' : ''}" data-id="${item.id}" title="${isFav ? 'Favorilerden Çıkar' : 'Favorilere Ekle'}">${isFav ? '★' : '☆'}</button>
                         </div>
                     </div>
@@ -517,7 +515,6 @@ class GreekApp {
                     <div class="modal-lemma-text">${item.lemma}</div>
                 </div>
                 <div class="modal-actions-right">
-                    <button type="button" class="btn-audio-round btn-speak-word" data-word="${item.word}" title="Telaffuz Dinle">🔊</button>
                     <button type="button" class="btn-fav-toggle ${isFav ? 'active' : ''}" data-id="${item.id}" title="${isFav ? 'Favorilerden Çıkar' : 'Favorilere Ekle'}">${isFav ? '★' : '☆'}</button>
                 </div>
             </div>
