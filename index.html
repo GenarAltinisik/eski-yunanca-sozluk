@@ -66,14 +66,14 @@
                 <button type="button" class="nav-tab active" data-tab="dictionary">
                     📖 Sözlük (<span id="total-word-count">...</span>)
                 </button>
+                <button type="button" class="nav-tab" data-tab="flashcards">
+                    🗂️ Kelime Kartları (Quiz)
+                </button>
                 <button type="button" class="nav-tab" data-tab="alphabet">
                     🔤 Alfabe & Fonetik
                 </button>
                 <button type="button" class="nav-tab" data-tab="grammar">
                     🏛️ Gramer & Büküm Tabloları
-                </button>
-                <button type="button" class="nav-tab" data-tab="flashcards">
-                    🗂️ Kelime Kartları (Quiz)
                 </button>
             </nav>
         </div>
@@ -167,7 +167,16 @@
         </section>
 
         <!-- ==========================================
-             VIEW 2: ALPHABET & PHONETICS TAB
+             VIEW 2: FLASHCARDS TAB
+             ========================================== -->
+        <section id="view-flashcards" class="tab-view">
+            <div id="flashcards-container">
+                <!-- Managed by FlashcardTrainer class -->
+            </div>
+        </section>
+
+        <!-- ==========================================
+             VIEW 3: ALPHABET & PHONETICS TAB
              ========================================== -->
         <section id="view-alphabet" class="tab-view">
             <div class="wotd-section">
@@ -210,7 +219,7 @@
         </section>
 
         <!-- ==========================================
-             VIEW 3: GRAMMAR & DECLENSIONS TAB
+             VIEW 4: GRAMMAR & DECLENSIONS TAB
              ========================================== -->
         <section id="view-grammar" class="tab-view">
             <div class="wotd-section">
@@ -229,15 +238,6 @@
 
                 <!-- Verb Luo Box -->
                 <div id="grammar-verb-box"></div>
-            </div>
-        </section>
-
-        <!-- ==========================================
-             VIEW 4: FLASHCARDS TAB
-             ========================================== -->
-        <section id="view-flashcards" class="tab-view">
-            <div id="flashcards-container">
-                <!-- Managed by FlashcardTrainer class -->
             </div>
         </section>
 
