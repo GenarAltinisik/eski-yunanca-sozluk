@@ -1253,7 +1253,7 @@ body.theme-dark .scholarly-select:focus {
     position: relative;
 }
 
-/* COMPACT HERO CONTROL STRIP (Sleek 52px Bar) */
+/* COMPACT HERO CONTROL STRIP */
 .fc-hero-control-strip {
     background: var(--bg-surface);
     border: 1px solid var(--border-accent);
@@ -1294,41 +1294,84 @@ body.theme-dark .fc-strip-progress-fill {
 .fc-deck-trigger-btn {
     background: var(--bg-page);
     border: 1.5px solid var(--border-accent);
-    border-radius: 20px;
-    padding: 6px 14px;
+    border-radius: var(--radius-md);
+    padding: 6px 12px;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     cursor: pointer;
-    transition: all var(--transition-fast);
+    transition: all 0.2s ease;
     color: var(--text-primary);
-    font-size: 13px;
-    font-weight: 700;
-    max-width: 60%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    text-align: left;
+    max-width: 62%;
 }
 
 .fc-deck-trigger-btn:hover {
     border-color: var(--gold);
     background: var(--bg-surface);
+    box-shadow: var(--shadow-sm);
     transform: translateY(-1px);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .fc-deck-trigger-icon {
-    font-size: 15px;
+    font-size: 18px;
+    color: var(--gold);
+    flex-shrink: 0;
 }
 
-.fc-deck-trigger-text {
+.fc-deck-trigger-texts {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.fc-deck-trigger-headline {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.fc-deck-trigger-arrow {
+body.theme-dark .fc-deck-trigger-headline {
     color: var(--gold);
-    font-size: 12px;
+}
+
+.fc-deck-sep {
+    color: var(--text-muted);
+}
+
+.fc-deck-trigger-detail {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fc-deck-trigger-pill {
+    font-size: 11px;
+    font-weight: 700;
+    background: var(--bg-subtle);
+    color: var(--text-primary);
+    padding: 4px 8px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border-color);
+    margin-left: 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all 0.2s;
+}
+
+.fc-deck-trigger-btn:hover .fc-deck-trigger-pill {
+    background: var(--gold-bg);
+    border-color: var(--gold);
+    color: var(--gold);
 }
 
 /* Center & Right Actions */
@@ -1337,6 +1380,12 @@ body.theme-dark .fc-strip-progress-fill {
     align-items: center;
     gap: 8px;
     flex-shrink: 0;
+}
+
+.btn-fc-strip-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
 }
 
 .fc-strip-percent-badge {
@@ -1368,7 +1417,7 @@ body.theme-dark .fc-strip-progress-fill {
     font-weight: 700;
     color: var(--text-secondary);
     cursor: pointer;
-    transition: all var(--transition-fast);
+    transition: all 0.15s ease;
 }
 
 .btn-fc-toggle:hover {
@@ -1387,14 +1436,14 @@ body.theme-dark .btn-fc-toggle.active {
 }
 
 /* Reset Button & Dropdown Menu */
-.fc-reset-btn-wrapper {
+.fc-reset-btn-wrapper, .fc-drawer-reset-area {
     position: relative;
 }
 
 .btn-fc-reset {
     border-color: rgba(192, 57, 43, 0.3);
     color: #c0392b;
-    padding: 5px 10px;
+    padding: 6px 12px;
     font-size: 12px;
 }
 
@@ -1411,8 +1460,8 @@ body.theme-dark .btn-fc-reset {
 
 .fc-reset-menu {
     position: absolute;
-    right: 0;
-    top: calc(100% + 8px);
+    left: 0;
+    bottom: calc(100% + 8px);
     width: 290px;
     background: var(--bg-surface);
     border: 1px solid var(--border-accent);
@@ -1438,7 +1487,7 @@ body.theme-dark .btn-fc-reset {
     font-weight: 500;
     color: var(--text-primary);
     cursor: pointer;
-    transition: background var(--transition-fast);
+    transition: background 0.15s;
 }
 
 .fc-reset-item:hover {
@@ -1460,11 +1509,13 @@ body.theme-dark .btn-fc-reset {
     margin: 6px 0;
 }
 
-/* COLLAPSIBLE DECK & FILTER DRAWER */
+/* ==========================================
+   ENHANCED SETTINGS DRAWER / SHEET
+   ========================================== */
 .fc-deck-drawer {
     margin-top: 14px;
     margin-bottom: 24px;
-    animation: slideDown 0.25s ease-out;
+    animation: slideDown 0.22s ease-out;
 }
 
 .fc-deck-drawer.hidden {
@@ -1473,216 +1524,508 @@ body.theme-dark .btn-fc-reset {
 
 .fc-drawer-content {
     background: var(--bg-surface);
-    border: 1.5px solid var(--border-accent);
+    border: 2px solid var(--border-accent);
     border-radius: var(--radius-lg);
-    padding: 20px 24px;
+    padding: 22px 24px;
     box-shadow: var(--shadow-md);
 }
 
 .fc-drawer-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     border-bottom: 1px solid var(--border-color);
-    padding-bottom: 12px;
-    margin-bottom: 16px;
+    padding-bottom: 14px;
+    margin-bottom: 20px;
 }
 
-.fc-drawer-header h4 {
-    font-size: 16px;
-    color: var(--primary);
-    margin: 0;
-}
-
-.fc-drawer-section {
-    margin-bottom: 16px;
-}
-
-.fc-drawer-section-title {
-    display: block;
-    font-size: 11px;
+.fc-drawer-header-title h3 {
+    font-family: var(--font-heading);
+    font-size: 17px;
     font-weight: 700;
-    text-transform: uppercase;
-    color: var(--gold);
-    letter-spacing: 0.5px;
-    margin-bottom: 8px;
+    color: var(--primary);
+    margin-bottom: 2px;
 }
 
-.fc-pills-row {
+body.theme-dark .fc-drawer-header-title h3 {
+    color: var(--gold);
+}
+
+.fc-drawer-header-subtitle {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+/* Step / Setting Block */
+.fc-setting-block {
+    background: var(--bg-page);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 16px 18px;
+    margin-bottom: 16px;
+}
+
+.fc-setting-label-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.fc-step-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+body.theme-dark .fc-step-num {
+    background: var(--gold);
+    color: #0f1216;
+}
+
+.fc-setting-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: block;
+    line-height: 1.2;
+}
+
+.fc-setting-desc {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+/* Step 1: Source Cards Grid */
+.fc-sources-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.fc-source-card {
+    background: var(--bg-surface);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 12px 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+.fc-source-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.fc-source-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.fc-source-icon {
+    font-size: 16px;
+}
+
+.fc-source-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.fc-source-meta {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.fc-source-card.active {
+    border-color: var(--primary);
+    background: rgba(30, 61, 89, 0.08);
+    box-shadow: 0 0 0 1.5px var(--primary);
+}
+
+.fc-source-card.fc-source-ath.active {
+    border-color: var(--gold);
+    background: var(--gold-bg);
+    box-shadow: 0 0 0 1.5px var(--gold);
+}
+
+.fc-source-card.fc-source-emel.active {
+    border-color: #8e44ad;
+    background: rgba(142, 68, 173, 0.09);
+    box-shadow: 0 0 0 1.5px #8e44ad;
+}
+
+.fc-source-card.fc-source-filiz.active {
+    border-color: #2d6a4f;
+    background: rgba(45, 106, 79, 0.09);
+    box-shadow: 0 0 0 1.5px #2d6a4f;
+}
+
+body.theme-dark .fc-source-card.active {
+    border-color: var(--gold);
+    background: rgba(212, 175, 55, 0.15);
+    box-shadow: 0 0 0 1.5px var(--gold);
+}
+
+/* Step 2: Sub-category Pills */
+.fc-sub-pills-row {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-.fc-pill, .fc-sub-pill {
-    background: var(--bg-page);
+.fc-sub-pill {
+    background: var(--bg-surface);
     border: 1px solid var(--border-color);
-    border-radius: 20px;
-    padding: 6px 14px;
+    border-radius: var(--radius-pill);
+    padding: 7px 14px;
     font-size: 13px;
     font-weight: 600;
     color: var(--text-secondary);
     cursor: pointer;
-    transition: all var(--transition-fast);
+    transition: all 0.2s ease;
 }
 
-.fc-pill:hover, .fc-sub-pill:hover {
+.fc-sub-pill:hover {
     border-color: var(--gold);
-    color: var(--primary);
-    transform: translateY(-1px);
+    color: var(--text-primary);
 }
 
-.fc-pill.active, .fc-sub-pill.active {
+.fc-sub-pill.active {
     background: var(--primary);
     color: #ffffff;
     border-color: var(--primary);
     box-shadow: 0 2px 6px rgba(30, 61, 89, 0.25);
 }
 
-.fc-pill.fc-pill-ath.active {
-    background: linear-gradient(135deg, #1e3d59 0%, #2b5b84 100%);
-    border-color: var(--gold);
-    color: #ffffff;
-}
-
-.fc-pill.fc-pill-emel.active {
-    background: linear-gradient(135deg, #6c3483 0%, #884ea0 100%);
-    border-color: #d7bde2;
-    color: #ffffff;
-}
-
-.fc-pill.fc-pill-filiz.active {
-    background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
-    border-color: #74c69d;
-    color: #ffffff;
-}
-
-body.theme-dark .fc-pill.active, body.theme-dark .fc-sub-pill.active {
+body.theme-dark .fc-sub-pill.active {
     background: var(--gold);
-    color: #121517;
+    color: #0f1216;
     border-color: var(--gold);
 }
 
-body.theme-dark .fc-pill.fc-pill-emel.active {
-    background: linear-gradient(135deg, #7d3c98 0%, #a569bd 100%);
-    color: #ffffff;
-    border-color: #bb8fce;
-}
-
-body.theme-dark .fc-pill.fc-pill-filiz.active {
-    background: linear-gradient(135deg, #2d6a4f 0%, #40916c 100%);
-    color: #ffffff;
-    border-color: #95d5b2;
-}
-
-/* 10-Word Batches Grid */
-.fc-batches-grid {
+/* Step 3: Mode Selection Tabs & Panels */
+.fc-mode-selection-tabs {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-}
-
-.fc-batch-card-btn {
-    background: var(--bg-page);
-    border: 1.5px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 10px 12px;
-    text-align: left;
-    cursor: pointer;
-    transition: all var(--transition-fast);
-}
-
-.fc-batch-card-btn:hover {
-    border-color: var(--gold);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-sm);
-}
-
-.fc-batch-card-btn.active {
-    border-color: var(--primary);
-    background: rgba(30, 61, 89, 0.08);
-    box-shadow: 0 0 0 1px var(--primary);
-}
-
-body.theme-dark .fc-batch-card-btn.active {
-    border-color: var(--gold);
-    background: rgba(212, 175, 55, 0.12);
-    box-shadow: 0 0 0 1px var(--gold);
-}
-
-.batch-title {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 4px;
-}
-
-.batch-stats-line {
-    display: flex;
-    justify-content: space-between;
-    font-size: 11px;
-    color: var(--text-muted);
-    margin-bottom: 6px;
-}
-
-.batch-percent {
-    font-weight: 700;
-    color: var(--gold);
-}
-
-.batch-progress-bar {
-    width: 100%;
-    height: 4px;
-    background: var(--border-color);
-    border-radius: 2px;
-    overflow: hidden;
-}
-
-.batch-progress-fill {
-    height: 100%;
-    background: #27ae60;
-    border-radius: 2px;
-}
-
-/* Smart Decks Row */
-.fc-smart-decks-row {
-    display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
     gap: 8px;
+    margin-bottom: 14px;
+    background: var(--bg-surface);
+    padding: 4px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
 }
 
-.fc-smart-deck-btn {
-    flex: 1;
-    min-width: 160px;
-    background: var(--bg-page);
-    border: 1.5px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 8px 14px;
+.fc-mode-tab {
+    background: transparent;
+    border: none;
+    padding: 9px 12px;
+    border-radius: var(--radius-sm);
     font-size: 13px;
     font-weight: 700;
     color: var(--text-secondary);
     cursor: pointer;
-    transition: all var(--transition-fast);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
 }
 
-.fc-smart-deck-btn:hover {
-    border-color: var(--gold);
+.fc-mode-tab:hover {
+    color: var(--text-primary);
+}
+
+.fc-mode-tab.active {
+    background: var(--primary);
+    color: #ffffff;
+    box-shadow: var(--shadow-sm);
+}
+
+body.theme-dark .fc-mode-tab.active {
+    background: var(--gold);
+    color: #0f1216;
+}
+
+/* Stepper Panel */
+.fc-batch-selector-panel {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 16px;
+}
+
+.fc-batch-stepper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed var(--border-color);
+    margin-bottom: 14px;
+}
+
+.fc-batch-stepper-info {
+    text-align: center;
+    flex: 1;
+}
+
+.fc-batch-stepper-title {
+    font-size: 16px;
+    font-weight: 800;
     color: var(--primary);
+    line-height: 1.2;
 }
 
-.fc-smart-deck-btn.active {
-    background: linear-gradient(135deg, var(--gold) 0%, #b8860b 100%);
-    color: #121517;
+body.theme-dark .fc-batch-stepper-title {
+    color: var(--gold);
+}
+
+.fc-batch-stepper-range {
+    font-size: 12px;
+    color: var(--text-muted);
+    display: block;
+    margin-top: 2px;
+}
+
+.fc-batch-stepper-stats {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.fc-batch-stepper-badge {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-primary);
+    background: var(--bg-page);
+    padding: 2px 8px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border-color);
+}
+
+.fc-batch-stepper-pct {
+    font-size: 11px;
+    font-weight: 800;
+    color: #27ae60;
+}
+
+.fc-batch-progress-mini {
+    height: 4px;
+    background: var(--border-color);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 6px;
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fc-batch-progress-mini-fill {
+    height: 100%;
+    background: #27ae60;
+}
+
+.fc-batch-step-btn {
+    padding: 8px 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.fc-batch-step-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Dropdown row */
+.fc-batch-dropdown-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.fc-mini-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.fc-batch-select {
+    flex: 1;
+    font-size: 13px;
+    padding: 7px 10px;
+}
+
+/* Quick Chips */
+.fc-batch-quick-section {
+    padding-top: 10px;
+    border-top: 1px dashed var(--border-color);
+}
+
+.fc-batch-quick-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.fc-quick-chip {
+    min-width: 32px;
+    height: 32px;
+    padding: 0 6px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-page);
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fc-quick-chip:hover {
     border-color: var(--gold);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    color: var(--text-primary);
+    transform: translateY(-1px);
 }
 
+.fc-quick-chip.active {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+    box-shadow: 0 2px 4px rgba(30, 61, 89, 0.3);
+}
+
+body.theme-dark .fc-quick-chip.active {
+    background: var(--gold);
+    color: #0f1216;
+    border-color: var(--gold);
+}
+
+.fc-quick-chip.completed {
+    border-color: #27ae60;
+    color: #27ae60;
+}
+
+.fc-quick-chip.completed.active {
+    background: #27ae60;
+    color: #ffffff;
+    border-color: #27ae60;
+}
+
+/* Smart Decks Panel */
+.fc-smart-selector-panel {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 14px;
+}
+
+.fc-smart-decks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fc-smart-card {
+    background: var(--bg-page);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.fc-smart-card:hover {
+    border-color: var(--gold);
+    background: var(--bg-surface);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.fc-smart-card.active {
+    border-color: var(--gold);
+    background: var(--gold-bg);
+    box-shadow: 0 0 0 1.5px var(--gold);
+}
+
+.fc-smart-card-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.fc-smart-card-icon {
+    font-size: 24px;
+}
+
+.fc-smart-card-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.fc-smart-card-desc {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.fc-smart-card-count {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--primary);
+    background: var(--bg-surface);
+    padding: 4px 10px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+body.theme-dark .fc-smart-card-count {
+    color: var(--gold);
+}
+
+/* Drawer Footer */
 .fc-drawer-footer {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 16px;
-    padding-top: 12px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+    padding-top: 14px;
     border-top: 1px solid var(--border-color);
+    gap: 12px;
+}
+
+.fc-drawer-reset-area {
+    position: relative;
 }
 
 /* ==========================================
@@ -3167,22 +3510,82 @@ body.theme-dark .filiz-modal-section h4 {
         text-align: center;
     }
 
-    .fc-chunk-btns {
-        grid-template-columns: repeat(2, 1fr);
+    /* Flashcards Settings Drawer Mobile Scaling */
+    .fc-drawer-content {
+        padding: 16px 14px;
+    }
+
+    .fc-setting-block {
+        padding: 12px 14px;
+    }
+
+    .fc-sources-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .fc-source-card {
+        padding: 10px 12px;
+    }
+
+    .fc-sub-pills-row {
         gap: 6px;
     }
 
-    .btn-fc-chunk {
-        padding: 7px 8px;
+    .fc-sub-pill {
+        padding: 6px 10px;
         font-size: 12px;
     }
 
-    .fc-deck-drawer {
-        padding: 16px;
+    .fc-mode-selection-tabs {
+        grid-template-columns: 1fr;
+        gap: 6px;
     }
 
-    .fc-deck-drawer-header h3 {
-        font-size: 16px;
+    .fc-batch-stepper {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .fc-batch-step-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .fc-batch-dropdown-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .fc-batch-select {
+        width: 100%;
+    }
+
+    .fc-drawer-footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .fc-drawer-reset-area {
+        width: 100%;
+    }
+
+    .btn-fc-reset {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .fc-reset-menu {
+        width: 100%;
+    }
+
+    #fc-drawer-apply-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+        font-size: 14px;
     }
 
     /* Virtual Keyboard: Mobile Fit */
@@ -3317,6 +3720,10 @@ body.theme-dark .filiz-modal-section h4 {
     .btn-fc-learned, #fc-know-btn {
         padding: 10px 4px;
         font-size: 12px;
+    }
+
+    .fc-sources-grid {
+        grid-template-columns: 1fr;
     }
 }
 
