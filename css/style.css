@@ -1290,6 +1290,92 @@ body.theme-dark .fc-strip-progress-fill {
     background: linear-gradient(90deg, #2ecc71 0%, #a3e4d7 100%);
 }
 
+/* Left Group: Quick Stepper + Trigger */
+.fc-strip-left-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+}
+
+/* Quick Group Stepper (Inline Set Switcher) */
+.fc-quick-group-stepper {
+    display: inline-flex;
+    align-items: stretch;
+    background: var(--bg-page);
+    border: 1.5px solid var(--border-accent);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 42px;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.fc-quick-step-btn {
+    background: transparent;
+    border: none;
+    padding: 0 11px;
+    font-size: 13px;
+    color: var(--gold);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    user-select: none;
+}
+
+.fc-quick-step-btn:hover:not(:disabled) {
+    background: var(--gold-bg);
+    color: var(--gold);
+}
+
+.fc-quick-step-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.fc-quick-step-center {
+    background: transparent;
+    border: none;
+    border-left: 1px solid var(--border-accent);
+    border-right: 1px solid var(--border-accent);
+    padding: 2px 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 95px;
+    text-align: center;
+    transition: background 0.15s;
+}
+
+.fc-quick-step-center:hover {
+    background: var(--bg-surface);
+}
+
+.fc-quick-step-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+body.theme-dark .fc-quick-step-label {
+    color: var(--gold);
+}
+
+.fc-quick-step-sub {
+    font-size: 10px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
 /* Left: Deck Trigger Button */
 .fc-deck-trigger-btn {
     background: var(--bg-page);
@@ -1303,7 +1389,9 @@ body.theme-dark .fc-strip-progress-fill {
     transition: all 0.2s ease;
     color: var(--text-primary);
     text-align: left;
-    max-width: 62%;
+    flex: 1;
+    min-width: 0;
+    height: 42px;
 }
 
 .fc-deck-trigger-btn:hover {
@@ -2424,6 +2512,133 @@ body.theme-dark .fc-hero-answer-title {
 }
 
 /* ==========================================
+   END-OF-BATCH BANNER (10th Card Action & Celebration)
+   ========================================== */
+.fc-batch-banner-container {
+    width: 100%;
+}
+
+.fc-batch-complete-toast {
+    margin: 8px 0 14px 0;
+    padding: 12px 18px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, rgba(235, 247, 238, 0.95) 0%, rgba(245, 242, 232, 0.95) 100%);
+    border: 1.5px solid rgba(46, 125, 50, 0.35);
+    box-shadow: 0 4px 14px rgba(46, 125, 50, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    animation: fcBannerSlideIn 0.25s ease-out;
+}
+
+body.theme-dark .fc-batch-complete-toast {
+    background: linear-gradient(135deg, rgba(26, 46, 32, 0.95) 0%, rgba(30, 30, 36, 0.95) 100%);
+    border-color: rgba(76, 175, 80, 0.4);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.fc-batch-complete-toast.fc-toast-finished {
+    background: linear-gradient(135deg, rgba(254, 249, 231, 0.95) 0%, rgba(250, 243, 224, 0.95) 100%);
+    border-color: rgba(212, 175, 55, 0.45);
+}
+
+body.theme-dark .fc-batch-complete-toast.fc-toast-finished {
+    background: linear-gradient(135deg, rgba(45, 38, 20, 0.95) 0%, rgba(30, 30, 36, 0.95) 100%);
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+.fc-toast-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.fc-toast-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.fc-toast-texts {
+    display: flex;
+    flex-direction: column;
+}
+
+.fc-toast-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #1e7e34;
+    line-height: 1.3;
+}
+
+body.theme-dark .fc-toast-title {
+    color: #4ade80;
+}
+
+.fc-toast-finished .fc-toast-title {
+    color: #b7791f;
+}
+
+body.theme-dark .fc-toast-finished .fc-toast-title {
+    color: var(--gold);
+}
+
+.fc-toast-desc {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.25;
+}
+
+.fc-toast-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.fc-toast-next-btn {
+    background: linear-gradient(135deg, #2e7d32, #1b5e20) !important;
+    color: #ffffff !important;
+    border: none !important;
+    font-weight: 700 !important;
+    padding: 8px 18px !important;
+    border-radius: var(--radius-md) !important;
+    box-shadow: 0 2px 8px rgba(46, 125, 50, 0.25) !important;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.fc-toast-next-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.35) !important;
+}
+
+.fc-toast-review-btn {
+    padding: 7px 14px !important;
+    font-weight: 600 !important;
+    white-space: nowrap;
+}
+
+.fc-toast-first-btn {
+    padding: 7px 14px !important;
+    font-weight: 700 !important;
+    white-space: nowrap;
+}
+
+@keyframes fcBannerSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
    BOTTOM NAVIGATION & ANSWER BUTTONS
    ========================================== */
 .fc-navigation {
@@ -3395,11 +3610,61 @@ body.theme-dark .filiz-modal-section h4 {
         padding: 10px 12px;
     }
 
+    .fc-strip-left-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .fc-quick-group-stepper {
+        width: 100%;
+        justify-content: space-between;
+        height: 42px;
+    }
+
+    .fc-quick-step-center {
+        flex: 1;
+        min-width: 0;
+    }
+
     .fc-deck-trigger-btn {
         max-width: 100%;
+        width: 100%;
         justify-content: space-between;
         font-size: 13px;
         padding: 8px 12px;
+        height: auto;
+        min-height: 42px;
+    }
+
+    .fc-batch-complete-toast {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .fc-toast-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 6px;
+    }
+
+    .fc-toast-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .fc-toast-next-btn,
+    .fc-toast-review-btn,
+    .fc-toast-first-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 14px !important;
+        font-size: 13px !important;
     }
 
     .fc-strip-actions {

@@ -300,6 +300,9 @@ class FlashcardTrainer {
                     </div>
                 </div>
 
+                <!-- INLINE COMPLETION & NEXT SET BANNER (Appears on the 10th card of a group) -->
+                <div class="fc-batch-banner-container" id="fc-batch-banner-container"></div>
+
                 <!-- BOTTOM ANSWER & NAVIGATION CONTROLS -->
                 <div class="fc-navigation">
                     <button type="button" class="btn-scholarly btn-fc-nav btn-fc-prev" id="fc-prev-btn" title="Önceki Kelime (Sol Ok)">
@@ -334,19 +337,38 @@ class FlashcardTrainer {
                     <!-- COMPACT HERO CONTROL STRIP (Sleek 52px Bar) -->
                     <div class="fc-hero-control-strip">
                         
-                        <!-- Left: Active Deck Selector Button -->
-                        <button type="button" class="fc-deck-trigger-btn" id="fc-deck-trigger-btn" title="Kütüphane, Kelime Türü ve Grup Ayarlarını Açmak İçin Tıklayın">
-                            <span class="fc-deck-trigger-icon">🎯</span>
-                            <div class="fc-deck-trigger-texts">
-                                <div class="fc-deck-trigger-headline">
-                                    <span class="fc-deck-main-name">${this.getMainCategoryLabel()}</span>
-                                    <span class="fc-deck-sep">•</span>
-                                    <span class="fc-deck-sub-name">${this.getSubCategoryLabel()}</span>
+                        <!-- Left Controls: Quick Group Stepper & Deck Trigger -->
+                        <div class="fc-strip-left-group">
+                            ${this.deckMode === 'batch' ? `
+                                <!-- Quick Group Stepper (Instant Set Switcher) -->
+                                <div class="fc-quick-group-stepper" title="Gruplar arası doğrudan geçiş yapın">
+                                    <button type="button" class="fc-quick-step-btn" id="fc-quick-prev-btn" ${this.batchIndex <= 0 ? 'disabled' : ''} title="Önceki 10'lu Grup">
+                                        ◀
+                                    </button>
+                                    <button type="button" class="fc-quick-step-center" id="fc-quick-step-center" title="Tüm grupları ve ayarları açmak için tıklayın">
+                                        <span class="fc-quick-step-label">Grup ${this.batchIndex + 1} / ${totalBatches}</span>
+                                        <span class="fc-quick-step-sub">${(this.batchIndex * 10) + 1}–${Math.min((this.batchIndex * 10) + 10, poolWords.length)} (${batchStats.learned}/10)</span>
+                                    </button>
+                                    <button type="button" class="fc-quick-step-btn" id="fc-quick-next-btn" ${this.batchIndex >= totalBatches - 1 ? 'disabled' : ''} title="Sonraki 10'lu Grup">
+                                        ▶
+                                    </button>
                                 </div>
-                                <div class="fc-deck-trigger-detail">${this.getDeckModeDetailLabel()}</div>
-                            </div>
-                            <span class="fc-deck-trigger-pill">⚙️ Ayarlar ▾</span>
-                        </button>
+                            ` : ''}
+
+                            <!-- Active Deck Trigger Button -->
+                            <button type="button" class="fc-deck-trigger-btn" id="fc-deck-trigger-btn" title="Kütüphane, Kelime Türü ve Grup Ayarlarını Açmak İçin Tıklayın">
+                                <span class="fc-deck-trigger-icon">🎯</span>
+                                <div class="fc-deck-trigger-texts">
+                                    <div class="fc-deck-trigger-headline">
+                                        <span class="fc-deck-main-name">${this.getMainCategoryLabel()}</span>
+                                        <span class="fc-deck-sep">•</span>
+                                        <span class="fc-deck-sub-name">${this.getSubCategoryLabel()}</span>
+                                    </div>
+                                    <div class="fc-deck-trigger-detail">${this.getDeckModeDetailLabel()}</div>
+                                </div>
+                                <span class="fc-deck-trigger-pill">⚙️ Ayarlar ▾</span>
+                            </button>
+                        </div>
 
                         <!-- Center / Right Controls: Direction Toggle, Progress Badge, Shuffle -->
                         <div class="fc-strip-actions">
@@ -611,6 +633,7 @@ class FlashcardTrainer {
 
         // Empty state check
         if (!this.currentDeck || this.currentDeck.length === 0) {
+            this.renderBanner();
             cardContainer.innerHTML = `
                 <div class="fc-card-face fc-card-front fc-card-empty">
                     <div class="empty-icon">📜</div>
@@ -840,6 +863,66 @@ class FlashcardTrainer {
             <div class="fc-card-face fc-card-front">${frontHtml}</div>
             <div class="fc-card-face fc-card-back">${backHtml}</div>
         `;
+        this.renderBanner();
+    }
+
+    renderBanner() {
+        const bannerContainer = this.container.querySelector('#fc-batch-banner-container');
+        if (!bannerContainer) return;
+
+        if (this.deckMode !== 'batch' || !this.currentDeck || this.currentDeck.length === 0) {
+            bannerContainer.innerHTML = '';
+            return;
+        }
+
+        const isLastCard = (this.currentIndex === this.currentDeck.length - 1);
+        if (!isLastCard) {
+            bannerContainer.innerHTML = '';
+            return;
+        }
+
+        const poolWords = this.getSubCategoryWords(this.mainCategory, this.subCategory);
+        const totalBatches = Math.max(1, Math.ceil(poolWords.length / 10));
+        const batchStats = this.getCurrentBatchStats();
+        const isLastBatch = (this.batchIndex >= totalBatches - 1);
+
+        if (!isLastBatch) {
+            bannerContainer.innerHTML = `
+                <div class="fc-batch-complete-toast">
+                    <div class="fc-toast-content">
+                        <span class="fc-toast-icon">🎉</span>
+                        <div class="fc-toast-texts">
+                            <strong class="fc-toast-title">Grup ${this.batchIndex + 1} sonundasınız!</strong>
+                            <span class="fc-toast-desc">${batchStats.learned}/${batchStats.total} kelime öğrenildi (%${batchStats.percent})</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-scholarly btn-sm btn-primary fc-toast-next-btn" id="fc-banner-next-batch" title="Grup ${this.batchIndex + 2}'ye geç">
+                        Sonraki Gruba Geç (Grup ${this.batchIndex + 2}) ▶
+                    </button>
+                </div>
+            `;
+        } else {
+            const subStats = this.getCurrentSubCategoryStats();
+            bannerContainer.innerHTML = `
+                <div class="fc-batch-complete-toast fc-toast-finished">
+                    <div class="fc-toast-content">
+                        <span class="fc-toast-icon">🏆</span>
+                        <div class="fc-toast-texts">
+                            <strong class="fc-toast-title">Tebrikler! Bu bölümdeki tüm grupları tamamladınız!</strong>
+                            <span class="fc-toast-desc">Bu grup: ${batchStats.learned}/${batchStats.total} • Genel durum: %${subStats.percent} (${subStats.learned}/${subStats.total} kelime)</span>
+                        </div>
+                    </div>
+                    <div class="fc-toast-actions">
+                        <button type="button" class="btn-scholarly btn-sm btn-outline fc-toast-review-btn" id="fc-banner-review-batch" title="Öğrenilmeyen kelimeleri tekrar et">
+                            ⏳ Bilmediklerimi Tekrar Et ▶
+                        </button>
+                        <button type="button" class="btn-scholarly btn-sm btn-primary fc-toast-first-btn" id="fc-banner-first-batch" title="1. Gruba geri dön">
+                            🔄 Grup 1'e Dön
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
     }
 
     /* ==========================================================================
@@ -952,6 +1035,13 @@ class FlashcardTrainer {
         if (mainNameEl) mainNameEl.textContent = this.getMainCategoryLabel();
         if (subNameEl) subNameEl.textContent = this.getSubCategoryLabel();
         if (detailEl) detailEl.textContent = this.getDeckModeDetailLabel();
+
+        const quickSubEl = this.container.querySelector('.fc-quick-step-sub');
+        if (quickSubEl && this.deckMode === 'batch') {
+            const start = this.batchIndex * 10;
+            const end = Math.min(start + 10, poolWords.length);
+            quickSubEl.textContent = `${start + 1}–${end} (${batchStats.learned}/10)`;
+        }
     }
 
     /* ==========================================================================
@@ -1110,7 +1200,62 @@ class FlashcardTrainer {
                 return;
             }
 
-            // Batch Stepper: Prev Batch
+            // Quick Group Stepper: Prev Group (on control strip)
+            if (e.target.closest('#fc-quick-prev-btn')) {
+                if (this.batchIndex > 0) {
+                    this.batchIndex--;
+                    this.deckMode = 'batch';
+                    this.currentIndex = 0;
+                    this.savePreferences();
+                    this.buildActiveDeck();
+                    this.render();
+                }
+                return;
+            }
+
+            // Quick Group Stepper & Banner: Next Group
+            if (e.target.closest('#fc-quick-next-btn') || e.target.closest('#fc-banner-next-batch')) {
+                const poolWords = this.getSubCategoryWords(this.mainCategory, this.subCategory);
+                const totalBatches = Math.max(1, Math.ceil(poolWords.length / 10));
+                if (this.batchIndex < totalBatches - 1) {
+                    this.batchIndex++;
+                    this.deckMode = 'batch';
+                    this.currentIndex = 0;
+                    this.savePreferences();
+                    this.buildActiveDeck();
+                    this.render();
+                }
+                return;
+            }
+
+            // Quick Group Stepper: Center label clicks open drawer
+            if (e.target.closest('#fc-quick-step-center')) {
+                this.toggleDrawer();
+                return;
+            }
+
+            // Completion Banner: Review unlearned
+            if (e.target.closest('#fc-banner-review-batch')) {
+                this.deckMode = 'unknown';
+                this.currentIndex = 0;
+                this.savePreferences();
+                this.buildActiveDeck();
+                this.render();
+                return;
+            }
+
+            // Completion Banner: Return to group 1
+            if (e.target.closest('#fc-banner-first-batch')) {
+                this.batchIndex = 0;
+                this.deckMode = 'batch';
+                this.currentIndex = 0;
+                this.savePreferences();
+                this.buildActiveDeck();
+                this.render();
+                return;
+            }
+
+            // Batch Stepper: Prev Batch (inside drawer)
             if (e.target.closest('#fc-batch-prev-btn')) {
                 if (this.batchIndex > 0) {
                     this.batchIndex--;
