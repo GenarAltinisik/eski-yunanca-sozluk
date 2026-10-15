@@ -149,6 +149,90 @@ const GreekUtils = {
         }
 
         window.speechSynthesis.speak(utterance);
+    },
+
+    /**
+     * Get noun metadata: definite article and grammatical gender
+     * Returns { isNoun, article, gender, genderClass, genderTitle } or null if not a noun
+     */
+    getNounInfo(item) {
+        if (!item) return null;
+        const pos = item.partOfSpeech || '';
+        const cat = item.category || '';
+        
+        // Check if item represents a noun or substantivized noun
+        const isNoun = pos.includes('İsim') || cat.includes('İsim') || pos.includes('Özel İsim');
+        if (!isNoun) return null;
+
+        const fullText = (pos + ' ' + (item.grammar?.declension || '') + ' ' + (item.lemma || '')).toLowerCase();
+
+        // 1. Determine gender: 'M' (Masculinum), 'F' (Femininum), 'N' (Neutrum), 'M/F' (Common)
+        let gender = null;
+        let genderClass = '';
+        let genderTitle = '';
+
+        if (fullText.includes('ortak') || fullText.includes('eril / dişil') || fullText.includes('eril/dişil') || 
+            (item.lemma && (item.lemma.includes('ὁ / ἡ') || item.lemma.includes('ὁ/ἡ')))) {
+            gender = 'M/F';
+            genderClass = 'mf';
+            genderTitle = 'Ortak Cinsiyet (Masculinum & Femininum)';
+        } else if (fullText.includes('nötr') || fullText.includes('notr') || fullText.includes('neuter') || 
+                   (item.lemma && (item.lemma.includes(' τό') || item.lemma.includes(', τό') || item.lemma.includes('τὸ ')))) {
+            gender = 'N';
+            genderClass = 'n';
+            genderTitle = 'Nötr (Neutrum)';
+        } else if (fullText.includes('eril') || fullText.includes('masculine') || 
+                   (item.lemma && (item.lemma.endsWith(' ὁ') || item.lemma.includes(', ὁ') || item.lemma.includes('ὁ ')))) {
+            gender = 'M';
+            genderClass = 'm';
+            genderTitle = 'Eril (Masculinum)';
+        } else if (fullText.includes('dişil') || fullText.includes('disil') || fullText.includes('feminine') || 
+                   (item.lemma && (item.lemma.endsWith(' ἡ') || item.lemma.includes(', ἡ') || item.lemma.includes('ἡ ')))) {
+            gender = 'F';
+            genderClass = 'f';
+            genderTitle = 'Dişil (Femininum)';
+        }
+
+        // Fallbacks for special entries
+        if (!gender) {
+            if (item.word === 'βάρβαρος') { gender = 'M/F'; genderClass = 'mf'; genderTitle = 'Ortak Cinsiyet (Masculinum & Femininum)'; }
+            else if (item.word === 'Ἀθηναῖος') { gender = 'M'; genderClass = 'm'; genderTitle = 'Eril (Masculinum)'; }
+            else if (item.word === 'αἰθήρ') { gender = 'M/F'; genderClass = 'mf'; genderTitle = 'Ortak Cinsiyet (Masculinum & Femininum)'; }
+        }
+
+        // 2. Determine definite article
+        let article = null;
+        const lemma = item.lemma || '';
+
+        // Check if lemma starts with article
+        const leadMatch = lemma.match(/^(ὁ\s*\/\s*ἡ|ὁ|ἡ|τό|τὸ|οἱ|αἱ|τά|τὰ)\s+/);
+        if (leadMatch) {
+            article = leadMatch[1].replace('τὸ', 'τό').replace('τὰ', 'τά').trim();
+        } else {
+            // Check if lemma ends with comma article or slash article
+            const endMatch = lemma.match(/,\s*(ὁ\s*\/\s*ἡ|ὁ|ἡ|τό|τὸ|οἱ|αἱ|τά|τὰ)(\s*\(.*?\))?$/) ||
+                             lemma.match(/\/\s*(ὁ\s*\/\s*ἡ|ὁ|ἡ|τό|τὸ|οἱ|αἱ|τά|τὰ)\s+[\wἀ-ῼ]+/);
+            if (endMatch) {
+                article = endMatch[1].replace('τὸ', 'τό').replace('τὰ', 'τά').trim();
+            }
+        }
+
+        // Fallback article based on gender & plural
+        if (!article) {
+            const isPlural = fullText.includes('çoğul') || fullText.includes('plural');
+            if (gender === 'M') article = isPlural ? 'οἱ' : 'ὁ';
+            else if (gender === 'F') article = isPlural ? 'αἱ' : 'ἡ';
+            else if (gender === 'N') article = isPlural ? 'τά' : 'τό';
+            else if (gender === 'M/F') article = 'ὁ / ἡ';
+        }
+
+        return {
+            isNoun: true,
+            article,
+            gender,
+            genderClass,
+            genderTitle
+        };
     }
 };
 

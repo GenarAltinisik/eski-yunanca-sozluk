@@ -213,12 +213,18 @@ class GreekApp {
         const index = dayOfYear % this.dictionary.length;
         const wotd = this.dictionary[index] || this.dictionary[0];
 
+        const nounInfo = window.GreekUtils ? window.GreekUtils.getNounInfo(wotd) : null;
+
         dayBox.innerHTML = `
             <div class="wotd-banner">
                 <div class="wotd-label">🏛️ Günün Antik Yunanca Kelimesi</div>
                 <div class="wotd-content">
                     <div class="wotd-left">
-                        <span class="wotd-greek">${wotd.word}</span>
+                        <div class="wotd-greek">
+                            ${nounInfo?.article ? `<span class="word-article wotd-article">${nounInfo.article}</span>` : ''}
+                            <span>${wotd.word}</span>
+                            ${nounInfo?.gender ? `<span class="badge-gender wotd-gender-badge badge-gender-${nounInfo.genderClass}" title="${nounInfo.genderTitle}">${nounInfo.gender}</span>` : ''}
+                        </div>
                         <span class="wotd-translit">${wotd.transliteration}</span>
                         <span class="wotd-lemma">${wotd.lemma}</span>
                     </div>
@@ -358,12 +364,17 @@ class GreekApp {
             const isFav = this.isFavorite(item.id);
             const stars = '★'.repeat(item.frequency || 3) + '☆'.repeat(5 - (item.frequency || 3));
             const trMeanings = (item.meanings_tr || []).slice(0, 2).join(' • ');
+            const nounInfo = window.GreekUtils ? window.GreekUtils.getNounInfo(item) : null;
 
             html += `
                 <div class="word-card" data-id="${item.id}">
                     <div class="word-card-header">
                         <div class="greek-title-group">
-                            <span class="greek-word">${item.word}</span>
+                            <div class="greek-word-row">
+                                ${nounInfo?.article ? `<span class="word-article">${nounInfo.article}</span>` : ''}
+                                <span class="greek-word">${item.word}</span>
+                                ${nounInfo?.gender ? `<span class="badge-gender badge-gender-${nounInfo.genderClass}" title="${nounInfo.genderTitle}">${nounInfo.gender}</span>` : ''}
+                            </div>
                             <span class="greek-translit">${item.transliteration || ''}</span>
                         </div>
                         <div class="card-top-actions">
@@ -507,10 +518,16 @@ class GreekApp {
             `;
         }
 
+        const nounInfo = window.GreekUtils ? window.GreekUtils.getNounInfo(item) : null;
+
         content.innerHTML = `
             <div class="modal-word-header">
                 <div class="modal-greek-block">
-                    <h2 class="modal-greek-word">${item.word}</h2>
+                    <h2 class="modal-greek-word">
+                        ${nounInfo?.article ? `<span class="word-article modal-article">${nounInfo.article}</span> ` : ''}
+                        <span>${item.word}</span>
+                        ${nounInfo?.gender ? `<span class="badge-gender modal-gender-badge badge-gender-${nounInfo.genderClass}" title="${nounInfo.genderTitle}">${nounInfo.gender}</span>` : ''}
+                    </h2>
                     <span class="modal-translit">${item.transliteration}</span>
                     <div class="modal-lemma-text">${item.lemma}</div>
                 </div>

@@ -659,6 +659,7 @@ class FlashcardTrainer {
 
         const item = this.currentDeck[this.currentIndex];
         const isLearned = this.isWordLearned(item.id);
+        const nounInfo = window.GreekUtils ? window.GreekUtils.getNounInfo(item) : null;
         const cardStatusBadge = isLearned 
             ? `<span class="badge fc-badge-status learned">✅ Öğrenildi</span>`
             : `<span class="badge fc-badge-status unlearned">⏳ Henüz Öğrenilmedi</span>`;
@@ -696,7 +697,11 @@ class FlashcardTrainer {
                 </div>
 
                 <div class="fc-front-main">
-                    <div class="fc-greek-word">${item.word}</div>
+                    <div class="fc-greek-word">
+                        ${nounInfo?.article ? `<span class="word-article fc-article">${nounInfo.article}</span>` : ''}
+                        <span>${item.word}</span>
+                        ${nounInfo?.gender ? `<span class="badge-gender fc-gender-badge badge-gender-${nounInfo.genderClass}" title="${nounInfo.genderTitle}">${nounInfo.gender}</span>` : ''}
+                    </div>
                     <div class="fc-translit">${item.transliteration || ''}</div>
                     <div class="fc-lemma">${item.lemma}</div>
                 </div>
@@ -713,7 +718,11 @@ class FlashcardTrainer {
             backHtml = `
                 <div class="fc-card-top-bar">
                     <div class="fc-back-title-wrap">
-                        <span class="fc-back-word">${item.word}</span>
+                        <span class="fc-back-word">
+                            ${nounInfo?.article ? `<span class="word-article fc-article-sm">${nounInfo.article}</span>` : ''}
+                            ${item.word}
+                            ${nounInfo?.gender ? `<span class="badge-gender fc-gender-badge-sm badge-gender-${nounInfo.genderClass}" title="${nounInfo.genderTitle}">${nounInfo.gender}</span>` : ''}
+                        </span>
                         <span class="fc-back-translit">(${item.transliteration || ''})</span>
                     </div>
                 </div>
@@ -819,7 +828,11 @@ class FlashcardTrainer {
                 <!-- BIG HERO GREEK ANSWER BLOCK -->
                 <div class="fc-hero-answer-block greek-hero">
                     <div class="fc-hero-answer-badge">🎯 Grekçe Karşılık</div>
-                    <div class="fc-hero-greek-word">${item.word}</div>
+                    <div class="fc-hero-greek-word">
+                        ${nounInfo?.article ? `<span class="word-article fc-article">${nounInfo.article}</span> ` : ''}
+                        <span>${item.word}</span>
+                        ${nounInfo?.gender ? `<span class="badge-gender fc-gender-badge badge-gender-${nounInfo.genderClass}" title="${nounInfo.genderTitle}">${nounInfo.gender}</span>` : ''}
+                    </div>
                     <div class="fc-hero-greek-translit">${item.transliteration || ''}</div>
                     <div class="fc-hero-greek-lemma">${item.lemma}</div>
                 </div>
