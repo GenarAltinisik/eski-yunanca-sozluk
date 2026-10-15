@@ -657,47 +657,25 @@ body.theme-dark .scholarly-select:focus {
 /* ==========================================
    NOUN DEFINITE ARTICLES & GENDER BADGES
    ========================================== */
-.word-article {
-    font-family: var(--font-greek);
-    color: #9c680a;
-    font-weight: 600;
-    margin-right: 4px;
-    display: inline;
-}
-
-body.theme-dark .word-article {
-    color: var(--gold, #dfb76c);
-}
-
-.modal-article {
-    margin-right: 8px;
-}
-
+.word-article,
+.fc-article,
+.fc-article-sm,
+.modal-article,
 .wotd-article {
-    margin-right: 6px;
-}
-
-.fc-article {
     font-family: var(--font-greek);
+    font-size: 1em; /* Kelime ile birebir aynı büyüklükte */
+    font-weight: inherit;
+    line-height: inherit;
     color: #9c680a;
-    font-weight: 600;
-    margin-right: 8px;
     display: inline;
+    margin-right: 2px;
 }
 
-body.theme-dark .fc-article {
-    color: var(--gold, #dfb76c);
-}
-
-.fc-article-sm {
-    font-family: var(--font-greek);
-    color: #9c680a;
-    font-weight: 600;
-    margin-right: 4px;
-    display: inline;
-}
-
-body.theme-dark .fc-article-sm {
+body.theme-dark .word-article,
+body.theme-dark .fc-article,
+body.theme-dark .fc-article-sm,
+body.theme-dark .modal-article,
+body.theme-dark .wotd-article {
     color: var(--gold, #dfb76c);
 }
 

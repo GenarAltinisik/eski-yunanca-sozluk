@@ -371,8 +371,7 @@ class GreekApp {
                     <div class="word-card-header">
                         <div class="greek-title-group">
                             <div class="greek-word-row">
-                                ${nounInfo?.article ? `<span class="word-article">${nounInfo.article}</span>` : ''}
-                                <span class="greek-word">${item.word}</span>
+                                <span class="greek-word">${nounInfo?.article ? `<span class="word-article">${nounInfo.article}</span> ` : ''}${item.word}</span>
                                 ${nounInfo?.gender ? `<span class="badge-gender badge-gender-${nounInfo.genderClass}" title="${nounInfo.genderTitle}">${nounInfo.gender}</span>` : ''}
                             </div>
                             <span class="greek-translit">${item.transliteration || ''}</span>
