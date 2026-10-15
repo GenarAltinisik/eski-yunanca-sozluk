@@ -1240,13 +1240,18 @@ body.theme-dark .scholarly-select:focus {
     position: relative;
 }
 
+.fc-controls-section {
+    margin-top: 18px;
+    position: relative;
+}
+
 /* COMPACT HERO CONTROL STRIP (Sleek 52px Bar) */
 .fc-hero-control-strip {
     background: var(--bg-surface);
     border: 1px solid var(--border-accent);
     border-radius: var(--radius-lg);
     padding: 8px 14px;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     box-shadow: var(--shadow-sm);
     display: flex;
     justify-content: space-between;
@@ -1449,6 +1454,7 @@ body.theme-dark .btn-fc-reset {
 
 /* COLLAPSIBLE DECK & FILTER DRAWER */
 .fc-deck-drawer {
+    margin-top: 14px;
     margin-bottom: 24px;
     animation: slideDown 0.25s ease-out;
 }
@@ -1677,7 +1683,7 @@ body.theme-dark .fc-batch-card-btn.active {
 .fc-card-scene {
     perspective: 1200px;
     height: 430px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     cursor: pointer;
 }
 
@@ -2146,6 +2152,7 @@ body.theme-dark .btn-fc-learned {
     background: var(--bg-surface);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
+    margin-bottom: 6px;
 }
 
 .fc-counter-hint {

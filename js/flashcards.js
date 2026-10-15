@@ -259,152 +259,7 @@ class FlashcardTrainer {
         this.container.innerHTML = `
             <div class="flashcards-wrapper">
                 
-                <!-- COMPACT HERO CONTROL STRIP (Sleek 52px Bar) -->
-                <div class="fc-hero-control-strip">
-                    
-                    <!-- Left: Active Deck Selector Button -->
-                    <button type="button" class="fc-deck-trigger-btn" id="fc-deck-trigger-btn" title="Kategori, Gramer Türü ve Paket Seçimi İçin Tıklayın">
-                        <span class="fc-deck-trigger-icon">🎯</span>
-                        <span class="fc-deck-trigger-text">${this.getDeckSummaryLabel()}</span>
-                        <span class="fc-deck-trigger-arrow">▾</span>
-                    </button>
-
-                    <!-- Center / Right Controls: Direction Toggle, Progress Badge, Reset, Shuffle -->
-                    <div class="fc-strip-actions">
-                        
-                        <!-- Direction Toggle -->
-                        <div class="fc-toggle-group" title="Çalışma Yönünü Değiştir">
-                            <button type="button" class="btn-fc-toggle ${this.direction === 'greek_to_tr' ? 'active' : ''}" data-direction="greek_to_tr" title="Grekçe ➔ Türkçe">
-                                🇬🇷 ➔ 🇹🇷
-                            </button>
-                            <button type="button" class="btn-fc-toggle ${this.direction === 'tr_to_greek' ? 'active' : ''}" data-direction="tr_to_greek" title="Türkçe ➔ Grekçe">
-                                🇹🇷 ➔ 🇬🇷
-                            </button>
-                        </div>
-
-                        <!-- Progress Percent Pill -->
-                        <div class="fc-strip-percent-badge" title="Bu Paketteki Öğrenme Oranı">
-                            <span id="fc-progress-percent">%${currentPercent}</span>
-                        </div>
-
-                        <!-- Reset Menu Dropdown -->
-                        <div class="fc-reset-btn-wrapper">
-                            <button type="button" class="btn-scholarly btn-sm btn-fc-reset" id="fc-reset-toggle-btn" title="İlerlemeyi Sıfırla">
-                                🗑️ Sıfırla ▾
-                            </button>
-                            <div class="fc-reset-menu hidden" id="fc-reset-menu">
-                                <button type="button" class="fc-reset-item" data-action="reset-batch">
-                                    📦 Bu Paketi Sıfırla (${this.deckMode === 'batch' ? (this.batchIndex + 1) + '. Grup' : 'Mevcut Paket'})
-                                </button>
-                                <button type="button" class="fc-reset-item" data-action="reset-sub">
-                                    📑 Bu Alt Kategoriyi Sıfırla (${this.getSubCategoryLabel()})
-                                </button>
-                                <button type="button" class="fc-reset-item" data-action="reset-main">
-                                    🏛️ Bu Ana Kütüphaneyi Sıfırla (${this.getMainCategoryLabel()})
-                                </button>
-                                <div class="fc-reset-divider"></div>
-                                <button type="button" class="fc-reset-item danger" data-action="reset-all">
-                                    ⚠️ Tüm Sözlük Kart İlerlemesini Sıfırla
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Shuffle Button -->
-                        <button type="button" class="btn-icon-action btn-sm" id="fc-shuffle-btn" title="Kartları Karıştır">🔀</button>
-
-                    </div>
-
-                    <!-- Mini Progress Line under the strip -->
-                    <div class="fc-strip-progress-line">
-                        <div class="fc-strip-progress-fill" id="fc-progress-bar-fill" style="width: ${currentPercent}%"></div>
-                    </div>
-
-                </div>
-
-                <!-- COLLAPSIBLE FILTER & DECK DRAWER / SHEET -->
-                <div class="fc-deck-drawer ${this.isFilterDrawerOpen ? 'open' : 'hidden'}" id="fc-deck-drawer">
-                    <div class="fc-drawer-content">
-                        
-                        <div class="fc-drawer-header">
-                            <h4>🎯 Çalışma Kütüphanesi, Gramer Türü ve Paket Seçimi</h4>
-                            <button type="button" class="btn-icon-action" id="fc-drawer-close-btn" title="Kapat">✕</button>
-                        </div>
-
-                        <!-- 1. Layer: Main Scope -->
-                        <div class="fc-drawer-section">
-                            <span class="fc-drawer-section-title">1. Ana Kaynak Kütüphanesi:</span>
-                            <div class="fc-pills-row" id="fc-main-pills">
-                                <button type="button" class="fc-pill ${this.mainCategory === 'all' ? 'active' : ''}" data-main="all">
-                                    🌟 Tüm Kelimeler (${this.fullDictionary.length})
-                                </button>
-                                <button type="button" class="fc-pill fc-pill-ath ${this.mainCategory === 'athenaze' ? 'active' : ''}" data-main="athenaze">
-                                    📚 Athenaze: Book I (${this.getMainCategoryWords('athenaze').length})
-                                </button>
-                                <button type="button" class="fc-pill fc-pill-emel ${this.mainCategory === 'emel_hoca' ? 'active' : ''}" data-main="emel_hoca">
-                                    🌸 Emel Hoca'nın Seçtikleri (${this.getMainCategoryWords('emel_hoca').length})
-                                </button>
-                                <button type="button" class="fc-pill fc-pill-filiz ${this.mainCategory === 'filiz_hoca' ? 'active' : ''}" data-main="filiz_hoca">
-                                    🌿 Filiz Hoca'nın Notları (${this.getMainCategoryWords('filiz_hoca').length})
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- 2. Layer: Sub-categories -->
-                        <div class="fc-drawer-section">
-                            <span class="fc-drawer-section-title">2. Kelime Türü (Gramer):</span>
-                            <div class="fc-pills-row" id="fc-sub-pills">
-                                <button type="button" class="fc-sub-pill ${this.subCategory === 'all' ? 'active' : ''}" data-sub="all">
-                                    Tüm Türler (${this.getMainCategoryWords(this.mainCategory).length})
-                                </button>
-                                <button type="button" class="fc-sub-pill ${this.subCategory === 'İsim' ? 'active' : ''}" data-sub="İsim">
-                                    İsimler (${this.getSubCategoryWords(this.mainCategory, 'İsim').length})
-                                </button>
-                                <button type="button" class="fc-sub-pill ${this.subCategory === 'Fiil' ? 'active' : ''}" data-sub="Fiil">
-                                    Fiiller (${this.getSubCategoryWords(this.mainCategory, 'Fiil').length})
-                                </button>
-                                <button type="button" class="fc-sub-pill ${this.subCategory === 'Sıfat' ? 'active' : ''}" data-sub="Sıfat">
-                                    Sıfatlar (${this.getSubCategoryWords(this.mainCategory, 'Sıfat').length})
-                                </button>
-                                <button type="button" class="fc-sub-pill ${this.subCategory === 'Edat' ? 'active' : ''}" data-sub="Edat">
-                                    Edatlar & Bağlaçlar (${this.getSubCategoryWords(this.mainCategory, 'Edat').length})
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- 3. Layer: 10-Word Batches Grid -->
-                        <div class="fc-drawer-section">
-                            <span class="fc-drawer-section-title">3. 10'arlık Çalışma Paketleri:</span>
-                            <div class="fc-batches-grid" id="fc-batches-grid">
-                                ${this.renderDrawerBatchCards(poolWords, totalBatches)}
-                            </div>
-                        </div>
-
-                        <!-- 4. Layer: Smart Decks (Unrestricted size) -->
-                        <div class="fc-drawer-section">
-                            <span class="fc-drawer-section-title">4. Özel Akıllı Havuzlar (10 Sınırı Olmadan):</span>
-                            <div class="fc-smart-decks-row">
-                                <button type="button" class="fc-smart-deck-btn ${this.deckMode === 'known' ? 'active' : ''}" data-mode="known">
-                                    🏆 Bildiğim Kelimeler (${knownCount})
-                                </button>
-                                <button type="button" class="fc-smart-deck-btn ${this.deckMode === 'unknown' ? 'active' : ''}" data-mode="unknown">
-                                    ⏳ Bilmediğim / Tekrar (${unknownCount})
-                                </button>
-                                <button type="button" class="fc-smart-deck-btn ${this.deckMode === 'all_pool' ? 'active' : ''}" data-mode="all_pool">
-                                    📋 Tüm Havuz (${poolWords.length})
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="fc-drawer-footer">
-                            <button type="button" class="btn-scholarly btn-sm" id="fc-drawer-apply-btn">
-                                ✓ Kartlara Dön ve Çalışmaya Başla
-                            </button>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- HERO FLASHCARD SCENE (Dominates the screen) -->
+                <!-- HERO FLASHCARD SCENE (Dominates the screen at the very top) -->
                 <div class="fc-card-scene" id="fc-card-scene" title="Kartı çevirmek için tıkla (veya Boşluk tuşu)">
                     <div class="fc-card" id="fc-card">
                         <!-- Dynamic Card Faces rendered by renderCard() -->
@@ -436,6 +291,156 @@ class FlashcardTrainer {
                     <span class="fc-counter-hint" id="fc-counter-hint">
                         ${this.currentDeck.length > 0 ? (this.currentIndex + 1) + ' / ' + this.currentDeck.length : '0 / 0'}
                     </span>
+                </div>
+
+                <!-- SETTINGS & CONTROLS SECTION (Positioned below card section) -->
+                <div class="fc-controls-section">
+                    
+                    <!-- COMPACT HERO CONTROL STRIP (Sleek 52px Bar) -->
+                    <div class="fc-hero-control-strip">
+                        
+                        <!-- Left: Active Deck Selector Button -->
+                        <button type="button" class="fc-deck-trigger-btn" id="fc-deck-trigger-btn" title="Kategori, Gramer Türü ve Paket Seçimi İçin Tıklayın">
+                            <span class="fc-deck-trigger-icon">🎯</span>
+                            <span class="fc-deck-trigger-text">${this.getDeckSummaryLabel()}</span>
+                            <span class="fc-deck-trigger-arrow">▾</span>
+                        </button>
+
+                        <!-- Center / Right Controls: Direction Toggle, Progress Badge, Reset, Shuffle -->
+                        <div class="fc-strip-actions">
+                            
+                            <!-- Direction Toggle -->
+                            <div class="fc-toggle-group" title="Çalışma Yönünü Değiştir">
+                                <button type="button" class="btn-fc-toggle ${this.direction === 'greek_to_tr' ? 'active' : ''}" data-direction="greek_to_tr" title="Grekçe ➔ Türkçe">
+                                    🇬🇷 ➔ 🇹🇷
+                                </button>
+                                <button type="button" class="btn-fc-toggle ${this.direction === 'tr_to_greek' ? 'active' : ''}" data-direction="tr_to_greek" title="Türkçe ➔ Grekçe">
+                                    🇹🇷 ➔ 🇬🇷
+                                </button>
+                            </div>
+
+                            <!-- Progress Percent Pill -->
+                            <div class="fc-strip-percent-badge" title="Bu Paketteki Öğrenme Oranı">
+                                <span id="fc-progress-percent">%${currentPercent}</span>
+                            </div>
+
+                            <!-- Reset Menu Dropdown -->
+                            <div class="fc-reset-btn-wrapper">
+                                <button type="button" class="btn-scholarly btn-sm btn-fc-reset" id="fc-reset-toggle-btn" title="İlerlemeyi Sıfırla">
+                                    🗑️ Sıfırla ▾
+                                </button>
+                                <div class="fc-reset-menu hidden" id="fc-reset-menu">
+                                    <button type="button" class="fc-reset-item" data-action="reset-batch">
+                                        📦 Bu Paketi Sıfırla (${this.deckMode === 'batch' ? (this.batchIndex + 1) + '. Grup' : 'Mevcut Paket'})
+                                    </button>
+                                    <button type="button" class="fc-reset-item" data-action="reset-sub">
+                                        📑 Bu Alt Kategoriyi Sıfırla (${this.getSubCategoryLabel()})
+                                    </button>
+                                    <button type="button" class="fc-reset-item" data-action="reset-main">
+                                        🏛️ Bu Ana Kütüphaneyi Sıfırla (${this.getMainCategoryLabel()})
+                                    </button>
+                                    <div class="fc-reset-divider"></div>
+                                    <button type="button" class="fc-reset-item danger" data-action="reset-all">
+                                        ⚠️ Tüm Sözlük Kart İlerlemesini Sıfırla
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Shuffle Button -->
+                            <button type="button" class="btn-icon-action btn-sm" id="fc-shuffle-btn" title="Kartları Karıştır">🔀</button>
+
+                        </div>
+
+                        <!-- Mini Progress Line under the strip -->
+                        <div class="fc-strip-progress-line">
+                            <div class="fc-strip-progress-fill" id="fc-progress-bar-fill" style="width: ${currentPercent}%"></div>
+                        </div>
+
+                    </div>
+
+                    <!-- COLLAPSIBLE FILTER & DECK DRAWER / SHEET -->
+                    <div class="fc-deck-drawer ${this.isFilterDrawerOpen ? 'open' : 'hidden'}" id="fc-deck-drawer">
+                        <div class="fc-drawer-content">
+                            
+                            <div class="fc-drawer-header">
+                                <h4>🎯 Çalışma Kütüphanesi, Gramer Türü ve Paket Seçimi</h4>
+                                <button type="button" class="btn-icon-action" id="fc-drawer-close-btn" title="Kapat">✕</button>
+                            </div>
+
+                            <!-- 1. Layer: Main Scope -->
+                            <div class="fc-drawer-section">
+                                <span class="fc-drawer-section-title">1. Ana Kaynak Kütüphanesi:</span>
+                                <div class="fc-pills-row" id="fc-main-pills">
+                                    <button type="button" class="fc-pill ${this.mainCategory === 'all' ? 'active' : ''}" data-main="all">
+                                        🌟 Tüm Kelimeler (${this.fullDictionary.length})
+                                    </button>
+                                    <button type="button" class="fc-pill fc-pill-ath ${this.mainCategory === 'athenaze' ? 'active' : ''}" data-main="athenaze">
+                                        📚 Athenaze: Book I (${this.getMainCategoryWords('athenaze').length})
+                                    </button>
+                                    <button type="button" class="fc-pill fc-pill-emel ${this.mainCategory === 'emel_hoca' ? 'active' : ''}" data-main="emel_hoca">
+                                        🌸 Emel Hoca'nın Seçtikleri (${this.getMainCategoryWords('emel_hoca').length})
+                                    </button>
+                                    <button type="button" class="fc-pill fc-pill-filiz ${this.mainCategory === 'filiz_hoca' ? 'active' : ''}" data-main="filiz_hoca">
+                                        🌿 Filiz Hoca'nın Notları (${this.getMainCategoryWords('filiz_hoca').length})
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 2. Layer: Sub-categories -->
+                            <div class="fc-drawer-section">
+                                <span class="fc-drawer-section-title">2. Kelime Türü (Gramer):</span>
+                                <div class="fc-pills-row" id="fc-sub-pills">
+                                    <button type="button" class="fc-sub-pill ${this.subCategory === 'all' ? 'active' : ''}" data-sub="all">
+                                        Tüm Türler (${this.getMainCategoryWords(this.mainCategory).length})
+                                    </button>
+                                    <button type="button" class="fc-sub-pill ${this.subCategory === 'İsim' ? 'active' : ''}" data-sub="İsim">
+                                        İsimler (${this.getSubCategoryWords(this.mainCategory, 'İsim').length})
+                                    </button>
+                                    <button type="button" class="fc-sub-pill ${this.subCategory === 'Fiil' ? 'active' : ''}" data-sub="Fiil">
+                                        Fiiller (${this.getSubCategoryWords(this.mainCategory, 'Fiil').length})
+                                    </button>
+                                    <button type="button" class="fc-sub-pill ${this.subCategory === 'Sıfat' ? 'active' : ''}" data-sub="Sıfat">
+                                        Sıfatlar (${this.getSubCategoryWords(this.mainCategory, 'Sıfat').length})
+                                    </button>
+                                    <button type="button" class="fc-sub-pill ${this.subCategory === 'Edat' ? 'active' : ''}" data-sub="Edat">
+                                        Edatlar & Bağlaçlar (${this.getSubCategoryWords(this.mainCategory, 'Edat').length})
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 3. Layer: 10-Word Batches Grid -->
+                            <div class="fc-drawer-section">
+                                <span class="fc-drawer-section-title">3. 10'arlık Çalışma Paketleri:</span>
+                                <div class="fc-batches-grid" id="fc-batches-grid">
+                                    ${this.renderDrawerBatchCards(poolWords, totalBatches)}
+                                </div>
+                            </div>
+
+                            <!-- 4. Layer: Smart Decks (Unrestricted size) -->
+                            <div class="fc-drawer-section">
+                                <span class="fc-drawer-section-title">4. Özel Akıllı Havuzlar (10 Sınırı Olmadan):</span>
+                                <div class="fc-smart-decks-row">
+                                    <button type="button" class="fc-smart-deck-btn ${this.deckMode === 'known' ? 'active' : ''}" data-mode="known">
+                                        🏆 Bildiğim Kelimeler (${knownCount})
+                                    </button>
+                                    <button type="button" class="fc-smart-deck-btn ${this.deckMode === 'unknown' ? 'active' : ''}" data-mode="unknown">
+                                        ⏳ Bilmediğim / Tekrar (${unknownCount})
+                                    </button>
+                                    <button type="button" class="fc-smart-deck-btn ${this.deckMode === 'all_pool' ? 'active' : ''}" data-mode="all_pool">
+                                        📋 Tüm Havuz (${poolWords.length})
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="fc-drawer-footer">
+                                <button type="button" class="btn-scholarly btn-sm" id="fc-drawer-apply-btn">
+                                    ✓ Kartlara Dön ve Çalışmaya Başla
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -890,6 +895,9 @@ class FlashcardTrainer {
         if (this.isFilterDrawerOpen) {
             drawer.classList.remove('hidden');
             drawer.classList.add('open');
+            setTimeout(() => {
+                drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 60);
         } else {
             drawer.classList.remove('open');
             drawer.classList.add('hidden');
