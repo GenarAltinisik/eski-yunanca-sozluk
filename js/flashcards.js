@@ -268,26 +268,27 @@ class FlashcardTrainer {
 
                 <!-- BOTTOM ANSWER & NAVIGATION CONTROLS -->
                 <div class="fc-navigation">
-                    <button type="button" class="btn-scholarly btn-fc-nav" id="fc-prev-btn" title="Önceki Kelime (Sol Ok)">
+                    <button type="button" class="btn-scholarly btn-fc-nav btn-fc-prev" id="fc-prev-btn" title="Önceki Kelime (Sol Ok)">
                         ◀ Önceki
                     </button>
                     <button type="button" class="btn-scholarly btn-fc-answer btn-fc-unlearned" id="fc-repeat-btn" title="Bilmiyorum / Tekrar Edilecek Olarak İşaretle (Kısayol: 1)">
-                        ❌ Bilmiyorum [1]
+                        ❌ Bilmiyorum <span class="btn-key-hint">[1]</span>
                     </button>
                     <button type="button" class="btn-scholarly btn-fc-flip" id="fc-flip-btn" title="Kartı Çevir (Boşluk / Yukarı Ok)">
-                        🔄 Çevir [Boşluk]
+                        🔄 Çevir <span class="btn-key-hint">[Boşluk]</span>
                     </button>
                     <button type="button" class="btn-scholarly btn-fc-answer btn-fc-learned" id="fc-know-btn" title="Biliyorum / Öğrenildi Olarak İşaretle (Kısayol: 2)">
-                        ✅ Biliyorum [2]
+                        ✅ Biliyorum <span class="btn-key-hint">[2]</span>
                     </button>
-                    <button type="button" class="btn-scholarly btn-fc-nav" id="fc-next-btn" title="Sonraki Kelime (Sağ Ok)">
+                    <button type="button" class="btn-scholarly btn-fc-nav btn-fc-next" id="fc-next-btn" title="Sonraki Kelime (Sağ Ok)">
                         Sonraki ▶
                     </button>
                 </div>
 
-                <!-- Keyboard shortcuts bar -->
+                <!-- Keyboard shortcuts / Mobile hint bar -->
                 <div class="fc-shortcuts-hint">
-                    <span>⌨️ Kısayollar: <strong>[Boşluk]</strong> Çevir • <strong>[Sol / Sağ Ok]</strong> Gezin • <strong>[1]</strong> Bilmiyorum • <strong>[2]</strong> Biliyorum</span>
+                    <span class="fc-shortcuts-desktop-hint">⌨️ Kısayollar: <strong>[Boşluk]</strong> Çevir • <strong>[Sol / Sağ Ok]</strong> Gezin • <strong>[1]</strong> Bilmiyorum • <strong>[2]</strong> Biliyorum</span>
+                    <span class="fc-shortcuts-mobile-hint">👆 Kartı çevirmek için dokunun</span>
                     <span class="fc-counter-hint" id="fc-counter-hint">
                         ${this.currentDeck.length > 0 ? (this.currentIndex + 1) + ' / ' + this.currentDeck.length : '0 / 0'}
                     </span>

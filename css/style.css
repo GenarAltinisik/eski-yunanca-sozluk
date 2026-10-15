@@ -85,6 +85,11 @@ body.theme-dark {
     padding: 0;
 }
 
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg-page);
     color: var(--text-primary);
@@ -95,6 +100,9 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
 .greek-font {
@@ -2160,33 +2168,8 @@ body.theme-dark .btn-fc-learned {
     color: var(--gold);
 }
 
-@media (max-width: 768px) {
-    .fc-hero-control-strip {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .fc-deck-trigger-btn {
-        max-width: 100%;
-        justify-content: space-between;
-    }
-    .fc-strip-actions {
-        justify-content: space-between;
-    }
-    .fc-navigation {
-        flex-wrap: wrap;
-    }
-    .btn-fc-nav {
-        flex: 1 1 45%;
-    }
-    .btn-fc-answer, .btn-fc-flip {
-        flex: 1 1 100%;
-    }
-    .fc-card-scene {
-        height: 470px;
-    }
-    .fc-hero-answer-title {
-        font-size: 26px;
-    }
+.fc-shortcuts-mobile-hint {
+    display: none;
 }
 
 
@@ -2453,36 +2436,7 @@ body.theme-dark .btn-fc-learned {
     font-size: 15px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .tab-view {
-        padding-top: 18px;
-    }
-    .top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
-    .top-actions {
-        width: 100%;
-        justify-content: space-between;
-    }
-    .dictionary-grid {
-        grid-template-columns: 1fr;
-    }
-    .wotd-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .virtual-keyboard {
-        padding: 12px 8px 16px 8px;
-    }
-    .kb-key {
-        min-width: 30px;
-        height: 38px;
-        font-size: 17px;
-    }
-}
+
 
 /* ==========================================
    ATHENAZE BOOK I SPECIAL STYLES & BADGES
@@ -2829,6 +2783,543 @@ body.theme-dark .filiz-modal-section h4 {
     color: var(--text-primary);
     line-height: 1.6;
 }
+
+/* ==========================================
+   MASTER MOBILE RESPONSIVE SYSTEM
+   Optimized for 360px - 768px Viewports
+   ========================================== */
+@media (max-width: 768px) {
+    /* Layout & Containers */
+    .container {
+        padding: 0 16px;
+    }
+
+    .tab-view {
+        padding-top: 14px;
+        padding-bottom: 32px;
+    }
+
+    /* Header & Top Bar */
+    .top-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding: 12px 0;
+    }
+
+    .brand-group {
+        gap: 12px;
+        align-items: center;
+    }
+
+    .meander-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 28px;
+        flex-shrink: 0;
+    }
+
+    .brand-title {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .brand-subtitle {
+        font-size: 11px;
+    }
+
+    .top-actions {
+        width: 100%;
+        display: flex;
+        gap: 8px;
+        justify-content: space-between;
+    }
+
+    .top-actions .btn-scholarly {
+        flex: 1;
+        justify-content: center;
+        padding: 7px 10px;
+        font-size: 13px;
+    }
+
+    /* Navigation Tabs: Touch-Scrollable with Hidden Scrollbar */
+    .nav-tabs-wrapper {
+        padding: 6px 0 0 0;
+        gap: 4px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .nav-tabs-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-tab {
+        padding: 8px 12px;
+        font-size: 13px;
+        flex-shrink: 0;
+    }
+
+    /* Search Bar & Filter Controls */
+    .search-section {
+        padding: 14px;
+        margin-bottom: 16px;
+    }
+
+    .search-bar-wrapper {
+        padding: 4px 8px;
+    }
+
+    .search-input {
+        font-size: 16px;
+        padding: 8px 4px;
+    }
+
+    .search-actions {
+        gap: 4px;
+    }
+
+    .kb-btn-text {
+        display: none;
+    }
+
+    #toggle-keyboard-btn {
+        padding: 6px 10px;
+        min-width: 38px;
+    }
+
+    .search-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        margin-top: 12px;
+    }
+
+    .category-pills {
+        display: flex;
+        gap: 6px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 2px;
+    }
+
+    .category-pills::-webkit-scrollbar {
+        display: none;
+    }
+
+    .cat-pill {
+        padding: 6px 12px;
+        font-size: 12px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .dropdown-filters {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .scholarly-select {
+        width: 100%;
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    /* Dictionary Word Grid */
+    .dictionary-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .word-card {
+        padding: 16px;
+        border-radius: var(--radius-md);
+    }
+
+    .word-greek {
+        font-size: 26px;
+    }
+
+    .word-translit {
+        font-size: 14px;
+    }
+
+    .word-meaning {
+        font-size: 14px;
+    }
+
+    .btn-fav-toggle {
+        padding: 8px;
+        min-width: 40px;
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Word Detail Modal */
+    .modal-overlay {
+        padding: 12px;
+    }
+
+    .modal-container {
+        padding: 20px 16px;
+        max-height: 92vh;
+        border-radius: var(--radius-lg);
+        width: 100%;
+    }
+
+    .modal-close-btn {
+        top: 12px;
+        right: 12px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .modal-word-title {
+        font-size: 28px;
+    }
+
+    .modal-meaning-hero {
+        font-size: 16px;
+    }
+
+    .athenaze-modal-section,
+    .emel-modal-section,
+    .filiz-modal-section {
+        padding: 12px 14px;
+    }
+
+    /* Alphabet & Grammar View */
+    .scholarly-table-wrapper {
+        margin-bottom: 20px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .scholarly-table th, 
+    .scholarly-table td {
+        padding: 10px 12px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .scholarly-table td.col-notes {
+        white-space: normal;
+        min-width: 160px;
+    }
+
+    .grammar-grid {
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    .grammar-card {
+        padding: 16px;
+        overflow-x: auto;
+    }
+
+    .grammar-card table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+    }
+
+    .diacritics-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .diphthongs-grid {
+        grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+        gap: 10px;
+    }
+
+    /* Flashcards (Kelime Kartları) */
+    .flashcards-wrapper {
+        margin: 0 auto 24px auto;
+    }
+
+    .fc-hero-control-strip {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 10px 12px;
+    }
+
+    .fc-deck-trigger-btn {
+        max-width: 100%;
+        justify-content: space-between;
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    .fc-strip-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 6px;
+    }
+
+    .fc-strip-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .fc-card-scene {
+        height: 395px;
+        margin-bottom: 12px;
+    }
+
+    .fc-card-face {
+        padding: 18px 16px;
+    }
+
+    .fc-greek-word {
+        font-size: 38px;
+        margin-bottom: 4px;
+    }
+
+    .fc-translit {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    .fc-hero-answer-title {
+        font-size: 24px;
+    }
+
+    .fc-back-word {
+        font-size: 18px;
+    }
+
+    .fc-meanings-list {
+        font-size: 14px;
+        margin-left: 16px;
+    }
+
+    /* Flashcard Navigation: Ergonomic 2-Row Grid */
+    .fc-navigation {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+
+    .btn-fc-prev, #fc-prev-btn {
+        grid-column: span 2;
+        padding: 10px 4px;
+        font-size: 13px;
+        order: 1;
+    }
+
+    .btn-fc-flip, #fc-flip-btn {
+        grid-column: span 2;
+        padding: 10px 4px;
+        font-size: 13px;
+        order: 2;
+    }
+
+    .btn-fc-next, #fc-next-btn {
+        grid-column: span 2;
+        padding: 10px 4px;
+        font-size: 13px;
+        order: 3;
+    }
+
+    .btn-fc-unlearned, #fc-repeat-btn {
+        grid-column: span 3;
+        padding: 11px 8px;
+        font-size: 13px;
+        order: 4;
+    }
+
+    .btn-fc-learned, #fc-know-btn {
+        grid-column: span 3;
+        padding: 11px 8px;
+        font-size: 13px;
+        order: 5;
+    }
+
+    .btn-key-hint {
+        display: none;
+    }
+
+    .fc-shortcuts-desktop-hint {
+        display: none;
+    }
+
+    .fc-shortcuts-mobile-hint {
+        display: inline;
+    }
+
+    .fc-shortcuts-hint {
+        padding: 6px 10px;
+        font-size: 11px;
+        flex-direction: column;
+        gap: 4px;
+        text-align: center;
+    }
+
+    .fc-chunk-btns {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+
+    .btn-fc-chunk {
+        padding: 7px 8px;
+        font-size: 12px;
+    }
+
+    .fc-deck-drawer {
+        padding: 16px;
+    }
+
+    .fc-deck-drawer-header h3 {
+        font-size: 16px;
+    }
+
+    /* Virtual Keyboard: Mobile Fit */
+    .virtual-keyboard {
+        padding: 10px 6px 14px 6px;
+        max-width: 100%;
+        border-radius: var(--radius-md) var(--radius-md) 0 0;
+    }
+
+    .keyboard-header {
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+    }
+
+    .keyboard-title .greek-font {
+        font-size: 15px;
+    }
+
+    .keyboard-title .sub-title {
+        font-size: 11px;
+    }
+
+    .diacritics-bar {
+        padding: 6px 8px;
+        gap: 4px;
+        margin-bottom: 6px;
+    }
+
+    .keyboard-row {
+        gap: 3px;
+        margin-bottom: 4px;
+    }
+
+    .kb-key {
+        min-width: 28px;
+        height: 38px;
+        font-size: 16px;
+        border-radius: 4px;
+    }
+
+    .kb-key.diacritic-key {
+        min-width: 26px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .keyboard-bottom-row {
+        gap: 4px;
+        margin-top: 6px;
+    }
+
+    .kb-key.action-key {
+        padding: 0 8px;
+        font-size: 12px;
+        min-width: 44px;
+    }
+
+    /* Favorites Drawer */
+    .favorites-drawer {
+        max-width: 100%;
+        width: 100%;
+        right: -100%;
+    }
+
+    .favorites-drawer.open {
+        right: 0;
+    }
+
+    .drawer-header {
+        padding: 16px;
+    }
+
+    .drawer-body {
+        padding: 12px 16px;
+    }
+
+    /* Footer */
+    .app-footer {
+        padding: 24px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+}
+
+/* ==========================================
+   COMPACT MOBILE FINE-TUNING (<= 480px)
+   ========================================== */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .brand-title {
+        font-size: 18px;
+    }
+
+    .brand-subtitle {
+        display: none;
+    }
+
+    .dropdown-filters {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .fc-card-scene {
+        height: 380px;
+    }
+
+    .fc-greek-word {
+        font-size: 34px;
+    }
+
+    .kb-key {
+        min-width: 25px;
+        height: 36px;
+        font-size: 15px;
+    }
+
+    .btn-fc-prev, #fc-prev-btn, 
+    .btn-fc-flip, #fc-flip-btn, 
+    .btn-fc-next, #fc-next-btn {
+        padding: 9px 2px;
+        font-size: 12px;
+    }
+
+    .btn-fc-unlearned, #fc-repeat-btn, 
+    .btn-fc-learned, #fc-know-btn {
+        padding: 10px 4px;
+        font-size: 12px;
+    }
+}
+
 
 
 
