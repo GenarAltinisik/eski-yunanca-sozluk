@@ -58,7 +58,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "tags": [
       "filiz_hoca"
     ],
-    "filiz_notes": "Filiz Hoca Olumsuzluk Edatı: Değil, -me (ünlüden önce οὐκ, asperden önce οὐχ)."
+    "filiz_notes": "Filiz Hoca İsimler: Söz, konuşma; akıl, usa vurma, ilke (ὁ λόγος; mantık, -loji kökü)."
   },
   {
     "id": "psyche",
@@ -168,7 +168,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     ],
     "emel_notes": "Kategori: Dişil İsimler (Feminine). Emel Hoca Listesi: Bilgelik. Transliterasyon: hē sophía.",
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Okuma Listesi: Bilgelik, hikmet, felsefi derinlik."
+    "filiz_notes": "Filiz Hoca Dişil İsimler: Bilgelik, hikmet, derinlik (felsefe: philosophia kökü)."
   },
   {
     "id": "philosophia",
@@ -410,7 +410,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "tags": [
       "filiz_hoca"
     ],
-    "filiz_notes": "Filiz Hoca Bağlaçlar: Oysa, ise, öte yandan; de, da (postpositivum)."
+    "filiz_notes": "Filiz Hoca İsimler: Form, şekil, görünüş; Platonik idea, kavram (ideal, ideoloji kökü)."
   },
   {
     "id": "arche",
@@ -618,7 +618,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "tags": [
       "filiz_hoca"
     ],
-    "filiz_notes": "Filiz Hoca Ünlemler: Ey! (seslenme ünlemi: ὦ Ζεῦ = Ey Zeus!)."
+    "filiz_notes": "Filiz Hoca İsimler: Kent, şehir devleti (polis, politika, metropol kökü)."
   },
   {
     "id": "demokratia",
@@ -704,7 +704,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Pindaros",
         "work": "Fragman 169a"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Eril İsimler: Yasa, töre, kural (acc: τὸν νόμον; ekonomi, astronomi kökü)."
   },
   {
     "id": "dike",
@@ -923,7 +928,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "isEmelHoca": true,
     "emel_notes": "Kategori: Ortak Cinsiyetli İsimler (Masculine / Feminine). Emel Hoca Listesi: Kişi, insan, adam, insanlık. Transliterasyon: ho/hē ánthrōpos, anthrṓpou.",
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca İsimler Tablosu: İnsan, adam. Bileşik kök: antropoloji (ἀνθρωπος + λογος)."
+    "filiz_notes": "Filiz Hoca Eril İsimler: İnsan, adam (gen: ἀνθρώπου, dat. pl: ἀνθρώποις, nom. pl: οἱ ἄνθρωποι; antropoloji kökü)."
   },
   {
     "id": "soma",
@@ -965,7 +970,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Platon",
         "work": "Kratylos 400c"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Cinssiz (Nötr) İsimler: Beden, cisim, gövde (derste telaffuz örneği [sōma] olarak geçmektedir; psikosomatik kökü)."
   },
   {
     "id": "bios",
@@ -1010,7 +1020,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       "filiz_hoca"
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca İsimler Tablosu: Yaşam (nom: ὁ βίος, acc: τὸν βίον). Bileşik kökler: biyoloji (βιος + λογος), otobiyografi (αὐτος + βιος + γραφειν)."
+    "filiz_notes": "Filiz Hoca Eril İsimler: Yaşam (acc: τὸν βίον; biyoloji, otobiyografi kökü)."
   },
   {
     "id": "thanatos",
@@ -1096,9 +1106,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
     ],
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
-    "athenaze_forms": "τὸν χρόνον"
+    "athenaze_forms": "τὸν χρόνον",
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Eril İsimler: Zaman (acc: χρόνον; kronoloji kökü; kalıplar: πολὺν χρόνον = uzun süre, οὐ πολὺν χρόνον = kısa süre)."
   },
   {
     "id": "theos",
@@ -1308,7 +1321,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     ],
     "athenaze_forms": "εἶ, ἐστί[ν], εἰσί[ν], ἴσθι",
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Fiiller Tablosu: Olmak, var olmak; -im. 3. tekil: ἐστί(ν) (var, olur, -dir)."
+    "filiz_notes": "Filiz Hoca Fiiller: Varım, olurum, oluyorum, -im; olmak, var olmak (mastar: εἶναι, 3. tekil: ἐστί(ν), 3. çoğul: εἰσί)."
   },
   {
     "id": "lego",
@@ -1357,7 +1370,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     ],
     "athenaze_forms": "λέγει",
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Fiiller Tablosu: Söylüyorum, diyorum. 3. tekil: λέγει (söylüyor, der)."
+    "filiz_notes": "Filiz Hoca Fiiller: Söylüyorum, diyorum (3. tekil: λέγει)."
   },
   {
     "id": "gignosko",
@@ -1441,7 +1454,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Yuhanna İncili",
         "work": "1:3"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Fiiller: Yapıyorum, yaparım (3. tekil: ποιέει / ποιεῖ)."
   },
   {
     "id": "luo",
@@ -1623,7 +1641,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     ],
     "emel_notes": "Emel Hoca Listesi: Yazmak. Transliterasyon: gráphō.",
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Fiiller: Yazmak, çizmek (mastar: γράφειν). Bileşik kök: otobiyografi (αὐτος + βιος + γραφειν)."
+    "filiz_notes": "Filiz Hoca Fiiller: Yazıyorum (3. tekil: γράφει, perf.: γέγραφα). Bileşik kök: otobiyografi (αὐτοβιογραφία)."
   },
   {
     "id": "agathos",
@@ -1705,7 +1723,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     ],
     "athenaze_forms": "καλός",
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Sıfatlar Tablosu: Güzel, soylu, iyi."
+    "filiz_notes": "Filiz Hoca Sıfatlar: Güzel, iyi, soylu (acc: καλόν, nom. pl: καλοί; articulus ile ὁ καλός: yakışıklı adam/oğlan)."
   },
   {
     "id": "kakos",
@@ -1862,7 +1880,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     ],
     "athenaze_forms": "καί",
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Bağlaçlar: Ve, dahi, hem de."
+    "filiz_notes": "Filiz Hoca Bağlaçlar: Ve; dahi, da, bile."
   },
   {
     "id": "en",
@@ -1899,11 +1917,14 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "isAthenaze": true,
     "tags": [
       "athenaze",
-      "emel_hoca"
+      "emel_hoca",
+      "filiz_hoca"
     ],
     "athenaze_forms": "ἐν (+ Dat.)",
     "isEmelHoca": true,
-    "emel_notes": "Emel Hoca Listesi: -de, -in içinde (nerede?). Transliterasyon: en."
+    "emel_notes": "Emel Hoca Listesi: -de, -in içinde (nerede?). Transliterasyon: en.",
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Edatlar: İçinde, -de/-da (+ dativus: bulunma bildirir; kalıplar: ἐν τῷ ἀγρῷ = tarlada, ἐν ταῖς Ἀθήναις = Atina'da)."
   },
   {
     "id": "eis",
@@ -1939,11 +1960,14 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "isAthenaze": true,
     "tags": [
       "athenaze",
-      "emel_hoca"
+      "emel_hoca",
+      "filiz_hoca"
     ],
     "athenaze_forms": "εἰς (+ Acc.)",
     "isEmelHoca": true,
-    "emel_notes": "Emel Hoca Listesi: -e, -e doğru, -in içine (Nereye?). Transliterasyon: eis."
+    "emel_notes": "Emel Hoca Listesi: -e, -e doğru, -in içine (Nereye?). Transliterasyon: eis.",
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Edatlar: -e doğru, içine (+ accusativus: yönelme bildirir)."
   },
   {
     "id": "ek",
@@ -1980,11 +2004,14 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "isAthenaze": true,
     "tags": [
       "athenaze",
-      "emel_hoca"
+      "emel_hoca",
+      "filiz_hoca"
     ],
     "athenaze_forms": "ἐκ / ἐξ (+ Gen.)",
     "isEmelHoca": true,
-    "emel_notes": "Emel Hoca Listesi: -den, -den dışarı (nereden? / ayrılma). Transliterasyon: ek / ex."
+    "emel_notes": "Emel Hoca Listesi: -den, -den dışarı (nereden? / ayrılma). Transliterasyon: ek / ex.",
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Edatlar: -den, -dan (+ genitivus: çıkış bildirir; kalıp: ἐκ τοῦ ἀγροῦ = tarladan)."
   },
   {
     "id": "ou",
@@ -2019,9 +2046,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
     ],
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
-    "athenaze_forms": "οὐ / οὐκ / οὐχ"
+    "athenaze_forms": "οὐ / οὐκ / οὐχ",
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Olumsuzluk Edatı: -me, değil (ünlüden önce οὐκ, asperden/sert soluktan önce οὐχ; nesnel olumsuzluk)."
   },
   {
     "id": "polemos",
@@ -2231,7 +2261,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     ],
     "athenaze_forms": "τὸν οἶκον, τοῦ οἴκου, τῷ οἴκῳ",
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca İsimler Tablosu: Ev, ikametgâh."
+    "filiz_notes": "Filiz Hoca Eril İsimler: Ev, ikametgah, konut (acc: τὸν οἶκον; ekonomi, ekoloji kökü)."
   },
   {
     "id": "helios",
@@ -2271,8 +2301,11 @@ window.ANCIENT_GREEK_DICTIONARY = [
     ],
     "isAthenaze": true,
     "tags": [
-      "athenaze"
-    ]
+      "athenaze",
+      "filiz_hoca"
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Eril İsimler: Güneş (ὁ ἥλιος; helyum kökü)."
   },
   {
     "id": "ge",
@@ -2520,11 +2553,14 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "isAthenaze": true,
     "tags": [
       "athenaze",
-      "emel_hoca"
+      "emel_hoca",
+      "filiz_hoca"
     ],
     "athenaze_forms": "φέρει, φέρουσιν, φέρε, φέρειν",
     "isEmelHoca": true,
-    "emel_notes": "Emel Hoca Listesi: Getirmek, taşımak. Transliterasyon: phérō."
+    "emel_notes": "Emel Hoca Listesi: Getirmek, taşımak. Transliterasyon: phérō.",
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Fiiller: Taşıyorum, getiriyorum, götürüyorum (φέρω)."
   },
   {
     "id": "echo",
@@ -2711,7 +2747,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "tr": "Kral Oidipus (Oidipous Tyrannos).",
         "author": "Sophokles"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Eril İsimler: Tiran, mutlak yönetici (ὁ τύραννος)."
   },
   {
     "id": "agora",
@@ -3047,7 +3088,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "tr": "Cehaletten daha korkunç hiçbir şey yoktur.",
         "author": "Menandros"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Eril İsimler: Korku, dehşet (fobi kelimesinin kökü)."
   },
   {
     "id": "eros",
@@ -3131,7 +3177,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     ],
     "emel_notes": "Kategori: Eril İsimler (Masculine). Emel Hoca Listesi: Arkadaş, sevilen kişi. Transliterasyon: ho phílos, phílou.",
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Okuma Listesi: Dost, arkadaş, sevgili; seven. Bileşik kök: filoloji (φιλος + λογος)."
+    "filiz_notes": "Filiz Hoca Eril İsimler: Arkadaş, dost; seven/sevilen kişi (acc: τὸν φíλον; felsefe kökü)."
   },
   {
     "id": "chronos_kairos",
@@ -3432,7 +3478,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "tags": [
       "filiz_hoca"
     ],
-    "filiz_notes": "Filiz Hoca Okuma Listesi: Halk, ahali, yurttaş kitlesi. Bileşik kök: demokrasi (δημος + κρατος)."
+    "filiz_notes": "Filiz Hoca Eril İsimler: Halk, ahali (demokrasi kelimesinin kökü)."
   },
   {
     "id": "anagnorisis",
@@ -3687,7 +3733,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "tr": "En iyi şey ölçülü olmaktır (her şeyde ölçü esastır).",
         "author": "Kleoboulos (Yedi Bilgeden biri)"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Cinssiz (Nötr) İsimler: Ölçü, vezin (geometri, simetri kökü)."
   },
   {
     "id": "meden_agan",
@@ -4072,7 +4123,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "tags": [
       "filiz_hoca"
     ],
-    "filiz_notes": "Filiz Hoca Okuma Listesi: At. Bileşik kökler: hipopotam (ἱππος + ποταμος), hipodrom (ἱππος + δρομος)."
+    "filiz_notes": "Filiz Hoca Eril İsimler: At (acc: τὸν ἵππον; hipodrom kökü)."
   },
   {
     "id": "thalassa",
@@ -4401,7 +4452,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "tr": "Kardeşi tarafından korunan kardeş, muhkem bir kale gibidir.",
         "author": "Antik Özdeyiş"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Eril İsimler: Erkek kardeş (acc: τὸν ἀδελφόν; Philadelphia kökü)."
   },
   {
     "id": "pais",
@@ -4524,7 +4580,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     ],
     "emel_notes": "Kategori: Eril İsimler (Masculine). Emel Hoca Listesi: Nehir. Transliterasyon: ho potamós.",
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Okuma Listesi: Nehir, ırmak. Bileşik kök: hipopotam (ἱππος + ποταμος)."
+    "filiz_notes": "Filiz Hoca Eril İsimler: Irmak, nehir (dat: ποταμῷ, acc. pl: τοὺς ποταμούς, gen. pl: ποταμῶν; Mezopotamya kökü)."
   },
   {
     "id": "oros",
@@ -4730,11 +4786,14 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "isAthenaze": true,
     "tags": [
       "athenaze",
-      "emel_hoca"
+      "emel_hoca",
+      "filiz_hoca"
     ],
     "athenaze_forms": "τὸν δοῦλον",
     "isEmelHoca": true,
-    "emel_notes": "Kategori: Eril İsimler (Masculine). Emel Hoca Listesi: Köle. Transliterasyon: ho doũlos, ou."
+    "emel_notes": "Kategori: Eril İsimler (Masculine). Emel Hoca Listesi: Köle. Transliterasyon: ho doũlos, ou.",
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Eril İsimler: Köle (nom. pl: δοῦλοι)."
   },
   {
     "id": "stratos",
@@ -4839,7 +4898,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Herakleitos",
         "work": "Fragman B60"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Dişil İsimler: Yol (2. çekim -ος ile bitip dişil olan isimlerdendir: ἡ ὁδός; metod [meta+hodos], periyot kökü)."
   },
   {
     "id": "lithos",
@@ -4873,9 +4937,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
     ],
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
-    "athenaze_forms": "τὸν λίθον, οἱ λίθοι, τοὺς λίθους"
+    "athenaze_forms": "τὸν λίθον, οἱ λίθοι, τοὺς λίθους",
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Eril İsimler: Taş (paleolitik, neolitik kökü)."
   },
   {
     "id": "selene",
@@ -4906,7 +4973,12 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "tr": "Ay ışığını vermeyecek.",
         "author": "Matta İncili 24:29"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Dişil İsimler: Ay, ay tanrıçası (selenografi kökü)."
   },
   {
     "id": "kephale",
@@ -5083,7 +5155,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca İsimler Tablosu: Çiftlik, tarla; arazi; kır. (ὁ ἀγρός)"
+    "filiz_notes": "Filiz Hoca Eril İsimler: Çiftlik, tarla, arazi, kır (acc: τὸν ἀγρόν; kalıplar: ἐν τῷ ἀγρῷ = tarlada, ἐκ τοῦ ἀγροῦ = tarladan, ἐν τοῖς ἀγροῖς = kırsal alanda)."
   },
   {
     "id": "ath_rotos",
@@ -5185,7 +5257,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca İsimler Tablosu: Kendi kendine çalışan, toprağını kendisi işleyen (köleler olmadan) çiftçi."
+    "filiz_notes": "Filiz Hoca Eril İsimler: Kendi kendine çalışan, toprağını köleler olmadan kendisi işleyen çiftçi (αὐτός + ἔργον)."
   },
   {
     "id": "ath_bos",
@@ -5267,7 +5339,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -5289,7 +5362,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 1β"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Cinssiz (Nötr) İsimler: Ağaç (dat: τῷ δένδρῳ; kalıp: ὑπὸ τῷ δένδρῳ = ağacın altında; dendroloji kökü)."
   },
   {
     "id": "ath_despts",
@@ -5336,7 +5411,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -5357,7 +5433,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 3α"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Cinssiz (Nötr) İsimler: Taş yığını, dayanak (τὸ ἕρμα)."
   },
   {
     "id": "ath_zygn",
@@ -5468,7 +5546,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca İsimler Tablosu: Çiftlik, arazi (nom: ὁ κλῆρος, acc: τὸν κλῆρον)."
+    "filiz_notes": "Filiz Hoca Eril İsimler: Çiftlik, arazi, hisse (acc: τὸν κλῆρον; kleromansi kökü)."
   },
   {
     "id": "ath_mastigas",
@@ -5573,7 +5651,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "isEmelHoca": true,
     "emel_notes": "Kategori: Eril İsimler (Masculine). Emel Hoca Listesi: Acı, zahmet, iş gücü. Transliterasyon: ho pónos, pónou.",
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca İsimler Tablosu: Emek, çaba; yorucu iş; zahmet, yorgunluk."
+    "filiz_notes": "Filiz Hoca Eril İsimler: Emek, çaba, çalışma, iş; yorucu iş, zahmet, yorgunluk (ὁ πόνος)."
   },
   {
     "id": "ath_stos",
@@ -5611,7 +5689,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca İsimler Tablosu: Buğday, un, ekmek; erzak, besin."
+    "filiz_notes": "Filiz Hoca Eril İsimler: Buğday, un, ekmek; erzak, besin, yiyecek (acc: τὸν σῖτον)."
   },
   {
     "id": "ath_sprma",
@@ -5724,7 +5802,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "isEmelHoca": true,
     "emel_notes": "Kategori: Eril İsimler (Masculine). Emel Hoca Listesi: Atinalı. Transliterasyon: Athēnaíos.",
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Kişi ve Kavim Adları: Atinalı (ὁ Ἀθηναῖος)."
+    "filiz_notes": "Filiz Hoca Eril İsimler: Atinalı (ὁ Ἀθηναῖος)."
   },
   {
     "id": "ath_athnai",
@@ -5737,7 +5815,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -5758,7 +5837,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 1α"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Özel İsimler: Atina (çoğul dişil: αἱ Ἀθῆναι, dat. pl: ταῖς Ἀθήναις; kalıp: ἐν ταῖς Ἀθήναις = Atina'da)."
   },
   {
     "id": "ath_dmtr",
@@ -5830,7 +5911,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Kişi Adları: Dikaiopolis (özel isim, dürüst yurttaş)."
+    "filiz_notes": "Filiz Hoca Özel İsimler: Dikaiopolis (Athenaze ana kahramanı: dikaia polis = adil yurttaş)."
   },
   {
     "id": "ath_zes",
@@ -5867,7 +5948,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Tanrılar Listesi: Baş Tanrı (gök ve şimşek). Vocativus: ὦ Ζεῦ (Ey Zeus!)."
+    "filiz_notes": "Filiz Hoca Özel İsimler: Zeus (voc: ὦ Ζεῦ = Ey Zeus!)."
   },
   {
     "id": "ath_xanthas",
@@ -5946,7 +6027,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -5968,7 +6050,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 2α"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Fiiller: Götürüyorum (3. tekil: ἄγει, geçmiş zaman: ἦγον)."
   },
   {
     "id": "ath_ar",
@@ -5981,7 +6065,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -6000,7 +6085,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 3α"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Fiiller: Yukarı kaldırıyorum (αἴρω)."
   },
   {
     "id": "ath_akolouth",
@@ -6037,7 +6124,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     ]
   },
   {
-    "id": "ath_ar",
+    "id": "ath_aroo",
     "word": "ἀρόω",
     "lemma": "ἀρόω, ἀρῶ",
     "transliteration": "aróō",
@@ -6079,7 +6166,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -6098,7 +6186,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 1β"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Fiiller: Yürüyorum (βαδίζω)."
   },
   {
     "id": "ath_blp",
@@ -6167,7 +6257,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Fiiller Tablosu: Çiftçilik yapmak, toprağı işlemek. Kontraksiyon: γεωργέ-ει -> γεωργεῖ."
+    "filiz_notes": "Filiz Hoca Fiiller: Çiftçilik yapıyorum/ediyorum, toprağı işliyorum (3. tekil: γεωργεῖ)."
   },
   {
     "id": "ath_deipn",
@@ -6440,7 +6530,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -6459,7 +6550,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 2β"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Fiiller: Yukarı kaldırıyorum, yükseltiyorum (3. tekil: ἐπαίρει; kalıp: ἐπαίρει ἑαυτόν = kendini kaldırıyor/ayağa kalkıyor)."
   },
   {
     "id": "ath_rchomai",
@@ -6504,7 +6597,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -6525,7 +6619,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 1β"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Fiiller: Dinleniyorum, dingin kalıyorum (ἡσυχάζω)."
   },
   {
     "id": "ath_kathed",
@@ -6570,7 +6666,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -6591,7 +6688,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 1β"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Fiiller: Oturuyorum (geçişsiz: καθίζω)."
   },
   {
     "id": "ath_kal",
@@ -6638,7 +6737,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -6657,7 +6757,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 1β"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Fiiller: Yoruluyorum, tükeniyorum (3. tekil: κάμνει; kalıp: μάλα κάμνει = çok yorulur)."
   },
   {
     "id": "ath_katabll",
@@ -6702,7 +6804,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -6721,7 +6824,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 1β"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Fiiller: Batıyorum (geçişsiz: καταδύνω; örn. ὁ ἥλιος καταδύνει)."
   },
   {
     "id": "ath_katatrb",
@@ -6734,7 +6839,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -6753,7 +6859,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 1α"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Fiiller: Yoruyorum, bitkin düşürüyorum, güçsüz bırakıyorum (geçişli: κατατρίβω)."
   },
   {
     "id": "ath_kent",
@@ -6929,7 +7037,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Fiiller Tablosu: İkamet ediyorum, evimde yaşıyorum. Kontraksiyon: οἰκέ-ει -> οἰκεῖ."
+    "filiz_notes": "Filiz Hoca Fiiller: İkamet ediyorum, evimde yaşıyorum, oturuyorum (3. tekil: οἰκεῖ; isim kökü: ὁ οἶκος)."
   },
   {
     "id": "ath_preimi",
@@ -6996,7 +7104,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Fiiller Tablosu: Sağlar, temin eder (3. tekil: παρέχει)."
+    "filiz_notes": "Filiz Hoca Fiiller: Sağlıyorum, verir, sunar (3. tekil: παρέχει)."
   },
   {
     "id": "ath_ppt",
@@ -7098,7 +7206,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Fiiller Tablosu: Çalışıyorum, çaba gösteriyorum, emek veriyorum. Kontraksiyon: πονέ-ει -> πονεῖ."
+    "filiz_notes": "Filiz Hoca Fiiller: Çalışıyorum, çaba gösteriyorum, emek veriyorum, zahmet ediyorum (3. tekil: πονεῖ; isim kökü: ὁ πόνος)."
   },
   {
     "id": "ath_prospt",
@@ -7207,7 +7315,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -7226,7 +7335,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 1α"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Fiiller: Kazıyorum, belliyorum, çapalıyorum (σκάπτω)."
   },
   {
     "id": "ath_sper",
@@ -7327,7 +7438,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Fiiller Tablosu: İç çekiyor, inliyor (3. tekil: στενάζει)."
+    "filiz_notes": "Filiz Hoca Fiiller: İç çekiyor, inliyor (3. tekil: στενάζει)."
   },
   {
     "id": "ath_syllambn",
@@ -7432,7 +7543,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Fiiller Tablosu: Seviyorum, dost oluyorum. Kontraksiyon: φιλέ-ει -> φιλεῖ."
+    "filiz_notes": "Filiz Hoca Fiiller: Seviyorum, hoşlanıyorum (3. tekil: φιλεῖ)."
   },
   {
     "id": "ath_phlg",
@@ -7445,7 +7556,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -7466,7 +7578,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 1β"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Fiiller: Yakıyorum, kavuruyorum; parlıyorum (φλέγω)."
   },
   {
     "id": "ath_phlyar",
@@ -7536,7 +7650,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Fiiller Tablosu: Seviniyorum, sevinç duyuyorum. 3. tekil: χαίρει."
+    "filiz_notes": "Filiz Hoca Fiiller: Seviniyorum, sevinç duyuyorum, zevk alıyorum (3. tekil: χαίρει; selamlama: χαῖρε)."
   },
   {
     "id": "ath_atios",
@@ -7669,7 +7783,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Sıfatlar Tablosu: Enerjik, gayretli, tembel olmayan."
+    "filiz_notes": "Filiz Hoca Sıfatlar: Enerjik, çalışkan (alpha privativum: ἀ- + ὄκνος tembellik)."
   },
   {
     "id": "ath_aprantos",
@@ -7704,7 +7818,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Sıfatlar Tablosu: Sınırsız, sonsuz."
+    "filiz_notes": "Filiz Hoca Sıfatlar: Sınırsız, sonsuz (ἀ- + πέρας sınır)."
   },
   {
     "id": "ath_args",
@@ -7777,10 +7891,10 @@ window.ANCIENT_GREEK_DICTIONARY = [
   {
     "id": "ath_211",
     "word": "ἐλεύθερος",
-    "lemma": "ἐλεύθερος",
-    "transliteration": "",
+    "lemma": "ἐλεύθερος, -α, -ον",
+    "transliteration": "eleútheros",
     "athenaze_forms": "ἐλεύθερος",
-    "partOfSpeech": "Kelime",
+    "partOfSpeech": "Sıfat (3 Takılı)",
     "category": "Politika & Toplum",
     "frequency": 4,
     "isAthenaze": true,
@@ -7789,14 +7903,18 @@ window.ANCIENT_GREEK_DICTIONARY = [
       "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
-    "meanings_tr": [],
-    "meanings_en": [],
+    "meanings_tr": [
+      "Özgür, hür, bağımsız"
+    ],
+    "meanings_en": [
+      "free, independent"
+    ],
     "etymology": "",
     "derivatives": [],
     "grammar": {},
     "examples": [],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Sıfatlar Tablosu: Özgür, hür."
+    "filiz_notes": "Filiz Hoca Sıfatlar: Özgür, hür (ἐλεύθερος)."
   },
   {
     "id": "ath_hikans",
@@ -7831,7 +7949,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Sıfatlar Tablosu: Yeterli (acc: ἱκανόν)."
+    "filiz_notes": "Filiz Hoca Sıfatlar: Yeterli, elverişli, kafi (acc: ἱκανόν)."
   },
   {
     "id": "ath_hles",
@@ -7898,7 +8016,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Sıfatlar Tablosu: Güçlü, kuvvetli, sağlam."
+    "filiz_notes": "Filiz Hoca Sıfatlar: Güçlü, sağlam, kuvvetli (ἰσχυρός)."
   },
   {
     "id": "ath_katratos",
@@ -7967,7 +8085,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Sıfatlar Tablosu: Uzun, büyük, geniş."
+    "filiz_notes": "Filiz Hoca Sıfatlar: Uzun, büyük (makro- kökü)."
   },
   {
     "id": "ath_mikrs",
@@ -8004,7 +8122,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Sıfatlar Tablosu: Kısa, küçük."
+    "filiz_notes": "Filiz Hoca Sıfatlar: Kısa, küçük (acc: μικρόν; mikro- kökü)."
   },
   {
     "id": "ath_olgos",
@@ -8078,7 +8196,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Sıfatlar Tablosu: Çok, birçok."
+    "filiz_notes": "Filiz Hoca Sıfatlar: Çok, birçok (acc: πολύν; poli- kökü; kalıp: πολὺν χρόνον = uzun süre)."
   },
   {
     "id": "ath_skais",
@@ -8177,7 +8295,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Sıfatlar Tablosu: Zor, çetin, güç."
+    "filiz_notes": "Filiz Hoca Sıfatlar: Zor, çetin, güç, zahmetli (χαλεπός)."
   },
   {
     "id": "ath_ho_h_to",
@@ -8190,7 +8308,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -8208,28 +8327,37 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "tr": "Adam, kadın, ağaç.",
         "author": "Athenaze I"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Tanımlık (Articulus): Tanımlık (articulus); Homeros'ta işaret zamiri, Attike düzyazısında 3. kişi zamiri (\"o\", \"bu\") ve iyelik işlevi gören belirleyici (ὁ, ἡ, τό)."
   },
   {
     "id": "ath_224",
     "word": "ἐγώ",
     "lemma": "ἐγώ",
-    "transliteration": "",
+    "transliteration": "egṓ",
     "athenaze_forms": "μοι",
-    "partOfSpeech": "Kelime",
+    "partOfSpeech": "Kişi Zamiri (1. Tekil Şahıs)",
     "category": "Gramer & Zamirler",
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
-    "meanings_tr": [],
-    "meanings_en": [],
+    "meanings_tr": [
+      "Ben (1. tekil şahıs zamiri)"
+    ],
+    "meanings_en": [
+      "I (first person singular pronoun)"
+    ],
     "etymology": "",
     "derivatives": [],
     "grammar": {},
-    "examples": []
+    "examples": [],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Zamirler: Ben (1. tekil şahıs zamiri: ego)."
   },
   {
     "id": "ath_225",
@@ -8255,10 +8383,10 @@ window.ANCIENT_GREEK_DICTIONARY = [
   {
     "id": "ath_226",
     "word": "αὐτός",
-    "lemma": "αὐτός",
-    "transliteration": "",
+    "lemma": "αὐτός, -ή, -ό",
+    "transliteration": "autós",
     "athenaze_forms": "αὐτόν, αὐτό",
-    "partOfSpeech": "Kelime",
+    "partOfSpeech": "Zamir / Belirteç (Intensive & 3rd Person Pronoun)",
     "category": "Gramer & Zamirler",
     "frequency": 4,
     "isAthenaze": true,
@@ -8267,14 +8395,20 @@ window.ANCIENT_GREEK_DICTIONARY = [
       "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
-    "meanings_tr": [],
-    "meanings_en": [],
+    "meanings_tr": [
+      "Onu (eril accusativus αὐτόν: metinde 3. kişi zamiri olarak)",
+      "Kendisi, bizzat (özneyi pekiştiren belirteç)",
+      "Aynı (articulus ile: ὁ αὐτός = aynı)"
+    ],
+    "meanings_en": [
+      "him (acc. autón); self, himself, same"
+    ],
     "etymology": "",
     "derivatives": [],
     "grammar": {},
     "examples": [],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Zamirler: Kendi; kendisi, o. Bileşik kök: otobiyografi (αὐτος + βιος + γραφειν)."
+    "filiz_notes": "Filiz Hoca Zamirler: αὐτόν (acc.): Onu (ayrıca αὐτός: kendisi, bizzat, o; bileşik kök: otobiyografi)."
   },
   {
     "id": "ath_heautn",
@@ -8287,7 +8421,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -8306,7 +8441,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 2β"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Zamirler: Kendini, kendi kendini (3. şahıs dönüşlü zamir; kalıp: ἐπαίρει ἑαυτόν = kendini kaldırıyor/ayağa kalkıyor)."
   },
   {
     "id": "ath_hotos",
@@ -8405,7 +8542,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Zarflar: Her zaman, daima."
+    "filiz_notes": "Filiz Hoca Zarflar: Her zaman, daima (ἀεί)."
   },
   {
     "id": "ath_hma",
@@ -8605,7 +8742,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     ]
   },
   {
-    "id": "ath_d",
+    "id": "ath_ede",
     "word": "ἤδη",
     "lemma": "ἤδη",
     "transliteration": "ḗdē",
@@ -8634,7 +8771,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 1β"
       }
-    ]
+    ],
+    "isFilizHoca": false
   },
   {
     "id": "ath_mla",
@@ -8647,7 +8785,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -8666,7 +8805,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 1β"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Zarflar: Çok (kalıp: μάλα κάμνει = çok yorulur)."
   },
   {
     "id": "ath_m",
@@ -8844,7 +8985,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -8863,7 +9005,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 1β"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Zarflar: (Olumsuz cümlede) artık, bir daha değil (οὐκέτι)."
   },
   {
     "id": "ath_on",
@@ -8898,7 +9042,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Zarflar: Böylece, bu yüzden, binaenaleyh (postpositivum)."
+    "filiz_notes": "Filiz Hoca Zarflar / Bağlaçlar: Böylece, bu yüzden, bunun üzerine (οὖν)."
   },
   {
     "id": "ath_hots__hot",
@@ -8965,7 +9109,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Zarflar: Sık sık, defalarca."
+    "filiz_notes": "Filiz Hoca Zarflar: Sık sık, çoğunlukla (πολλάκις)."
   },
   {
     "id": "ath_tlos",
@@ -8978,7 +9122,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -8999,7 +9144,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 1β"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Zarflar: Sonunda, nihayet (τέλος)."
   },
   {
     "id": "ath_t",
@@ -9112,7 +9259,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -9133,7 +9281,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 1β"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Edatlar: -e, -e doğru, yanına (+ accusativus)."
   },
   {
     "id": "ath_hyp",
@@ -9146,7 +9296,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -9167,7 +9318,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 1β"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Edatlar: Altında (+ dativus: bulunma; kalıp: ὑπὸ τῷ δένδρῳ = ağacın altında)."
   },
   {
     "id": "ath_all",
@@ -9202,7 +9355,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Bağlaçlar: Ama, fakat."
+    "filiz_notes": "Filiz Hoca Bağlaçlar: Ama, fakat, tersine (elisio ile ἀλλ')."
   },
   {
     "id": "ath_gr",
@@ -9237,10 +9390,10 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Bağlaçlar: Çünkü, zira; gerçekten, doğrusu (postpositivum)."
+    "filiz_notes": "Filiz Hoca Bağlaçlar: Çünkü; gerçekten, doğrusu (postpositivum)."
   },
   {
-    "id": "ath_d",
+    "id": "ath_de",
     "word": "δέ",
     "lemma": "δέ / δ' (postpositive)",
     "transliteration": "dé",
@@ -9250,7 +9403,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -9269,7 +9423,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 1α"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Bağlaçlar: Oysa, ise, öte yandan; de, da, dahi (postpositivum)."
   },
   {
     "id": "ath_ei",
@@ -9472,7 +9628,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -9491,7 +9648,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 2β"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Ünlemler: Ey! (seslenme ünlemi: vocativus ile kullanılır: ὦ Ζεῦ = Ey Zeus!)."
   },
   {
     "id": "ath_di_olgou",
@@ -9504,7 +9663,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "frequency": 4,
     "isAthenaze": true,
     "tags": [
-      "athenaze"
+      "athenaze",
+      "filiz_hoca"
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
@@ -9523,7 +9683,9 @@ window.ANCIENT_GREEK_DICTIONARY = [
         "author": "Athenaze I",
         "work": "Bölüm 2β"
       }
-    ]
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Metin Kalıpları: Kısa süre sonra, az sonra (δι' ὀλίγου)."
   },
   {
     "id": "ath_ei_m",
@@ -10211,8 +10373,11 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "emel_notes": "γῆ + ἔργον kökünden türeyen temel eril isimdir: 'Çiftçi'.",
     "isEmelHoca": true,
     "tags": [
-      "emel_hoca"
-    ]
+      "emel_hoca",
+      "filiz_hoca"
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Eril İsimler: Çiftçi, toprağı işleyen (γῆ + ἔργον)."
   },
   {
     "id": "emel_ploutos",
@@ -11069,8 +11234,11 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "emel_notes": "'İstemek, razı olmak'. βούλομαι'ya göre daha çok 'gönüllü olma, razı gelme' nüansı taşır.",
     "isEmelHoca": true,
     "tags": [
-      "emel_hoca"
-    ]
+      "emel_hoca",
+      "filiz_hoca"
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Fiiller: İstiyorum (1. çoğul: ἐθέλομεν)."
   },
   {
     "id": "emel_thuo",
@@ -11273,8 +11441,11 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "emel_notes": "Grekçe dilbilgisinde kurallı fiil çekim paradigmasının (model verb) standart örneğidir: 'Eğitmek'.",
     "isEmelHoca": true,
     "tags": [
-      "emel_hoca"
-    ]
+      "emel_hoca",
+      "filiz_hoca"
+    ],
+    "isFilizHoca": true,
+    "filiz_notes": "Filiz Hoca Fiiller: Eğitiyorum, eğitirim (3. tekil: παιδεύει)."
   },
   {
     "id": "emel_pauo",
@@ -12256,7 +12427,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "tags": [
       "filiz_hoca"
     ],
-    "filiz_notes": "Kategori: Okuma ve Kelime Listelerindeki İsimler. Anlam: Meyve, hasat; el bileği."
+    "filiz_notes": "Filiz Hoca Eril İsimler: Ürün, meyve, mahsul (nom. pl: οἱ καρποί)."
   },
   {
     "id": "filiz_kindynos",
@@ -14000,7 +14171,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "tags": [
       "filiz_hoca"
     ],
-    "filiz_notes": "Kategori: Edatlar ve Edatlı/Yer Tümleçleri. Anlam: Atina'da (ἐν ταῖς Ἀθήναις)."
+    "filiz_notes": "Filiz Hoca Metin Kalıpları: Atina'da (ἐν ταῖς Ἀθήναις - yer tümleci: ἐν + dativus pluralis)."
   },
   {
     "id": "filiz_en_tois_agrois",
@@ -14034,7 +14205,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "tags": [
       "filiz_hoca"
     ],
-    "filiz_notes": "Kategori: Edatlar ve Edatlı/Yer Tümleçleri. Anlam: Kırsal alanda, tarlalarda (ἐν τοῖς ἀγροῖς)."
+    "filiz_notes": "Filiz Hoca Metin Kalıpları: Kırsal alanda, tarlalarda, kırda (ἐν τοῖς ἀγροῖς - yer tümleci: ἐν + dativus pluralis)."
   },
   {
     "id": "filiz_babai",
@@ -14879,5 +15050,1285 @@ window.ANCIENT_GREEK_DICTIONARY = [
       "filiz_hoca"
     ],
     "filiz_notes": "Filiz Hoca Bileşik Kelimeler: ζῳον - λογος eşleşmesi (hayvan bilimi = zooloji)."
+  },
+  {
+    "id": "filiz_egklino",
+    "word": "ἐγκλίνω",
+    "lemma": "ἐγκλίνω (mastar: ἐγκλίνειν)",
+    "transliteration": "enklínō",
+    "partOfSpeech": "Fiil (Etken)",
+    "category": "Temel Fiiller",
+    "frequency": 3,
+    "meanings_tr": [
+      "Yatmak, arkaya dayanmak, eğilmek, yaslanmak",
+      "Dilbilgisi terimi: Enklitik olmak (vurguyu bir önceki sözcüğe aktarıp arkaya dayanmak)"
+    ],
+    "meanings_en": [
+      "to lean upon, recline, bend",
+      "incline (grammar: enclitic)"
+    ],
+    "etymology": "ἐν (içinde, üzerine) + κλίνω (eğmek, yatırmak, yaslamak).",
+    "derivatives": [
+      "enklitik (ardına dayanan vurgusuz sözcük)",
+      "klinik (yatakbaşı tıp)"
+    ],
+    "grammar": {
+      "infinitive": "ἐγκλίνειν",
+      "present_3sg": "ἐγκλίνει"
+    },
+    "examples": [
+      {
+        "greek": "ἐγκλίνειν ἐπὶ τῆς κλίνης.",
+        "tr": "Yatağa arkasını yaslamak / uzanmak."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Fiiller: Yatmak, arkaya dayanmak (mastar: ἐγκλίνειν). Dilbilgisinde enklitik teriminin kökenidir."
+  },
+  {
+    "id": "filiz_eimi_ibo",
+    "word": "εἶμι",
+    "lemma": "εἶμι (ibo)",
+    "transliteration": "eĩmi",
+    "partOfSpeech": "Fiil (Düzensiz, Gelecek Zaman)",
+    "category": "Temel Fiiller",
+    "frequency": 5,
+    "meanings_tr": [
+      "Gideceğim (Attike düzyazısında ἔρχομαι fiilinin gelecek zamanı yerine kullanılır; εἰμί [olmak] ile karıştırılmamalıdır)"
+    ],
+    "meanings_en": [
+      "I shall go, I am going (Attic future of erchomai)"
+    ],
+    "etymology": "Hint-Avrupa kökü *h₁ey- (gitmek; krş. Latince ire, eo).",
+    "derivatives": [
+      "iyon (ion: elektrik alanında giden parçacık)"
+    ],
+    "grammar": {
+      "forms": "1. tekil: εἶμι, 2. tekil: εἶ, 3. tekil: εἶσι(ν), çoğul: ἴμεν, ἴτε, ἴασι(ν)"
+    },
+    "examples": [
+      {
+        "greek": "οἴκαδε εἶμι.",
+        "tr": "Eve doğru gideceğim."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Fiiller: Gideceğim (Attike lehçesinde gelecek zaman anlamı taşır; εἰμί [olmak] ile karıştırılmamalıdır)."
+  },
+  {
+    "id": "filiz_noseo",
+    "word": "νοσέω",
+    "lemma": "νοσέω, νοσῶ",
+    "transliteration": "noséō",
+    "partOfSpeech": "Büzüşmeli Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 3,
+    "meanings_tr": [
+      "Hastalanıyorum, hastayım, rahatsızlanıyorum"
+    ],
+    "meanings_en": [
+      "to be sick, ill, ailing"
+    ],
+    "etymology": "νόσος (hastalık) isminden türetilmiştir.",
+    "derivatives": [
+      "nozoloji (hastalıklar sınıflaması)",
+      "nozokomiyal (hastane enfeksiyonu)"
+    ],
+    "grammar": {
+      "stem": "νοσε-",
+      "present_3sg": "νοσεῖ"
+    },
+    "examples": [
+      {
+        "greek": "ὁ δοῦλος νοσεῖ καὶ οὐ δύναται πονεῖν.",
+        "tr": "Köle hasta ve çalışamıyor."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Fiiller: Hastalanıyorum, hastayım (3. tekil: νοσεῖ; isim kökü: ἡ νόσος)."
+  },
+  {
+    "id": "filiz_okneo",
+    "word": "ὀκνέω",
+    "lemma": "ὀκνέω, ὀκνῶ",
+    "transliteration": "oknéō",
+    "partOfSpeech": "Büzüşmeli Fiil",
+    "category": "Temel Fiiller",
+    "frequency": 3,
+    "meanings_tr": [
+      "Tembellik ediyorum, tereddüt ediyorum, çekiniyorum, üşeniyorum"
+    ],
+    "meanings_en": [
+      "to shrink from, hesitate, be sluggish/lazy"
+    ],
+    "etymology": "ὄκνος (tembellik, ağırdan alma) kökünden; zıt anlamlısı ἄοκνος (enerjik, gayretli).",
+    "derivatives": [],
+    "grammar": {
+      "stem": "ὀκνε-",
+      "present_3sg": "ὀκνεῖ"
+    },
+    "examples": [
+      {
+        "greek": "ὁ δὲ δοῦλος ὀκνεῖ καὶ ἡσυχάζει.",
+        "tr": "Köle ise tembellik ediyor ve dinleniyor."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Fiiller: Tembellik ediyorum (3. tekil: ὀκνεῖ; zıt anlamlısı: ἄοκνος [enerjik, çalışkan])."
+  },
+  {
+    "id": "filiz_skopeo",
+    "word": "σκοπέω",
+    "lemma": "σκοπέω, σκοπῶ",
+    "transliteration": "skopéō",
+    "partOfSpeech": "Büzüşmeli Fiil",
+    "category": "Felsefe",
+    "frequency": 4,
+    "meanings_tr": [
+      "Bakıyorum, inceliyorum, gözlemliyorum, dikkatle inceliyor"
+    ],
+    "meanings_en": [
+      "to look at, examine, inspect, consider"
+    ],
+    "etymology": "Hint-Avrupa *speḱ- (bakmak; krş. Latince spectare, speculum).",
+    "derivatives": [
+      "mikroskop",
+      "teleskop",
+      "skeptik (şüpheci)",
+      "periskop"
+    ],
+    "grammar": {
+      "stem": "σκοπε-",
+      "present_3sg": "σκοπεῖ"
+    },
+    "examples": [
+      {
+        "greek": "σκοπεῖ τὸν ἀγρὸν καὶ τοὺς λίθους.",
+        "tr": "Tarlayı ve taşları inceliyor / bakıyor."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Fiiller: Bakıyor, inceliyor (3. tekil: σκοπεῖ). Bileşik türevler: teleskop, mikroskop."
+  },
+  {
+    "id": "filiz_stergo",
+    "word": "στέργω",
+    "lemma": "στέργω",
+    "transliteration": "stérgō",
+    "partOfSpeech": "Fiil (Etken)",
+    "category": "Temel Fiiller",
+    "frequency": 3,
+    "meanings_tr": [
+      "Seviyorum (özellikle evlada, anne/babaya, kardeşe veya arkadaşa duyulan doğal ailevi sevgi/şefkat)"
+    ],
+    "meanings_en": [
+      "to love, feel affection for (especially of family affection), cherish"
+    ],
+    "etymology": "Eski Yunanca storgē (doğal ailevi sevgi/şefkat) kavramının kökü.",
+    "derivatives": [
+      "storge (dört sevgi türünden biri: aile sevgisi)"
+    ],
+    "grammar": {
+      "present_3sg": "στέργει"
+    },
+    "examples": [
+      {
+        "greek": "ὁ πατὴρ τὸν υἱὸν στέργει.",
+        "tr": "Baba oğlunu (şefkatle/aile sevgisiyle) sever."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Fiiller: Seviyorum (özellikle evlada, anne/babaya, kardeşe veya arkadaşa duyulan sevgi)."
+  },
+  {
+    "id": "filiz_eniautos",
+    "word": "ἐνιαυτός",
+    "lemma": "ὁ ἐνιαυτός, τοῦ ἐνιαυτοῦ",
+    "transliteration": "eniautós",
+    "partOfSpeech": "İsim (Eril, 2. Çekim)",
+    "category": "Gramer & Zamirler",
+    "frequency": 4,
+    "meanings_tr": [
+      "Yıl, sene (acc. τὸν ἐνιαυτόν: yıl boyunca)"
+    ],
+    "meanings_en": [
+      "year (acc. tòn eniautón: for a year, throughout the year)"
+    ],
+    "etymology": "ἐν (içinde) + αὖ (tekrar, yeniden) köklerinden döngüsel yılı simgeler.",
+    "derivatives": [],
+    "grammar": {
+      "declension": "2. Çekim (Eril)",
+      "nominative": "ὁ ἐνιαυτός",
+      "genitive": "τοῦ ἐνιαυτοῦ",
+      "dative": "τῷ ἐνιαυτῷ",
+      "accusative": "τὸν ἐνιαυτόν"
+    },
+    "examples": [
+      {
+        "greek": "τὸν ἐνιαυτὸν ἅπαντα πονεῖ ὁ αὐτουργός.",
+        "tr": "Çiftçi bütün bir yıl boyunca çalışır."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Eril İsimler: Yıl (acc: τὸν ἐνιαυτόν; kalıp: τὸν ἐνιαυτόν = yıl boyunca [accusativus temporis])."
+  },
+  {
+    "id": "filiz_thermos_noun",
+    "word": "θέρμος",
+    "lemma": "ὁ θέρμος, τοῦ θέρμου",
+    "transliteration": "thérmos",
+    "partOfSpeech": "İsim (Eril, 2. Çekim)",
+    "category": "Tarım & Doğa",
+    "frequency": 2,
+    "meanings_tr": [
+      "Bakla, acı bakla, lupin (Eski Yunan kırsalında yaygın baklagil türü)"
+    ],
+    "meanings_en": [
+      "lupine, lupin bean"
+    ],
+    "etymology": "Hint-Avrupa *gʷʰer- (sıcak olmak, pişirmek; krş. θερμός).",
+    "derivatives": [],
+    "grammar": {
+      "declension": "2. Çekim (Eril)",
+      "nominative": "ὁ θέρμος",
+      "genitive": "τοῦ θέρμου",
+      "accusative": "τὸν θέρμον"
+    },
+    "examples": [
+      {
+        "greek": "ὁ γεωργὸς θέρμους ἐσθίει.",
+        "tr": "Çiftçi bakla yer."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Eril İsimler: Bakla (ὁ θέρμος; sıfat olan θερμός [sıcak] ile karıştırılmamalıdır)."
+  },
+  {
+    "id": "filiz_nosos",
+    "word": "νόσος",
+    "lemma": "ἡ νόσος, τῆς νόσου",
+    "transliteration": "nósos",
+    "partOfSpeech": "İsim (Dişil, 2. Çekim İstisna)",
+    "category": "Tıp & Yaşam",
+    "frequency": 4,
+    "meanings_tr": [
+      "Hastalık, maraz, illet (2. çekim -ος ile bittiği halde dişil articulus [ἡ] alan istisnai isimlerdendir: ἡ νόσος)"
+    ],
+    "meanings_en": [
+      "sickness, disease, plague (feminine 2nd declension)"
+    ],
+    "etymology": "Grekçe nosos (hastalık, dert).",
+    "derivatives": [
+      "nozoloji (hastalık bilimi)",
+      "nozo- ön eki"
+    ],
+    "grammar": {
+      "declension": "2. Çekim İstisna (Dişil)",
+      "nominative": "ἡ νόσος",
+      "genitive": "τῆς νόσου",
+      "dative": "τῇ νόσῳ",
+      "accusative": "τὴν νόσον"
+    },
+    "examples": [
+      {
+        "greek": "ἡ νόσος χαλεπή ἐστιν.",
+        "tr": "Hastalık ağırdır / zordur."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Dişil İsimler: Hastalık (2. çekim -ος ile bittiği halde dişil articulus [ἡ] alan istisnai isimlerdendir: ἡ νόσος)."
+  },
+  {
+    "id": "filiz_rhome",
+    "word": "ῥώμη",
+    "lemma": "ἡ ῥώμη, τῆς ῥώμης",
+    "transliteration": "rhṓmē",
+    "partOfSpeech": "İsim (Dişil, 1. Çekim)",
+    "category": "Politika & Toplum",
+    "frequency": 4,
+    "meanings_tr": [
+      "Güç, kuvvet, bedensel veya ruhsal sağlamlık, kudret"
+    ],
+    "meanings_en": [
+      "bodily strength, might, vigor, force"
+    ],
+    "etymology": "ῥώννυμι (güçlendirmek, kuvvet kazandırmak) fiilinden türetilmiştir.",
+    "derivatives": [],
+    "grammar": {
+      "declension": "1. Çekim (Dişil)",
+      "nominative": "ἡ ῥώμη",
+      "genitive": "τῆς ῥώμης",
+      "dative": "τῇ ῥώμῃ",
+      "accusative": "τὴν ῥώμην"
+    },
+    "examples": [
+      {
+        "greek": "ἡ ῥώμη τοῦ αὐτουργοῦ μεγάλη ἐστίν.",
+        "tr": "Çiftçinin gücü büyüktür."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Dişil İsimler: Güç, kuvvet (ἡ ῥώμη)."
+  },
+  {
+    "id": "filiz_sus",
+    "word": "σῦς",
+    "lemma": "ὁ / ἡ σῦς, συός",
+    "transliteration": "sỹs",
+    "partOfSpeech": "İsim (Ortak Cinsiyet, 3. Çekim)",
+    "category": "Tarım & Doğa",
+    "frequency": 3,
+    "meanings_tr": [
+      "Domuz, yaban domuzu (3. çekim ortak cinsiyet: ὁ/ἡ σῦς, gen. συός)"
+    ],
+    "meanings_en": [
+      "swine, pig, boar (common gender)"
+    ],
+    "etymology": "Hint-Avrupa *sū- (domuz; krş. Latince sus, İngilizce sow).",
+    "derivatives": [],
+    "grammar": {
+      "declension": "3. Çekim (Ortak Cinsiyet)",
+      "nominative": "ὁ / ἡ σῦς",
+      "genitive": "συός",
+      "dative": "συΐ",
+      "accusative": "σῦν"
+    },
+    "examples": [
+      {
+        "greek": "ὁ σῦς ἐν τοῖς ἀγροῖς ἐστιν.",
+        "tr": "Domuz tarlalardadır."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca İsimler: Domuz (ὁ/ἡ σῦς, 3. çekim tek heceli isim)."
+  },
+  {
+    "id": "filiz_aix",
+    "word": "αἴξ",
+    "lemma": "ἡ αἴξ, τῆς αἰγός",
+    "transliteration": "aíx",
+    "partOfSpeech": "İsim (Dişil, 3. Çekim)",
+    "category": "Tarım & Doğa",
+    "frequency": 3,
+    "meanings_tr": [
+      "Keçi (3. çekim dişil: ἡ αἴξ, gen. αἰγός; telaffuz örneği olarak aiks şeklinde gösterilir)"
+    ],
+    "meanings_en": [
+      "goat (fem. 3rd declension)"
+    ],
+    "etymology": "Hint-Avrupa *h₂eyǵ- (keçi; krş. Sanskritçe eḍa).",
+    "derivatives": [
+      "aegis (keçi derisinden kalkan / himaye - Zeus ve Athena kalkanı)"
+    ],
+    "grammar": {
+      "declension": "3. Çekim (Dişil)",
+      "nominative": "ἡ αἴξ",
+      "genitive": "αἰγός",
+      "dative": "αἰγί",
+      "accusative": "αἶγα"
+    },
+    "examples": [
+      {
+        "greek": "ἡ αἲξ βαδίζει πρὸς τὸν κλῆρον.",
+        "tr": "Keçi araziye doğru yürüyor."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca İsimler: Keçi (ἡ αἴξ, gen. αἰγός; derste telaffuz örneği [aiks] olarak verilmiştir)."
+  },
+  {
+    "id": "filiz_ornis",
+    "word": "ὄρνις",
+    "lemma": "ὁ / ἡ ὄρνις, ὄρνιθος",
+    "transliteration": "órnis",
+    "partOfSpeech": "İsim (Ortak Cinsiyet, 3. Çekim)",
+    "category": "Tarım & Doğa",
+    "frequency": 3,
+    "meanings_tr": [
+      "Kuş, kümes hayvanı (3. çekim: ὁ/ἡ ὄρνις, gen. ὄρνιθος; telaffuz örneği ornis)"
+    ],
+    "meanings_en": [
+      "bird, fowl (common gender, 3rd declension)"
+    ],
+    "etymology": "Hint-Avrupa *h₃or- / *orn- (kuş; krş. Hititçe ḫaraš kartal).",
+    "derivatives": [
+      "ornitoloji (kuşbilim)"
+    ],
+    "grammar": {
+      "declension": "3. Çekim (Ortak Cinsiyet)",
+      "nominative": "ὁ / ἡ ὄρνις",
+      "genitive": "ὄρνιθος",
+      "dative": "ὄρνιθι",
+      "accusative": "ὄρνιθα / ὄρνιν"
+    },
+    "examples": [
+      {
+        "greek": "ὁ ὄρνις ἐν τῷ δένδρῳ ᾄδει.",
+        "tr": "Kuş ağaçta ötüyor."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca İsimler: Kuş (ὁ/ἡ ὄρνις, gen. ὄρνιθος; ornitoloji kelimesinin kökeni; derste telaffuz örneği [ornis] olarak verilmiştir)."
+  },
+  {
+    "id": "filiz_aigyptos",
+    "word": "Αἴγυπτος",
+    "lemma": "ἡ Αἴγυπτος, τῆς Αἰγύπτου",
+    "transliteration": "Aígyptos",
+    "partOfSpeech": "Özel İsim (Dişil, 2. Çekim)",
+    "category": "Tarih & Mitoloji",
+    "frequency": 4,
+    "meanings_tr": [
+      "Mısır (ülke ve diyar adı; ülke adları Yunancada dişil kabul edilir ve dişil artikel alır: ἡ Αἴγυπτος)"
+    ],
+    "meanings_en": [
+      "Egypt (feminine country name)"
+    ],
+    "etymology": "Antik Mısırca Hwt-ka-Ptah (Ptah ruhunun konağı = Memphis) adının Grekçeleşmiş biçimi.",
+    "derivatives": [
+      "Egypt (Mısır)",
+      "Kıpti (Copt / Kopt)"
+    ],
+    "grammar": {
+      "declension": "2. Çekim (Dişil Özel İsim)",
+      "nominative": "ἡ Αἴγυπτος",
+      "genitive": "τῆς Αἰγύπτου",
+      "dative": "τῇ Αἰγύπτῳ",
+      "accusative": "τὴν Αἴγυπτον"
+    },
+    "examples": [
+      {
+        "greek": "ἡ Αἴγυπτος δῶρον τοῦ ποταμοῦ ἐστιν.",
+        "tr": "Mısır ırmağın (Nil'in) bir armağanıdır.",
+        "author": "Herodotos"
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Özel İsimler: Mısır (Aigyptos; ülke adları Yunancada genellikle dişil articulus [ἡ] alır: ἡ Αἴγυπτος)."
+  },
+  {
+    "id": "filiz_archimedes",
+    "word": "Ἀρχιμήδης",
+    "lemma": "ὁ Ἀρχιμήδης, τοῦ Ἀρχιμήδους",
+    "transliteration": "Archimḗdēs",
+    "partOfSpeech": "Özel İsim (Eril, 1./3. Çekim Karışık)",
+    "category": "Tarih & Mitoloji",
+    "frequency": 4,
+    "meanings_tr": [
+      "Arşimet (M.Ö. 287-212, Sirakuzalı ünlü Antik Yunan matematikçi, fizikçi, astronom ve mühendis)"
+    ],
+    "meanings_en": [
+      "Archimedes (ancient Greek mathematician and scientist)"
+    ],
+    "etymology": "ἀρχι- (baş, önder) + μῆδος (akıl, düşünce, plan). \"Düşüncenin önderi\" demektir.",
+    "derivatives": [
+      "Arşimet prensibi",
+      "Arşimet vidası"
+    ],
+    "grammar": {
+      "declension": "Özel İsim (Eril)",
+      "nominative": "ὁ Ἀρχιμήδης",
+      "genitive": "τοῦ Ἀρχιμήδους",
+      "dative": "τῷ Ἀρχιμήδει",
+      "accusative": "τὸν Ἀρχιμήδην"
+    },
+    "examples": [
+      {
+        "greek": "εὕρηκα, εὕρηκα! εἶπεν ὁ Ἀρχιμήδης.",
+        "tr": "Buldum, buldum! dedi Arşimet."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Özel İsimler: Arşimet (Arkhimēdēs - Sirakuzalı büyük bilgin)."
+  },
+  {
+    "id": "filiz_haides",
+    "word": "Ἅιδης",
+    "lemma": "ὁ Ἅιδης, τοῦ Ἅιδου",
+    "transliteration": "Hā́idēs",
+    "partOfSpeech": "Özel İsim (Eril, 1. Çekim)",
+    "category": "Tarih & Mitoloji",
+    "frequency": 4,
+    "meanings_tr": [
+      "Hades (Yunan mitolojisinde yeraltı ve ölüler dünyasının tanrısı; aynı zamanda ölüler diyarı)"
+    ],
+    "meanings_en": [
+      "Hades (god of the underworld, the underworld)"
+    ],
+    "etymology": "ἀ- (olumsuzluk ön eki) + ἰδεῖν (görmek). \"Görünmeyen, görünmez olan\" demektir.",
+    "derivatives": [
+      "Hades"
+    ],
+    "grammar": {
+      "declension": "1. Çekim (Eril -ης)",
+      "nominative": "ὁ Ἅιδης",
+      "genitive": "τοῦ Ἅιδου",
+      "dative": "τῷ Ἅιδῃ",
+      "accusative": "τὸν Ἅιδην"
+    },
+    "examples": [
+      {
+        "greek": "εἰς Ἅιδου βαδίζει.",
+        "tr": "Hades'e (ölüler diyarına) gidiyor."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Özel İsimler: Hades (Haidēs - Yeraltı tanrısı ve ölüler diyarı; 1. çekim eril isim: ὁ Ἅιδης)."
+  },
+  {
+    "id": "filiz_kyros",
+    "word": "Κῦρος",
+    "lemma": "ὁ Κῦρος, τοῦ Κύρου",
+    "transliteration": "Kỹros",
+    "partOfSpeech": "Özel İsim (Eril, 2. Çekim)",
+    "category": "Tarih & Mitoloji",
+    "frequency": 4,
+    "meanings_tr": [
+      "Kyros (Pers kralı Büyük Kyros veya Genç Kyros; Ksenophon'un Anabasis ve Kyrou Paideia eserlerinin kahramanı)"
+    ],
+    "meanings_en": [
+      "Cyrus (Cyrus the Great or Cyrus the Younger, Persian prince/king)"
+    ],
+    "etymology": "Eski Farsça Kūruš adının Grekçeleşmiş biçimi.",
+    "derivatives": [
+      "Kyrou Paideia (Kyros'un Eğitimi)"
+    ],
+    "grammar": {
+      "declension": "2. Çekim (Eril)",
+      "nominative": "ὁ Κῦρος",
+      "genitive": "τοῦ Κύρου",
+      "dative": "τῷ Κύρῳ",
+      "accusative": "τὸν Κῦρον"
+    },
+    "examples": [
+      {
+        "greek": "ὁ δὲ Κῦρος ἐπορεύετο διὰ τῆς χώρας.",
+        "tr": "Kyros ise ülke boyunca ilerliyordu.",
+        "author": "Ksenophon",
+        "work": "Anabasis"
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Özel İsimler: Kyros (gen: Κύρου; Ksenophon'un metinlerinde sıkça geçen Pers önderi)."
+  },
+  {
+    "id": "filiz_homeros",
+    "word": "Ὅμηρος",
+    "lemma": "ὁ Ὅμηρος, τοῦ Ὁμήρου",
+    "transliteration": "Hómēros",
+    "partOfSpeech": "Özel İsim (Eril, 2. Çekim)",
+    "category": "Edebiyat & Sanat",
+    "frequency": 5,
+    "meanings_tr": [
+      "Homeros (İlyada ve Odysseia destanlarının efsanevi ozanı)"
+    ],
+    "meanings_en": [
+      "Homer (epic poet, author of the Iliad and Odyssey)"
+    ],
+    "etymology": "ὁμηρέω (birlikte olmak, rehin/teminat vermek) veya dize örmek kökünden.",
+    "derivatives": [
+      "Homerik"
+    ],
+    "grammar": {
+      "declension": "2. Çekim (Eril)",
+      "nominative": "ὁ Ὅμηρος",
+      "genitive": "τοῦ Ὁμήρου",
+      "dative": "τῷ Ὁμήρῳ",
+      "accusative": "τὸν Ὅμηρον"
+    },
+    "examples": [
+      {
+        "greek": "Ὅμηρος ὁ τῶν ποιητῶν ἄριστος.",
+        "tr": "Homeros şairlerin en iyisidir."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Özel İsimler: Homeros (Homēros - İlyada ve Odysseia'nın büyük ozanı)."
+  },
+  {
+    "id": "filiz_atonos",
+    "word": "ἄτονος",
+    "lemma": "ἄτονος, -ον",
+    "transliteration": "átonos",
+    "partOfSpeech": "Sıfat (2 Takılı)",
+    "category": "Gramer & Zamirler",
+    "frequency": 3,
+    "meanings_tr": [
+      "Tonsuz, vurgusuz (dilbilgisinde üzerinde vurgu bulunmayan sözcükler: proklitica ve enklitica)",
+      "Gevşek, gerilimsiz (tıpta tonus kaybı)"
+    ],
+    "meanings_en": [
+      "unaccented, without tone, unstressed (grammar); limp, lacking tone"
+    ],
+    "etymology": "ἀ- (olumsuzluk eki: alpha privativum) + τόνος (ton, ses perdesi, vurgu, gerilim).",
+    "derivatives": [
+      "atoni (tıpta kas gerilimsizliği)"
+    ],
+    "grammar": {
+      "masculine_feminine": "ἄτονος",
+      "neuter": "ἄτονον"
+    },
+    "examples": [
+      {
+        "greek": "αἱ ἄτονοι λέξεις οὐκ ἔχουσι τόνον.",
+        "tr": "Tonsuz / vurgusuz sözcüklerin vurgusu yoktur."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Dilbilgisi Terimi: Tonsuz, vurgusuz (üzerinde vurgu işareti taşımayan sözcükler: proklitica ve enklitica)."
+  },
+  {
+    "id": "filiz_dikaios",
+    "word": "δίκαιος",
+    "lemma": "δίκαιος, -α, -ον",
+    "transliteration": "díkaios",
+    "partOfSpeech": "Sıfat (3 Takılı)",
+    "category": "Felsefe",
+    "frequency": 5,
+    "meanings_tr": [
+      "Adil, hakkaniyetli, doğru, dürüst, yasalara uygun davranan (dat. pl: τοῖς δικαίοις)"
+    ],
+    "meanings_en": [
+      "just, righteous, lawful, fair"
+    ],
+    "etymology": "δίκη (hak, adalet, yasa) isminden türetilmiştir. Δικαιόπολις adının ilk bileşenidir.",
+    "derivatives": [
+      "teodise (tanrı adaleti: theos + dike)"
+    ],
+    "grammar": {
+      "masculine": "δίκαιος",
+      "feminine": "δικαία",
+      "neuter": "δίκαιον",
+      "dat_pl": "τοῖς δικαίοις"
+    },
+    "examples": [
+      {
+        "greek": "ὁ δίκαιος ἄνθρωπος εὐδαίμων ἐστίν.",
+        "tr": "Adil insan mutludur.",
+        "author": "Platon"
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Sıfatlar: Adil, hakkaniyetli (dat. pl: τοῖς δικαίοις; Δικαιόπολις [Adil Yurttaş] adının kökü; derste telaffuz örneği olarak da geçer)."
+  },
+  {
+    "id": "filiz_hen",
+    "word": "ἕν",
+    "lemma": "εἷς, μία, ἕν",
+    "transliteration": "hén",
+    "partOfSpeech": "Sayı Sıfatı (Nötr)",
+    "category": "Gramer & Zamirler",
+    "frequency": 5,
+    "meanings_tr": [
+      "Bir (sayı sıfatı - nötr formu ἕν; eril εἷς, dişil μία; edat olan ἐν [içinde] ile soluk işareti farkına dikkat edilmelidir: ἕν sert soluk, ἐν yumuşak soluk)"
+    ],
+    "meanings_en": [
+      "one (neuter numeral: heis, mia, hen)"
+    ],
+    "etymology": "Hint-Avrupa *sem- / *sm- (bir, tek; krş. Latince semel, simplex, İngilizce same).",
+    "derivatives": [
+      "henoteizm (tek tanrıcılık)",
+      "hendiadys (iki sözcükle tek mana verme)"
+    ],
+    "grammar": {
+      "masculine": "εἷς",
+      "feminine": "μία",
+      "neuter": "ἕν",
+      "genitive": "ἑνός"
+    },
+    "examples": [
+      {
+        "greek": "ἓν μέτρον πάντων.",
+        "tr": "Her şeyin tek bir ölçüsü."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Sayılar: Bir (sayı; nötr formu ἕν; eril εἷς, dişil μία; edat olan ἐν [içinde] ile soluk işareti farkına dikkat edilmelidir: ἕν sert soluk, ἐν yumuşak soluk)."
+  },
+  {
+    "id": "filiz_thermos_adj",
+    "word": "θερμός",
+    "lemma": "θερμός, -ή, -όν",
+    "transliteration": "thermós",
+    "partOfSpeech": "Sıfat (3 Takılı)",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "meanings_tr": [
+      "Sıcak, ılık, hararetli, ateşli"
+    ],
+    "meanings_en": [
+      "warm, hot, fervent"
+    ],
+    "etymology": "Hint-Avrupa *gʷʰer- (sıcak olmak; krş. İngilizce warm, Latince formus).",
+    "derivatives": [
+      "termometre",
+      "termik",
+      "termostat",
+      "termal",
+      "hipotermi"
+    ],
+    "grammar": {
+      "masculine": "θερμός",
+      "feminine": "θερμή",
+      "neuter": "θερμόν"
+    },
+    "examples": [
+      {
+        "greek": "ὁ ἥλιος θερμός ἐστιν.",
+        "tr": "Güneş sıcaktır."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Sıfatlar: Sıcak (ὁ ἥλιος θερμός ἐστιν = Güneş sıcaktır; bileşik türevler: termometre, termal)."
+  },
+  {
+    "id": "filiz_moros",
+    "word": "μῶρος",
+    "lemma": "μῶρος, -α, -ον",
+    "transliteration": "mõros",
+    "partOfSpeech": "Sıfat (3 Takılı)",
+    "category": "Felsefe",
+    "frequency": 3,
+    "meanings_tr": [
+      "Aptal, ahmak, budala, akılsız"
+    ],
+    "meanings_en": [
+      "dull, sluggish, foolish, stupid, silly"
+    ],
+    "etymology": "Grekçe mōros (ahmak, budala).",
+    "derivatives": [
+      "moron (ahmak)",
+      "oksimoron (keskin-aptallık tezadı: oxys + moros)"
+    ],
+    "grammar": {
+      "masculine": "μῶρος",
+      "feminine": "μώρα",
+      "neuter": "μῶρον"
+    },
+    "examples": [
+      {
+        "greek": "ὁ μῶρος οὐ γιγνώσκει τὸν λόγον.",
+        "tr": "Aptal olan mantığı / sözü kavrayamaz."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Sıfatlar: Aptal, ahmak (moron ve oksimoron kelimelerinin kökenidir)."
+  },
+  {
+    "id": "filiz_pistos",
+    "word": "πιστός",
+    "lemma": "πιστός, -ή, -όν",
+    "transliteration": "pistós",
+    "partOfSpeech": "Sıfat (3 Takılı)",
+    "category": "Felsefe",
+    "frequency": 4,
+    "meanings_tr": [
+      "Sadık, güvenilir, vefalı, inanılır"
+    ],
+    "meanings_en": [
+      "faithful, trustworthy, reliable, loyal"
+    ],
+    "etymology": "πείθω (ikna etmek, inandırmak) fiilinden; πίστις (inanç, güven) kökü.",
+    "derivatives": [
+      "epistemoloji (episteme üzerinden felsefe)"
+    ],
+    "grammar": {
+      "masculine": "πιστός",
+      "feminine": "πιστή",
+      "neuter": "πιστόν"
+    },
+    "examples": [
+      {
+        "greek": "ὁ δοῦλος πιστός ἐστιν τῷ δεσπότῃ.",
+        "tr": "Köle efendisine sadıktır."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Sıfatlar: Sadık, güvenilir (ὁ πιστὸς δοῦλος = sadık köle)."
+  },
+  {
+    "id": "filiz_hypekoos",
+    "word": "ὑπήκοος",
+    "lemma": "ὑπήκοος, -ον",
+    "transliteration": "hypḗkoos",
+    "partOfSpeech": "Sıfat (2 Takılı)",
+    "category": "Politika & Toplum",
+    "frequency": 3,
+    "meanings_tr": [
+      "Bağımlı, tebaa, söz dinleyen, boyun eğen"
+    ],
+    "meanings_en": [
+      "obedient, subject to, tributary, submissive"
+    ],
+    "etymology": "ὑπό (altında) + ἀκούω (işitmek, dinlemek). \"Emri altında dinleyen / söz dinleyen\" demektir.",
+    "derivatives": [],
+    "grammar": {
+      "masculine_feminine": "ὑπήκοος",
+      "neuter": "ὑπήκοον"
+    },
+    "examples": [
+      {
+        "greek": "οἱ ὑπήκοοι ἄνθρωποι τῷ τυράννῳ πείθονται.",
+        "tr": "Bağımlı insanlar tirana boyun eğerler."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Sıfatlar: Bağımlı, tebaa (söz dinleyen, boyun eğen; kök: ὑπό + ἀκούω)."
+  },
+  {
+    "id": "filiz_kalos_adv",
+    "word": "καλῶς",
+    "lemma": "καλῶς",
+    "transliteration": "kalõs",
+    "partOfSpeech": "Zarf",
+    "category": "Zarflar & Edatlar",
+    "frequency": 4,
+    "meanings_tr": [
+      "Güzel bir biçimde, iyi şekilde, layıkıyla, hakkıyla"
+    ],
+    "meanings_en": [
+      "well, beautifully, properly, rightly"
+    ],
+    "etymology": "καλός (güzel, iyi) sıfatının düzenli zarf hali (-ως ekiyle).",
+    "derivatives": [],
+    "grammar": {
+      "type": "Niteleme Zarfı"
+    },
+    "examples": [
+      {
+        "greek": "καλῶς ποιεῖς.",
+        "tr": "İyi yapıyorsun (aferin)."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Zarflar: Güzel bir biçimde, iyi şekilde (καλός sıfatından -ως ekiyle türetilmiş niteleme zarfı)."
+  },
+  {
+    "id": "filiz_hos",
+    "word": "ὡς",
+    "lemma": "ὡς / ὥς",
+    "transliteration": "hōs",
+    "partOfSpeech": "Zarf / Bağlaç",
+    "category": "Zarflar & Edatlar",
+    "frequency": 5,
+    "meanings_tr": [
+      "Gibi, olarak, nasıl ki, -dığı gibi; telaffuz örneği (hōs); zira, çünkü, -dığı için"
+    ],
+    "meanings_en": [
+      "as, like, how, that, because"
+    ],
+    "etymology": "İlgi zamirinden türetilmiş modal zarf.",
+    "derivatives": [],
+    "grammar": {
+      "type": "Zarf / Bağlaç"
+    },
+    "examples": [
+      {
+        "greek": "ὡς λέγει ὁ Ὅμηρος.",
+        "tr": "Homeros'un dediği gibi."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Zarflar: Gibi, olarak; metinde telaffuz örneği olarak (hōs) geçmektedir."
+  },
+  {
+    "id": "filiz_ge",
+    "word": "γέ",
+    "lemma": "γέ",
+    "transliteration": "gé",
+    "partOfSpeech": "Edat (Enklitik Parçacık)",
+    "category": "Edatlar & Bağlaçlar",
+    "frequency": 4,
+    "meanings_tr": [
+      "Şüphesiz, en azından, gerçekten, hele, bilhassa (kendinden önceki sözcüğü vurgulayan enklitik edat)"
+    ],
+    "meanings_en": [
+      "at least, at any rate, indeed, truly (enclitic emphasizing particle)"
+    ],
+    "etymology": "Hint-Avrupa pekiştirme parçacığı *ge.",
+    "derivatives": [],
+    "grammar": {
+      "type": "Enklitik Parçacık (Postpositivum)"
+    },
+    "examples": [
+      {
+        "greek": "ἔγωγε.",
+        "tr": "Ben şahsen / bana gelince (ἐγώ + γε)."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Edatlar: Şüphesiz, en azından, doğrusu (enklitik vurgu edatı; kendinden önceki sözcüğe dayanır)."
+  },
+  {
+    "id": "filiz_alpha_privativum",
+    "word": "ἀ- / ἀν-",
+    "lemma": "ἀ- / ἀν- (alpha privativum)",
+    "transliteration": "a- / an-",
+    "partOfSpeech": "Ön Ek (Yoksunluk / Olumsuzluk Eki)",
+    "category": "Gramer & Zamirler",
+    "frequency": 5,
+    "meanings_tr": [
+      "Alpha privativum: Başına eklendiği sözcüğe olumsuzluk, yoksunluk katan ön ek (Türkçe -siz/-siz eki, İngilizce un- / a-); ünsüzlerden önce ἀ-, ünlülerden önce ἀν- gelir"
+    ],
+    "meanings_en": [
+      "alpha privative: negative/privative prefix (un-, non-, without)"
+    ],
+    "etymology": "Hint-Avrupa *n̥- (olumsuzluk ön eki; krş. Latince in-, İngilizce un-).",
+    "derivatives": [
+      "ateizm (a + theos)",
+      "anarşi (an + arche)",
+      "asimetri (a + symmetria)",
+      "amoral"
+    ],
+    "grammar": {
+      "rule": "Ünsüzlerden önce ἀ- (örn. ἄ-οκνος, ἄ-τονος), ünlülerden önce ἀν- (örn. ἀν-αρχία)."
+    },
+    "examples": [
+      {
+        "greek": "ἄ-οκνος (tembellik etmeyen = enerjik), ἄ-τονος (vurgusuz).",
+        "tr": "Alpha privativum ile türetilmiş sözcükler."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Dilbilgisi: Alpha privativum (ἀ- / ἀν-). Başına eklendiği sözcüğe olumsuzluk katan ön ek (krş. ἄ-οκνος enerjik, ἄ-τονος vurgusuz)."
+  },
+  {
+    "id": "filiz_en_to_agro",
+    "word": "ἐν τῷ ἀγρῷ",
+    "lemma": "ἐν τῷ ἀγρῷ",
+    "transliteration": "en tõi agrõi",
+    "partOfSpeech": "Edatlı Öbek (Yer Tümleci)",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "meanings_tr": [
+      "Tarlada, arazide (tekil yer tümleci: ἐν + dativus singularis)"
+    ],
+    "meanings_en": [
+      "in the field, on the land"
+    ],
+    "etymology": "ἐν (içinde, -de) + τῷ ἀγρῷ (tarlada).",
+    "derivatives": [],
+    "grammar": {
+      "case": "Dativus Loci",
+      "structure": "ἐν + dativus singularis"
+    },
+    "examples": [
+      {
+        "greek": "ὁ Δικαιόπολις πονεῖ ἐν τῷ ἀγρῷ.",
+        "tr": "Dikaiopolis tarlada çalışıyor."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Metin Kalıpları: Tarlada, arazide (ἐν τῷ ἀγρῷ - tekil yer bildiren edatlı öbek)."
+  },
+  {
+    "id": "filiz_ek_tou_agrou",
+    "word": "ἐκ τοῦ ἀγροῦ",
+    "lemma": "ἐκ τοῦ ἀγροῦ",
+    "transliteration": "ek toũ agroũ",
+    "partOfSpeech": "Edatlı Öbek (Çıkış Tümleci)",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "meanings_tr": [
+      "Tarladan, araziden (-den çıkış bildiren öbek: ἐκ + genitivus)"
+    ],
+    "meanings_en": [
+      "out of the field, from the land"
+    ],
+    "etymology": "ἐκ (içinden, -den) + τοῦ ἀγροῦ (tarlanın).",
+    "derivatives": [],
+    "grammar": {
+      "case": "Ablativus / Genitivus Separationis",
+      "structure": "ἐκ + genitivus"
+    },
+    "examples": [
+      {
+        "greek": "βαδίζει ἐκ τοῦ ἀγροῦ οἴκαδε.",
+        "tr": "Tarladan eve doğru yürüyor."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Metin Kalıpları: Tarladan (ἐκ τοῦ ἀγροῦ - çıkış/ayrılma bildiren edatlı öbek: ἐκ + genitivus)."
+  },
+  {
+    "id": "filiz_hypo_to_dendro",
+    "word": "ὑπὸ τῷ δένδρῳ",
+    "lemma": "ὑπὸ τῷ δένδρῳ",
+    "transliteration": "hypò tõi déndrōi",
+    "partOfSpeech": "Edatlı Öbek (Yer Tümleci)",
+    "category": "Tarım & Doğa",
+    "frequency": 4,
+    "meanings_tr": [
+      "Ağacın altında (durağan durum/konum bildiren öbek: ὑπό + dativus)"
+    ],
+    "meanings_en": [
+      "under the tree"
+    ],
+    "etymology": "ὑπό (altında) + τῷ δένδρῳ (ağacın).",
+    "derivatives": [],
+    "grammar": {
+      "case": "Dativus Loci",
+      "structure": "ὑπό + dativus"
+    },
+    "examples": [
+      {
+        "greek": "ὁ γεωργὸς καθίζει ὑπὸ τῷ δένδρῳ.",
+        "tr": "Çiftçi ağacın altında oturuyor."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Metin Kalıpları: Ağacın altında (ὑπὸ τῷ δένδρῳ - durağan konum bildiren öbek: ὑπό + dativus)."
+  },
+  {
+    "id": "filiz_ton_eniauton",
+    "word": "τὸν ἐνιαυτόν",
+    "lemma": "τὸν ἐνιαυτόν (kalıp)",
+    "transliteration": "tòn eniautón",
+    "partOfSpeech": "Zaman Zarfı / Kalıp İfade",
+    "category": "Gramer & Zamirler",
+    "frequency": 4,
+    "meanings_tr": [
+      "Yıl boyunca, bütün bir yıl (accusativus temporis / zaman akusatifi)"
+    ],
+    "meanings_en": [
+      "throughout the year, for a year (accusative of duration of time)"
+    ],
+    "etymology": "τὸν (articulus acc.) + ἐνιαυτόν (yıl). Süreç bildiren akusatif kuralı.",
+    "derivatives": [],
+    "grammar": {
+      "case": "Accusativus Temporis",
+      "function": "Eylemin ne kadar süre boyunca sürdüğünü belirtir."
+    },
+    "examples": [
+      {
+        "greek": "τὸν ἐνιαυτὸν μάλα κάμνει.",
+        "tr": "Yıl boyunca çok yorulur."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Metin Kalıpları: Yıl boyunca (accusativus temporis - süreyi bildiren accusativus yapısı: τὸν ἐνιαυτόν)."
+  },
+  {
+    "id": "filiz_polyn_chronon",
+    "word": "πολὺν χρόνον",
+    "lemma": "πολὺν χρόνον (kalıp)",
+    "transliteration": "polỳn chrónon",
+    "partOfSpeech": "Zaman Zarfı / Kalıp İfade",
+    "category": "Gramer & Zamirler",
+    "frequency": 4,
+    "meanings_tr": [
+      "Uzun süre, uzun zaman boyunca (accusativus temporis)"
+    ],
+    "meanings_en": [
+      "for a long time (accusative of duration of time)"
+    ],
+    "etymology": "πολύν (çok, acc.) + χρόνον (zaman, acc.).",
+    "derivatives": [],
+    "grammar": {
+      "case": "Accusativus Temporis"
+    },
+    "examples": [
+      {
+        "greek": "πολὺν χρόνον ἡσυχάζει.",
+        "tr": "Uzun süre dinlenir."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Metin Kalıpları: Uzun süre (accusativus temporis: πολὺν χρόνον)."
+  },
+  {
+    "id": "filiz_ou_polyn_chronon",
+    "word": "οὐ πολὺν χρόνον",
+    "lemma": "οὐ πολὺν χρόνον (kalıp)",
+    "transliteration": "ou polỳn chrónon",
+    "partOfSpeech": "Zaman Zarfı / Kalıp İfade",
+    "category": "Gramer & Zamirler",
+    "frequency": 4,
+    "meanings_tr": [
+      "Kısa süre, çok uzun olmayan bir süre, az bir zaman (accusativus temporis)"
+    ],
+    "meanings_en": [
+      "for not a long time, for a short while"
+    ],
+    "etymology": "οὐ (değil) + πολὺν χρόνον (uzun süre).",
+    "derivatives": [],
+    "grammar": {
+      "case": "Accusativus Temporis"
+    },
+    "examples": [
+      {
+        "greek": "οὐ πολὺν χρόνον ἡσυχάζει ὁ γεωργός.",
+        "tr": "Çiftçi uzun süre değil (kısa süre) dinlenir."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Metin Kalıpları: Kısa süre, çok uzun olmayan bir süre (accusativus temporis: οὐ πολὺν χρόνον)."
+  },
+  {
+    "id": "filiz_mala_kamnei",
+    "word": "μάλα κάμνει",
+    "lemma": "μάλα κάμνει (kalıp)",
+    "transliteration": "mála kámnei",
+    "partOfSpeech": "Kalıp İfade / Deyim",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "meanings_tr": [
+      "Çok yorulur, pek yorulur, takatten düşer"
+    ],
+    "meanings_en": [
+      "he/she is very weary, becomes exceedingly tired"
+    ],
+    "etymology": "μάλα (çok) + κάμνει (yoruluyor).",
+    "derivatives": [],
+    "grammar": {
+      "structure": "Zarf + 3. tekil etken fiil"
+    },
+    "examples": [
+      {
+        "greek": "ὁ γὰρ πόνος πολὺς ἐστιν, καὶ μάλα κάμνει.",
+        "tr": "Çünkü zahmet çoktur ve çok yorulur."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Metin Kalıpları: Çok yorulur (μάλα κάμνει)."
+  },
+  {
+    "id": "filiz_epairei_heauton",
+    "word": "ἐπαίρει ἑαυτόν",
+    "lemma": "ἐπαίρει ἑαυτόν (kalıp)",
+    "transliteration": "epaírei heautón",
+    "partOfSpeech": "Kalıp İfade / Deyim",
+    "category": "Temel Fiiller",
+    "frequency": 4,
+    "meanings_tr": [
+      "Kendini kaldırıyor, ayağa kalkıyor, doğruluyor"
+    ],
+    "meanings_en": [
+      "he lifts himself up, rises, gets up"
+    ],
+    "etymology": "ἐπαίρω (yükseltmek, kaldırmak) + ἑαυτόν (kendini).",
+    "derivatives": [],
+    "grammar": {
+      "structure": "Fiil + Dönüşlü Zamir"
+    },
+    "examples": [
+      {
+        "greek": "τέλος δὲ ἐπαίρει ἑαυτὸν καὶ βαδίζει.",
+        "tr": "Sonunda kendini kaldırır (ayağa kalkar) ve yürür."
+      }
+    ],
+    "isFilizHoca": true,
+    "tags": [
+      "filiz_hoca"
+    ],
+    "filiz_notes": "Filiz Hoca Metin Kalıpları: Kendini kaldırıyor / ayağa kalkıyor (ἐπαίρει ἑαυτόν)."
   }
 ];
