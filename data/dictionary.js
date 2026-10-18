@@ -1077,7 +1077,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "meanings_tr": [
       "Zaman, süre, çağ, vakit",
       "Kronolojik süreklilik (doğru an olan καιρός / kairos'tan farklı olarak akıp giden niceliksel zaman)",
-      "Yaşlılık, ömür uzunluğu"
+      "Yaşlılık, ömür uzunluğu",
+      "Accusativus Temporis kalıpları: πολὺν χρόνον (uzun süre boyunca), οὐ πολὺν χρόνον (kısa süre boyunca / çok uzun sürmeden)"
     ],
     "meanings_en": [
       "time, period, duration, season",
@@ -1098,6 +1099,14 @@ window.ANCIENT_GREEK_DICTIONARY = [
     },
     "examples": [
       {
+        "greek": "πολὺν χρόνον ἡσυχάζει ὁ γεωργός.",
+        "tr": "Çiftçi uzun süre dinlenir (Accusativus Temporis kalıbı)."
+      },
+      {
+        "greek": "οὐ πολὺν χρόνον κάμνει.",
+        "tr": "Kısa süre yorulur (uzun süre değil)."
+      },
+      {
         "greek": "χρόνος δ' ἀμαυροῖ πάντα κἀς λήθην ἄγει.",
         "tr": "Zaman her şeyi karartır ve unutuşa sürükler.",
         "author": "Platon",
@@ -1111,7 +1120,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     ],
     "athenaze_forms": "τὸν χρόνον",
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Eril İsimler: Zaman (acc: χρόνον; kronoloji kökü; kalıplar: πολὺν χρόνον = uzun süre, οὐ πολὺν χρόνον = kısa süre)."
+    "filiz_notes": "Filiz Hoca Eril İsimler: Zaman (acc: χρόνον). 📐 Gramer Kalıbı — Accusativus Temporis: Eylemin süresini bildiren edatsız akusatif yapısı: πολὺν χρόνον = uzun süre boyunca; οὐ πολὺν χρόνον = kısa süre / uzun olmayan bir süre boyunca."
   },
   {
     "id": "theos",
@@ -1924,7 +1933,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "isEmelHoca": true,
     "emel_notes": "Emel Hoca Listesi: -de, -in içinde (nerede?). Transliterasyon: en.",
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Edatlar: İçinde, -de/-da (+ dativus: bulunma bildirir; kalıplar: ἐν τῷ ἀγρῷ = tarlada, ἐν ταῖς Ἀθήναις = Atina'da)."
+    "filiz_notes": "Filiz Hoca Edatlar: İçinde, -de/-da (+ Dativus: bulunma / Dativus Loci bildirir). 📐 Metin Kalıpları: ἐν τῷ ἀγρῷ (tarlada), ἐν τοῖς ἀγροῖς (kırsalda), ἐν ταῖς Ἀθήναις (Atina'da)."
   },
   {
     "id": "eis",
@@ -2011,7 +2020,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "isEmelHoca": true,
     "emel_notes": "Emel Hoca Listesi: -den, -den dışarı (nereden? / ayrılma). Transliterasyon: ek / ex.",
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Edatlar: -den, -dan (+ genitivus: çıkış bildirir; kalıp: ἐκ τοῦ ἀγροῦ = tarladan)."
+    "filiz_notes": "Filiz Hoca Edatlar: -den, -dan (+ Genitivus: içinden çıkış / ayrılma bildirir). 📐 Metin Kalıbı: ἐκ τοῦ ἀγροῦ (tarladan eve doğru)."
   },
   {
     "id": "ou",
@@ -5136,7 +5145,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     ],
     "source": "Athenaze: Book I (1α – 3β)",
     "meanings_tr": [
-      "Tarla, kır, arazi (çoğul: kırsal bölge, taşra)"
+      "Tarla, kır, arazi (çoğul: kırsal bölge, taşra)",
+      "Edat kalıpları: ἐν τῷ ἀγρῷ (tarlada - tekil yer dativi), ἐκ τοῦ ἀγροῦ (tarladan - ayrılma/çıkış), ἐν τοῖς ἀγροῖς (kırda / tarlalarda - çoğul)"
     ],
     "meanings_en": [
       "field, countryside, land"
@@ -5148,6 +5158,10 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "grammar": {},
     "examples": [
       {
+        "greek": "ὁ Δικαιόπολις πονεῖ ἐν τῷ ἀγρῷ, ἔπειτα δὲ βαδίζει ἐκ τοῦ ἀγροῦ οἴκαδε.",
+        "tr": "Dikaiopolis tarlada çalışır, sonra da tarladan eve doğru yürür."
+      },
+      {
         "greek": "οἰκεῖ δὲ ὁ Δικαιόπολις οὐκ ἐν ταῖς Ἀθήναις ἀλλ' ἐν τοῖς ἀγροῖς.",
         "tr": "Dikaiopolis Atina'da değil, kırsalda (tarlalarda) yaşar.",
         "author": "Athenaze I",
@@ -5155,7 +5169,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Eril İsimler: Çiftlik, tarla, arazi, kır (acc: τὸν ἀγρόν; kalıplar: ἐν τῷ ἀγρῷ = tarlada, ἐκ τοῦ ἀγροῦ = tarladan, ἐν τοῖς ἀγροῖς = kırsal alanda)."
+    "filiz_notes": "Filiz Hoca Eril İsimler: Çiftlik, tarla, kır (acc: τὸν ἀγρόν). 📐 Edat ve Hâl Kalıpları: ἐν τῷ ἀγρῷ = tarlada (tekil yer dativi: ἐν + dativus); ἐκ τοῦ ἀγροῦ = tarladan (ayrılma/çıkış: ἐκ + genitivus); ἐν τοῖς ἀγροῖς = kırsalda, tarlalarda (çoğul yer dativi)."
   },
   {
     "id": "ath_rotos",
@@ -5357,6 +5371,10 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "grammar": {},
     "examples": [
       {
+        "greek": "ὁ γεωργὸς καθίζει ὑπὸ τῷ δένδρῳ.",
+        "tr": "Çiftçi ağacın altında oturuyor (ὑπό + dativus durağan yer kalıbı)."
+      },
+      {
         "greek": "ἡσυχάζει ὑπὸ τῷ δένδρῳ.",
         "tr": "Ağacın altında dinlenir.",
         "author": "Athenaze I",
@@ -5364,7 +5382,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Cinssiz (Nötr) İsimler: Ağaç (dat: τῷ δένδρῳ; kalıp: ὑπὸ τῷ δένδρῳ = ağacın altında; dendroloji kökü)."
+    "filiz_notes": "Filiz Hoca Cinssiz (Nötr) İsimler: Ağaç (dat: τῷ δένδρῳ). 📐 Edat Kalıbı: ὑπὸ τῷ δένδρῳ = ağacın altında (durağan konum: ὑπό + dativus; örn: ὁ γεωργὸς καθίζει ὑπὸ τῷ δένδρῳ)."
   },
   {
     "id": "ath_despts",
@@ -5832,6 +5850,10 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "grammar": {},
     "examples": [
       {
+        "greek": "ὁ Δικαιόπολις οὐκ οἰκεῖ ἐν ταῖς Ἀθήναις, ἀλλ' ἐν τοῖς ἀγροῖς.",
+        "tr": "Dikaiopolis Atina'da değil, kırsalda (tarlalarda) yaşar."
+      },
+      {
         "greek": "οὐκ οἰκεῖ ἐν ταῖς Ἀθήναις.",
         "tr": "Atina'da yaşamaz.",
         "author": "Athenaze I",
@@ -5839,7 +5861,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Özel İsimler: Atina (çoğul dişil: αἱ Ἀθῆναι, dat. pl: ταῖς Ἀθήναις; kalıp: ἐν ταῖς Ἀθήναις = Atina'da)."
+    "filiz_notes": "Filiz Hoca Özel İsimler: Atina (çoğul dişil: αἱ Ἀθῆναι, dat. pl: ταῖς Ἀθήναις). 📐 Edat Kalıbı: ἐν ταῖς Ἀθήναις = Atina'da (şehir isimlerinde yer bildirme: ἐν + dativus pluralis)."
   },
   {
     "id": "ath_dmtr",
@@ -6545,6 +6567,10 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "grammar": {},
     "examples": [
       {
+        "greek": "τέλος δὲ ἐπαίρει ἑαυτὸν καὶ βαδίζει.",
+        "tr": "Sonunda kendini kaldırır (ayağa kalkar) ve yürür."
+      },
+      {
         "greek": "μόλις ἐπαίρει ἑαυτόν.",
         "tr": "Kendini güçlükle ayağa kaldırır.",
         "author": "Athenaze I",
@@ -6552,7 +6578,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Fiiller: Yukarı kaldırıyorum, yükseltiyorum (3. tekil: ἐπαίρει; kalıp: ἐπαίρει ἑαυτόν = kendini kaldırıyor/ayağa kalkıyor)."
+    "filiz_notes": "Filiz Hoca Fiiller: Yukarı kaldırıyorum, yükseltiyorum (3. tekil: ἐπαίρει). 📐 Dönüşlü Fiil Kalıbı: ἐπαίρει ἑαυτόν = kendini kaldırıyor / ayağa kalkıyor (fiil + dönüşlü zamir; Athenaze: τέλος δὲ ἐπαίρει ἑαυτόν)."
   },
   {
     "id": "ath_rchomai",
@@ -6752,6 +6778,10 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "grammar": {},
     "examples": [
       {
+        "greek": "ὁ γὰρ πόνος πολὺς ἐστιν, καὶ μάλα κάμνει.",
+        "tr": "Çünkü zahmet çoktur ve çok yorulur."
+      },
+      {
         "greek": "ὁ δὲ Δικαιόπολις κάμνει.",
         "tr": "Dikaiopolis ise yorulur.",
         "author": "Athenaze I",
@@ -6759,7 +6789,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Fiiller: Yoruluyorum, tükeniyorum (3. tekil: κάμνει; kalıp: μάλα κάμνει = çok yorulur)."
+    "filiz_notes": "Filiz Hoca Fiiller: Yoruluyorum, tükeniyorum (3. tekil: κάμνει). 📐 Derecelendirme Kalıbı: μάλα κάμνει = çok yorulur / son derece bitkin düşer (Athenaze: καὶ μάλα κάμνει)."
   },
   {
     "id": "ath_katabll",
@@ -8196,7 +8226,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Sıfatlar: Çok, birçok (acc: πολύν; poli- kökü; kalıp: πολὺν χρόνον = uzun süre)."
+    "filiz_notes": "Filiz Hoca Sıfatlar: Çok, birçok (acc: πολύν). 📐 Süreç Kalıbı: πολὺν χρόνον = uzun süre boyunca (accusativus temporis)."
   },
   {
     "id": "ath_skais",
@@ -8443,7 +8473,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Zamirler: Kendini, kendi kendini (3. şahıs dönüşlü zamir; kalıp: ἐπαίρει ἑαυτόν = kendini kaldırıyor/ayağa kalkıyor)."
+    "filiz_notes": "Filiz Hoca Zamirler: Kendini, kendi kendini (3. şahıs dönüşlü zamir). 📐 Dönüşlü Kalıp: ἐπαίρει ἑαυτόν = kendini kaldırıyor / ayağa kalkıyor."
   },
   {
     "id": "ath_hotos",
@@ -8807,7 +8837,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Zarflar: Çok (kalıp: μάλα κάμνει = çok yorulur)."
+    "filiz_notes": "Filiz Hoca Zarflar: Çok, pek. 📐 Fiil Pekiştirme Kalıbı: μάλα κάμνει = çok yorulur / takati tükenir (zarf + fiil)."
   },
   {
     "id": "ath_m",
@@ -9320,7 +9350,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
       }
     ],
     "isFilizHoca": true,
-    "filiz_notes": "Filiz Hoca Edatlar: Altında (+ dativus: bulunma; kalıp: ὑπὸ τῷ δένδρῳ = ağacın altında)."
+    "filiz_notes": "Filiz Hoca Edatlar: Altında (+ Dativus: durağan konum bildirir; + Accusativus: altına doğru yönelme). 📐 Metin Kalıbı: ὑπὸ τῷ δένδρῳ (ağacın altında)."
   },
   {
     "id": "ath_all",
@@ -14140,74 +14170,6 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "filiz_notes": "Kategori: Zarflar. Bileşik kök: palindrom (παλιν - δρομος)."
   },
   {
-    "id": "filiz_en_tais_athenais",
-    "word": "ἐν ταῖς Ἀθήναις",
-    "lemma": "ἐν ταῖς Ἀθήναις",
-    "transliteration": "en taĩs Athḗnais",
-    "partOfSpeech": "Edatlı Öbek (Yer Tümleci)",
-    "category": "Zarflar & Edatlar",
-    "frequency": 3,
-    "meanings_tr": [
-      "Atina'da (ἐν edatı + çoğul dativus ile kurulan yer tümleci)"
-    ],
-    "meanings_en": [
-      "in Athens"
-    ],
-    "etymology": "ἐν (içinde, -de) + ταῖς Ἀθήναις (Atina'da).",
-    "derivatives": [],
-    "grammar": {
-      "case": "Dativus Loci (Yer Dativi)",
-      "structure": "ἐν + dativus pluralis"
-    },
-    "examples": [
-      {
-        "greek": "ὁ Σωκράτης ἐν ταῖς Ἀθήναις ἐβίωσε.",
-        "tr": "Sokrates Atina'da yaşadı.",
-        "author": "Platon",
-        "work": "Kriton"
-      }
-    ],
-    "isFilizHoca": true,
-    "tags": [
-      "filiz_hoca"
-    ],
-    "filiz_notes": "Filiz Hoca Metin Kalıpları: Atina'da (ἐν ταῖς Ἀθήναις - yer tümleci: ἐν + dativus pluralis)."
-  },
-  {
-    "id": "filiz_en_tois_agrois",
-    "word": "ἐν τοῖς ἀγροῖς",
-    "lemma": "ἐν τοῖς ἀγροῖς",
-    "transliteration": "en toĩs agroĩs",
-    "partOfSpeech": "Edatlı Öbek (Yer Tümleci)",
-    "category": "Tarım & Doğa",
-    "frequency": 3,
-    "meanings_tr": [
-      "Kırsal alanda, tarlalarda, kırda (ἐν edatı + çoğul dativus ile kurulan yer tümleci)"
-    ],
-    "meanings_en": [
-      "in the fields, in the country"
-    ],
-    "etymology": "ἐν (içinde, -de) + τοῖς ἀγροῖς (tarlalarda).",
-    "derivatives": [],
-    "grammar": {
-      "case": "Dativus Loci (Yer Dativi)",
-      "structure": "ἐν + dativus pluralis"
-    },
-    "examples": [
-      {
-        "greek": "ὁ Δικαιόπολις ἐν τοῖς ἀγροῖς πονεῖ.",
-        "tr": "Dikaiopolis tarlalarda (kırsal alanda) çalışır.",
-        "author": "Athenaze",
-        "work": "Bölüm 1α"
-      }
-    ],
-    "isFilizHoca": true,
-    "tags": [
-      "filiz_hoca"
-    ],
-    "filiz_notes": "Filiz Hoca Metin Kalıpları: Kırsal alanda, tarlalarda, kırda (ἐν τοῖς ἀγροῖς - yer tümleci: ἐν + dativus pluralis)."
-  },
-  {
     "id": "filiz_babai",
     "word": "βαβαί",
     "lemma": "βαβαί",
@@ -15267,7 +15229,8 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "category": "Gramer & Zamirler",
     "frequency": 4,
     "meanings_tr": [
-      "Yıl, sene (acc. τὸν ἐνιαυτόν: yıl boyunca)"
+      "Yıl, sene",
+      "Accusativus Temporis kalıbı (τὸν ἐνιαυτόν): Bütün bir yıl boyunca"
     ],
     "meanings_en": [
       "year (acc. tòn eniautón: for a year, throughout the year)"
@@ -15291,7 +15254,7 @@ window.ANCIENT_GREEK_DICTIONARY = [
     "tags": [
       "filiz_hoca"
     ],
-    "filiz_notes": "Filiz Hoca Eril İsimler: Yıl (acc: τὸν ἐνιαυτόν; kalıp: τὸν ἐνιαυτόν = yıl boyunca [accusativus temporis])."
+    "filiz_notes": "Filiz Hoca İsimler: Yıl (acc: τὸν ἐνιαυτόν). 📐 Gramer Kalıbı — Accusativus Temporis: Bir eylemin ne kadar süre boyunca sürdüğünü bildirmek için edatsız akusatif kullanılır: τὸν ἐνιαυτόν = bütün bir yıl boyunca (Athenaze: τὸν ἐνιαυτὸν μάλα κάμνει)."
   },
   {
     "id": "filiz_thermos_noun",
@@ -16078,257 +16041,5 @@ window.ANCIENT_GREEK_DICTIONARY = [
       "filiz_hoca"
     ],
     "filiz_notes": "Filiz Hoca Dilbilgisi: Alpha privativum (ἀ- / ἀν-). Başına eklendiği sözcüğe olumsuzluk katan ön ek (krş. ἄ-οκνος enerjik, ἄ-τονος vurgusuz)."
-  },
-  {
-    "id": "filiz_en_to_agro",
-    "word": "ἐν τῷ ἀγρῷ",
-    "lemma": "ἐν τῷ ἀγρῷ",
-    "transliteration": "en tõi agrõi",
-    "partOfSpeech": "Edatlı Öbek (Yer Tümleci)",
-    "category": "Tarım & Doğa",
-    "frequency": 4,
-    "meanings_tr": [
-      "Tarlada, arazide (tekil yer tümleci: ἐν + dativus singularis)"
-    ],
-    "meanings_en": [
-      "in the field, on the land"
-    ],
-    "etymology": "ἐν (içinde, -de) + τῷ ἀγρῷ (tarlada).",
-    "derivatives": [],
-    "grammar": {
-      "case": "Dativus Loci",
-      "structure": "ἐν + dativus singularis"
-    },
-    "examples": [
-      {
-        "greek": "ὁ Δικαιόπολις πονεῖ ἐν τῷ ἀγρῷ.",
-        "tr": "Dikaiopolis tarlada çalışıyor."
-      }
-    ],
-    "isFilizHoca": true,
-    "tags": [
-      "filiz_hoca"
-    ],
-    "filiz_notes": "Filiz Hoca Metin Kalıpları: Tarlada, arazide (ἐν τῷ ἀγρῷ - tekil yer bildiren edatlı öbek)."
-  },
-  {
-    "id": "filiz_ek_tou_agrou",
-    "word": "ἐκ τοῦ ἀγροῦ",
-    "lemma": "ἐκ τοῦ ἀγροῦ",
-    "transliteration": "ek toũ agroũ",
-    "partOfSpeech": "Edatlı Öbek (Çıkış Tümleci)",
-    "category": "Tarım & Doğa",
-    "frequency": 4,
-    "meanings_tr": [
-      "Tarladan, araziden (-den çıkış bildiren öbek: ἐκ + genitivus)"
-    ],
-    "meanings_en": [
-      "out of the field, from the land"
-    ],
-    "etymology": "ἐκ (içinden, -den) + τοῦ ἀγροῦ (tarlanın).",
-    "derivatives": [],
-    "grammar": {
-      "case": "Ablativus / Genitivus Separationis",
-      "structure": "ἐκ + genitivus"
-    },
-    "examples": [
-      {
-        "greek": "βαδίζει ἐκ τοῦ ἀγροῦ οἴκαδε.",
-        "tr": "Tarladan eve doğru yürüyor."
-      }
-    ],
-    "isFilizHoca": true,
-    "tags": [
-      "filiz_hoca"
-    ],
-    "filiz_notes": "Filiz Hoca Metin Kalıpları: Tarladan (ἐκ τοῦ ἀγροῦ - çıkış/ayrılma bildiren edatlı öbek: ἐκ + genitivus)."
-  },
-  {
-    "id": "filiz_hypo_to_dendro",
-    "word": "ὑπὸ τῷ δένδρῳ",
-    "lemma": "ὑπὸ τῷ δένδρῳ",
-    "transliteration": "hypò tõi déndrōi",
-    "partOfSpeech": "Edatlı Öbek (Yer Tümleci)",
-    "category": "Tarım & Doğa",
-    "frequency": 4,
-    "meanings_tr": [
-      "Ağacın altında (durağan durum/konum bildiren öbek: ὑπό + dativus)"
-    ],
-    "meanings_en": [
-      "under the tree"
-    ],
-    "etymology": "ὑπό (altında) + τῷ δένδρῳ (ağacın).",
-    "derivatives": [],
-    "grammar": {
-      "case": "Dativus Loci",
-      "structure": "ὑπό + dativus"
-    },
-    "examples": [
-      {
-        "greek": "ὁ γεωργὸς καθίζει ὑπὸ τῷ δένδρῳ.",
-        "tr": "Çiftçi ağacın altında oturuyor."
-      }
-    ],
-    "isFilizHoca": true,
-    "tags": [
-      "filiz_hoca"
-    ],
-    "filiz_notes": "Filiz Hoca Metin Kalıpları: Ağacın altında (ὑπὸ τῷ δένδρῳ - durağan konum bildiren öbek: ὑπό + dativus)."
-  },
-  {
-    "id": "filiz_ton_eniauton",
-    "word": "τὸν ἐνιαυτόν",
-    "lemma": "τὸν ἐνιαυτόν (kalıp)",
-    "transliteration": "tòn eniautón",
-    "partOfSpeech": "Zaman Zarfı / Kalıp İfade",
-    "category": "Gramer & Zamirler",
-    "frequency": 4,
-    "meanings_tr": [
-      "Yıl boyunca, bütün bir yıl (accusativus temporis / zaman akusatifi)"
-    ],
-    "meanings_en": [
-      "throughout the year, for a year (accusative of duration of time)"
-    ],
-    "etymology": "τὸν (articulus acc.) + ἐνιαυτόν (yıl). Süreç bildiren akusatif kuralı.",
-    "derivatives": [],
-    "grammar": {
-      "case": "Accusativus Temporis",
-      "function": "Eylemin ne kadar süre boyunca sürdüğünü belirtir."
-    },
-    "examples": [
-      {
-        "greek": "τὸν ἐνιαυτὸν μάλα κάμνει.",
-        "tr": "Yıl boyunca çok yorulur."
-      }
-    ],
-    "isFilizHoca": true,
-    "tags": [
-      "filiz_hoca"
-    ],
-    "filiz_notes": "Filiz Hoca Metin Kalıpları: Yıl boyunca (accusativus temporis - süreyi bildiren accusativus yapısı: τὸν ἐνιαυτόν)."
-  },
-  {
-    "id": "filiz_polyn_chronon",
-    "word": "πολὺν χρόνον",
-    "lemma": "πολὺν χρόνον (kalıp)",
-    "transliteration": "polỳn chrónon",
-    "partOfSpeech": "Zaman Zarfı / Kalıp İfade",
-    "category": "Gramer & Zamirler",
-    "frequency": 4,
-    "meanings_tr": [
-      "Uzun süre, uzun zaman boyunca (accusativus temporis)"
-    ],
-    "meanings_en": [
-      "for a long time (accusative of duration of time)"
-    ],
-    "etymology": "πολύν (çok, acc.) + χρόνον (zaman, acc.).",
-    "derivatives": [],
-    "grammar": {
-      "case": "Accusativus Temporis"
-    },
-    "examples": [
-      {
-        "greek": "πολὺν χρόνον ἡσυχάζει.",
-        "tr": "Uzun süre dinlenir."
-      }
-    ],
-    "isFilizHoca": true,
-    "tags": [
-      "filiz_hoca"
-    ],
-    "filiz_notes": "Filiz Hoca Metin Kalıpları: Uzun süre (accusativus temporis: πολὺν χρόνον)."
-  },
-  {
-    "id": "filiz_ou_polyn_chronon",
-    "word": "οὐ πολὺν χρόνον",
-    "lemma": "οὐ πολὺν χρόνον (kalıp)",
-    "transliteration": "ou polỳn chrónon",
-    "partOfSpeech": "Zaman Zarfı / Kalıp İfade",
-    "category": "Gramer & Zamirler",
-    "frequency": 4,
-    "meanings_tr": [
-      "Kısa süre, çok uzun olmayan bir süre, az bir zaman (accusativus temporis)"
-    ],
-    "meanings_en": [
-      "for not a long time, for a short while"
-    ],
-    "etymology": "οὐ (değil) + πολὺν χρόνον (uzun süre).",
-    "derivatives": [],
-    "grammar": {
-      "case": "Accusativus Temporis"
-    },
-    "examples": [
-      {
-        "greek": "οὐ πολὺν χρόνον ἡσυχάζει ὁ γεωργός.",
-        "tr": "Çiftçi uzun süre değil (kısa süre) dinlenir."
-      }
-    ],
-    "isFilizHoca": true,
-    "tags": [
-      "filiz_hoca"
-    ],
-    "filiz_notes": "Filiz Hoca Metin Kalıpları: Kısa süre, çok uzun olmayan bir süre (accusativus temporis: οὐ πολὺν χρόνον)."
-  },
-  {
-    "id": "filiz_mala_kamnei",
-    "word": "μάλα κάμνει",
-    "lemma": "μάλα κάμνει (kalıp)",
-    "transliteration": "mála kámnei",
-    "partOfSpeech": "Kalıp İfade / Deyim",
-    "category": "Temel Fiiller",
-    "frequency": 4,
-    "meanings_tr": [
-      "Çok yorulur, pek yorulur, takatten düşer"
-    ],
-    "meanings_en": [
-      "he/she is very weary, becomes exceedingly tired"
-    ],
-    "etymology": "μάλα (çok) + κάμνει (yoruluyor).",
-    "derivatives": [],
-    "grammar": {
-      "structure": "Zarf + 3. tekil etken fiil"
-    },
-    "examples": [
-      {
-        "greek": "ὁ γὰρ πόνος πολὺς ἐστιν, καὶ μάλα κάμνει.",
-        "tr": "Çünkü zahmet çoktur ve çok yorulur."
-      }
-    ],
-    "isFilizHoca": true,
-    "tags": [
-      "filiz_hoca"
-    ],
-    "filiz_notes": "Filiz Hoca Metin Kalıpları: Çok yorulur (μάλα κάμνει)."
-  },
-  {
-    "id": "filiz_epairei_heauton",
-    "word": "ἐπαίρει ἑαυτόν",
-    "lemma": "ἐπαίρει ἑαυτόν (kalıp)",
-    "transliteration": "epaírei heautón",
-    "partOfSpeech": "Kalıp İfade / Deyim",
-    "category": "Temel Fiiller",
-    "frequency": 4,
-    "meanings_tr": [
-      "Kendini kaldırıyor, ayağa kalkıyor, doğruluyor"
-    ],
-    "meanings_en": [
-      "he lifts himself up, rises, gets up"
-    ],
-    "etymology": "ἐπαίρω (yükseltmek, kaldırmak) + ἑαυτόν (kendini).",
-    "derivatives": [],
-    "grammar": {
-      "structure": "Fiil + Dönüşlü Zamir"
-    },
-    "examples": [
-      {
-        "greek": "τέλος δὲ ἐπαίρει ἑαυτὸν καὶ βαδίζει.",
-        "tr": "Sonunda kendini kaldırır (ayağa kalkar) ve yürür."
-      }
-    ],
-    "isFilizHoca": true,
-    "tags": [
-      "filiz_hoca"
-    ],
-    "filiz_notes": "Filiz Hoca Metin Kalıpları: Kendini kaldırıyor / ayağa kalkıyor (ἐπαίρει ἑαυτόν)."
   }
 ];

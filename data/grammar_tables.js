@@ -358,5 +358,89 @@ window.GREEK_GRAMMAR = {
       "title": "αὐτός, αὐτή, αὐτό (o / kendisi)",
       "desc": "3. şahıs zamiri ve 'kendi' (intensive) anlamında kullanılır."
     }
+  },
+  "syntax_patterns": {
+    "title": "Metin Kalıpları ve Sözdizimi Rehberi (Syntaxis & Praepositiones)",
+    "description": "Eski Yunanca metinlerde ve Athenaze derslerinde sıkça karşılaşılan edatlı öbekler, zaman akusatifi ve eylem kalıplarının işleyiş mantığı.",
+    "patterns": [
+      {
+        "category": "Accusativus Temporis (Zaman ve Süreç Akusatifi)",
+        "badge": "Süreç Akusatifi",
+        "rule": "Eski Yunancada bir eylemin 'ne kadar süre boyunca' devam ettiğini bildirmek için edat kullanılmaz; zaman bildiren isim veya tamlama doğrudan Accusativus (-i hali) biçiminde yazılır (Soru: Πόσον χρόνον; = Ne kadar süre boyunca?).",
+        "examples": [
+          {
+            "greek": "τὸν ἐνιαυτόν",
+            "tr": "Bütün bir yıl boyunca",
+            "analysis": "τὸν (articulus acc.) + ἐνιαυτόν (yıl acc.) -> Bütün bir yıl boyunca / yıl süresince (Athenaze: τὸν ἐνιαυτὸν μάλα κάμνει)"
+          },
+          {
+            "greek": "πολὺν χρόνον",
+            "tr": "Uzun süre boyunca",
+            "analysis": "πολύν (çok acc.) + χρόνον (zaman acc.) -> Uzun zaman boyunca (Athenaze: πολὺν χρόνον ἡσυχάζει)"
+          },
+          {
+            "greek": "οὐ πολὺν χρόνον",
+            "tr": "Kısa bir süre / çok uzun olmayan bir süre",
+            "analysis": "οὐ (olumsuzluk) + πολὺν χρόνον (uzun süre) -> Uzun süre değil, kısa bir süre boyunca"
+          }
+        ]
+      },
+      {
+        "category": "Edatlar ve Hal Yönetimi (Praepositiones & Casus)",
+        "badge": "Edat & Durum Kuralları",
+        "rule": "Edatın anlamını ardından gelen ismin durumu (hâli) belirler: Dativus durağan bulunma (-de/-da), Genitivus ayrılma/çıkış (-den/-dan), Accusativus ise yönelme/içine doğru (-e) bildirir.",
+        "examples": [
+          {
+            "greek": "ἐν + Dativus (Dativus Loci)",
+            "tr": "İçinde, -de / -da (Durağan yer)",
+            "analysis": "ἐν τῷ ἀγρῷ = Tarlada (tekil eril) | ἐν τοῖς ἀγροῖς = Kırda / tarlalarda (çoğul eril) | ἐν ταῖς Ἀθήναις = Atina'da (çoğul dişil)"
+          },
+          {
+            "greek": "ἐκ / ἐξ + Genitivus (Ablativus Separationis)",
+            "tr": "İçinden çıkış, -den / -dan (Ayrılma)",
+            "analysis": "ἐκ τοῦ ἀγροῦ = Tarladan (çıkıp eve doğru gitmek) | ἐκ τῆς οἰκίας = Evden"
+          },
+          {
+            "greek": "ὑπό + Dativus",
+            "tr": "Altında (Durağan konum)",
+            "analysis": "ὑπὸ τῷ δένδρῳ = Ağacın altında (oturmak/dinlenmek)"
+          },
+          {
+            "greek": "εἰς / πρός + Accusativus",
+            "tr": "-e doğru, içine doğru (Yönelme/Hareket)",
+            "analysis": "εἰς τὸν ἀγρόν = Tarlaya doğru / içine | πρὸς τὸν κλῆρον = Araziye doğru | οἴκαδε = Eve doğru"
+          }
+        ]
+      },
+      {
+        "category": "Dönüşlü Zamir ile Eylem Kalıbı (Pronomen Reflexivum)",
+        "badge": "Dönüşlülük",
+        "rule": "Etken (aktif) çatılı bir fiille birlikte 3. şahıs dönüşlü zamiri ἑαυτόν (kendini) nesne olarak kullanıldığında, eylem doğrudan özneye döner (öznenin kendi bedenine veya durumuna yönelik hareket).",
+        "examples": [
+          {
+            "greek": "ἐπαίρει ἑαυτόν",
+            "tr": "Kendini kaldırıyor -> Ayağa kalkıyor / doğruluyor",
+            "analysis": "ἐπαίρει (yukarı kaldırıyor) + ἑαυτόν (kendini) -> Doğrulup ayağa kalkma kalıbı (Athenaze: τέλος δὲ ἐπαίρει ἑαυτόν)"
+          }
+        ]
+      },
+      {
+        "category": "Zarf ile Eylem Derecelendirme (Adverbium + Verbum)",
+        "badge": "Pekiştirme",
+        "rule": "Fiilin hemen önüne getirilen niteleme veya miktar zarfları (özellikle μάλα = çok, pek; καλῶς = güzelce) eylemin yoğunluğunu ve niteliğini pekiştirir.",
+        "examples": [
+          {
+            "greek": "μάλα κάμνει",
+            "tr": "Çok yorulur / takati tükenir",
+            "analysis": "μάλα (çok, pek) + κάμνει (yoruluyor) -> Aşırı yorulma, bitkin düşme"
+          },
+          {
+            "greek": "καλῶς ποιεῖ",
+            "tr": "İyi / güzel yapıyor (aferin)",
+            "analysis": "καλῶς (güzel bir biçimde) + ποιεῖ (yapıyor) -> Layıkıyla iş yapma"
+          }
+        ]
+      }
+    ]
   }
 };

@@ -767,6 +767,44 @@ class GreekApp {
                 </div>
             `;
         }
+
+        const patternsBox = document.getElementById('grammar-patterns-box');
+        if (patternsBox && this.grammar.syntax_patterns) {
+            const sp = this.grammar.syntax_patterns;
+            patternsBox.innerHTML = `
+                <div class="grammar-card">
+                    <h3>${sp.title}</h3>
+                    <p class="grammar-desc">${sp.description}</p>
+                    ${sp.patterns.map(pat => `
+                        <div class="grammar-pattern-section" style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-color, rgba(255,255,255,0.08));">
+                            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap;">
+                                <h4 style="margin: 0; color: var(--gold); font-size: 16px;">${pat.category}</h4>
+                                <span class="badge" style="background: rgba(212,160,23,0.15); color: var(--gold); border: 1px solid rgba(212,160,23,0.3); font-size: 11px; padding: 2px 8px; border-radius: 12px; font-weight: 600;">${pat.badge}</span>
+                            </div>
+                            <p style="font-size: 13.5px; line-height: 1.5; color: var(--text-primary); margin-bottom: 12px;">${pat.rule}</p>
+                            <table class="scholarly-table" style="width: 100%; margin-bottom: 12px;">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 32%;">Grekçe Kalıp</th>
+                                        <th style="width: 32%;">Türkçe Anlamı</th>
+                                        <th style="width: 36%;">Sözdizimsel Çözümleme & Metin Örneği</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${pat.examples.map(ex => `
+                                        <tr>
+                                            <td><strong style="font-family: var(--font-greek, serif); font-size: 15px; color: var(--text-primary);">${ex.greek}</strong></td>
+                                            <td><span style="color: var(--text-secondary);">${ex.tr}</span></td>
+                                            <td><small style="color: var(--text-muted); font-size: 12px;">${ex.analysis}</small></td>
+                                        </tr>
+                                    `).join('')}
+                                </tbody>
+                            </table>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
     }
 
     renderFavoritesDrawer() {
